@@ -1,5 +1,5 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from "vue"
+import Router from "vue-router"
 import Home from '../Components/Home.vue'
 import About from '../Components/About.vue'
 import Contact from '../Components/Contact.vue'
