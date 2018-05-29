@@ -20,32 +20,25 @@
       </li>
     </ul>
     <ul class="portfolio-list">
-      <li class="portfolio-list-item">
-        <router-link to="portfolio/item">
-          <article class="portfolio-list-item-description">
-            <p class="portfolio-list-item-text">xdxd</p>
-            <p class="portfolio-list-item-text">xdxd</p>
-          </article>
-          <img class="portfolio-list-item-img" src="http://www.wallpapers4u.org/wp-content/uploads/puppy_couple_sunset_nature_play_kids_1194_1920x1080.jpg" alt= />
-        </router-link>
-      </li>
-      <li class="portfolio-list-item">
-        <router-link to="portfolio/item">
-          <article class="portfolio-list-item-description">
-            <p class="portfolio-list-item-text">xdxd</p>
-            <p class="portfolio-list-item-text">xdxd</p>
-          </article>
-          <img class="portfolio-list-item-img" src="http://www.wallpapers4u.org/wp-content/uploads/puppy_couple_sunset_nature_play_kids_1194_1920x1080.jpg" alt= />
-        </router-link>
-      </li>
+      <PortfolioItem v-bind:portfolioItem="portfolioItem" v-for="portfolioItem in portfolioItems" :key="portfolioItem.id"></PortfolioItem>
     </ul>
   </main>
 </template>
 
 <script>
 
+import PortfolioItem from "./PortfolioItem";
+
 export default {
-  name: "Portfolio"
+  name: "Portfolio",
+  components: {
+    PortfolioItem
+  },
+  computed: {
+    portfolioItems() {
+      return this.$store.state.Data;
+    }
+  }
 }
 
 </script>
