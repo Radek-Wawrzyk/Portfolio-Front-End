@@ -1,0 +1,51 @@
+//Colors 
+
+$red: #eb3719;
+$grey: #d9d7d3;
+$greyDark: #333333;
+$greyLight: #e0dedb;
+$greyMedium: #b9b5ae;
+$greyMediumDark: #72706c;
+$white: #fcfcfc;
+
+//Common styles
+
+* {
+  box-sizing: border-box;
+  line-height: 1.4;
+  font-family: 'Roboto', sans-serif;
+}
+
+//Typography
+
+html,body {font-family: 'Roboto', sans-serif;}
+h1 {font-size: 38px;}
+h2 {font-size: 32px;}
+h3 {font-size: 28px;}
+h4 {font-size: 26px;}
+h5 {font-size: 24px;}
+h6 {font-size: 22px;}
+p {font-size: 20px;}
+a {text-decoration: none; color: inherit;}
+
+//Main styles
+
+main {
+  max-width: 1400px;
+  width: 100%;
+  margin: 100px auto 0 auto;
+  padding: 0 25px;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  main {
+    margin: 60px auto 0 auto;
+  } 
+}
