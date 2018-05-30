@@ -20,7 +20,7 @@
         <div class="about-info-wrapper">
           <div class="about-info-tile"></div>
           <div class="about-info-tile">
-            <a href="#" aria-label="Check my CV" title="My CV">
+            <a href="https://drive.google.com/open?id=1fWsafCvqLPb2LHXScqeMsW9H1q0jOTeb" aria-label="Check my CV" title="My CV">
               <h2 class="about-info-tile-title">
                 Curriculum Vitae
               </h2>
