@@ -18,13 +18,18 @@ export default {
   data() {
     return {
       routerTitle: this.$route.params.title,
-      item: ""
+      item: "",
+      body: document.querySelector("body")
     }
   },
   created: function() {
-    const item = this.$store.state.Data.find(e => e.link === this.routerTitle);
+    const item = this.$store.state.Data.find(item => item.link === this.routerTitle);
     this.item = item;
-  } 
+    this.body.style.overflowY = "hidden";
+  },
+  destroyed: function() {
+    this.body.style.overflowY = "auto";
+  }
 }
 
 </script>
