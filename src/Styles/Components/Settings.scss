@@ -30,15 +30,19 @@ a {text-decoration: none; color: inherit;}
 
 //Main styles
 
-.Page {
+.page {
   position: relative;
+}
+.page-content {
+  position: absolute;
+  width: 100%;
 }
 main {
   max-width: 1400px;
   width: 100%;
   margin: 100px auto 0 auto;
   padding: 0 25px;
-  position: absolute;
+  position: relative;
 }
 
 @media screen and (max-width: 768px) {
