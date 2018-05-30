@@ -5,7 +5,7 @@ import About from '../Components/About.vue'
 import Contact from '../Components/Contact.vue'
 import Portfolio from '../Components/Portfolio.vue'
 import Error from '../Components/Error.vue'
-import PortfolioItem from '../Components/PortfolioItem.vue'
+import PortfolioItemPage from '../Components/PortfolioItemPage.vue'
 
 Vue.use(Router);
 
@@ -33,8 +33,9 @@ export default new Router({
       component: Portfolio,
       children: [
         {
+          name: "portfolioItemPage",
           path: ":title",
-          comments: PortfolioItem
+          component: PortfolioItemPage
         }
       ]
     },

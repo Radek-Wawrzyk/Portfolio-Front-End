@@ -22,6 +22,7 @@
     <ul class="portfolio-list">
       <PortfolioItem v-bind:portfolioItem="portfolioItem" v-for="portfolioItem in portfolioItems" :key="portfolioItem.id"></PortfolioItem>
     </ul>
+    <router-view></router-view>
     <Footer></Footer>
   </main>
 </template>
