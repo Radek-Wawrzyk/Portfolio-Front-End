@@ -100,13 +100,17 @@
         </router-link>
       </article>
     </section>
+    <Footer></Footer>
   </main>
 </template>
 
 <script>
 
+import Footer from "./Footer";
+
 export default {
   name: "About",
+  components: { Footer }
 }
 
 </script>

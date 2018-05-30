@@ -53,13 +53,17 @@
         </button>
       </div>
     </form>
+    <Footer></Footer>
   </main>
 </template>
 
 <script>
 
+import Footer from "./Footer";
+
 export default {
-  name: "Contact"
+  name: "Contact",
+  components: { Footer }
 }
 
 </script>

@@ -22,17 +22,20 @@
     <ul class="portfolio-list">
       <PortfolioItem v-bind:portfolioItem="portfolioItem" v-for="portfolioItem in portfolioItems" :key="portfolioItem.id"></PortfolioItem>
     </ul>
+    <Footer></Footer>
   </main>
 </template>
 
 <script>
 
 import PortfolioItem from "./PortfolioItem";
+import Footer from "./Footer";
 
 export default {
   name: "Portfolio",
   components: {
-    PortfolioItem
+    PortfolioItem,
+    Footer
   },
   computed: {
     portfolioItems() {
