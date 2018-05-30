@@ -22,7 +22,9 @@
     <ul class="portfolio-list">
       <PortfolioItem v-bind:portfolioItem="portfolioItem" v-for="portfolioItem in portfolioItems" :key="portfolioItem.id"></PortfolioItem>
     </ul>
-    <router-view></router-view>
+    <transition name="fade-left">
+      <router-view></router-view>
+    </transition>
     <Footer></Footer>
   </main>
 </template>

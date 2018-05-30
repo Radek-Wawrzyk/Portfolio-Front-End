@@ -1,0 +1,22 @@
+.fade-up-enter-active, .fade-up-leave-active {
+  transition: all 0.5s ease-out;
+}
+.fade-up-enter {
+  opacity: 0;
+  transform: translate3d(0,50px,0);
+}
+.fade-up-leave-to {
+  opacity: 0;
+}
+
+.fade-left-enter-active, .fade-left-leave-active {
+  transition: all 0.5s ease-out;
+}
+.fade-left-enter {
+  opacity: 0;
+  transform: translate3d(-50px,0,0);
+}
+.fade-left-leave-to {
+  opacity: 0;
+  transform: translate3d(50px,0,0);
+}
