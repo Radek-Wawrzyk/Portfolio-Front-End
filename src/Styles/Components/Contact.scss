@@ -95,6 +95,14 @@ input:-ms-input-placeholder, input:-moz-placeholder  {
   color: $greyLight;
 }
 
+//Contact Validation
+
+.contact-form-item-alert {
+  color: $red;
+  margin: 5px 0 0 7px;
+  font-size: 15px;
+}
+
 //Contact button 
 
 .contact-form-item-btn {

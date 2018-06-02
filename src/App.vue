@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <Navigation></Navigation>
-    <transition name="fade-up">
+    <transition name="fade-up" appear>
       <router-view></router-view>
     </transition>
   </div>
