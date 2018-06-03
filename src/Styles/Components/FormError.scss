@@ -1,0 +1,49 @@
+.success, .error {
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%,-20%);
+  z-index: 60;
+  width: 100%;
+  max-width: 500px;
+  padding: 0 15px;
+}
+.success-email, .error-email {  
+  background: rgba(255,255,255,0.9);
+  text-align: center;
+  padding: 35px 15px;
+}
+.success-email-img {
+  width: 40px;
+  height: 40px;
+  margin: 15px auto;
+  mask-image: url("./Img/success.svg");
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
+  background-color: #2ecc71;
+}
+.success-email-header {
+  color:#2ecc71;
+  font-size: 22px;
+}
+.success-email-description {
+  color: $greyMedium;
+  font-size: 16px;
+}
+.error-email-img {
+  width: 40px;
+  height: 40px;
+  margin: 15px auto;
+  mask-image: url("./Img/error.svg");
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
+  background-color: $red;
+}
+.error-email-header {
+  color:$red;
+  font-size: 22px;
+}
+.error-email-description {
+  color: $greyMedium;
+  font-size: 16px;
+}

@@ -59,6 +59,7 @@
         </div>
       </form>
     </main>
+    <FormError v-bind:statusModal="statusModal" v-bind:errorDetail="errorDetail" v-bind:error="error" ></FormError>
     <Footer></Footer>
   </div>
 </template>
@@ -66,13 +67,17 @@
 <script>
 
 import Footer from "./Footer";
+import FormError from "./FormError";
 import axios from 'axios';
 
 export default {
   name: "Contact",
-  components: { Footer },
+  components: { Footer, FormError },
   data() {
     return {
+      statusModal: false,
+      error: false,
+      errorDetail: undefined,
       data: {
         name: "",
         email: "",
@@ -88,12 +93,12 @@ export default {
     }
   },
   methods: {
-    formValidate(e) {
-      e.preventDefault();
+    formValidate(event) {
+      event.preventDefault();
       const emailCheck = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-      JSON.stringify(this.data);
-
+    
       if (emailCheck.test(this.data.email) && this.data.name.length >= 1 && this.data.subject.length >= 1  && this.data.message.length >= 1 ) {
+        JSON.stringify(this.data);
         axios.post("//formspree.io/radek511@op.pl", {
             name: this.data.name,
             email: this.data.email,
@@ -107,21 +112,42 @@ export default {
           for (let key in this.errors) {
             this.errors[key] = "";
           }
-          alert("ok!");
+          this.statusModal = true;
+
+          setTimeout(e => {
+            this.statusModal = false;
+          }, 3000);
         })
-        .catch(e => {
-          console.log(e);
+        .catch( error => {
+          console.log(error);
+          this.error = true;
+          this.errorDetail = error.response.status;
+
+          setTimeout( () => {
+            this.error = false;
+          }, 3000);
         }) 
       } else {
-        alert("not ok!");
         if (emailCheck.test(this.data.email)) {
           return true;
         } else {
           this.errors.email = "Bad email address";
         }
-        if (this.data.name <= 1) this.errors.name = "Pls fill name";
-        if (this.data.subject <= 1) this.errors.subject = "pls fill subject";
-        if (this.data.message <= 1) this.errors.message = "pls fill message";
+        if (this.data.name <= 1) {
+          this.errors.name = "Please fill name";
+        } else {
+          this.errors.name = "";
+        }
+        if (this.data.subject <= 1) {
+          this.errors.subject = "Please fill subject";
+        } else {
+          this.errors.subject = "";
+        }
+        if (this.data.message <= 1) {
+          this.errors.message = "Please fill message";
+        } else {
+          this.errors.message = "";
+        }
       }
     }
   }
