@@ -4,17 +4,30 @@
     <transition name="fade-up" appear>
       <router-view></router-view>
     </transition>
+    <Preloader v-bind:preloaderStatus="preloaderStatus"></Preloader>
   </div>
 </template>
 
 <script>
 
 import Navigation from "./Components/Navigation";
+import Preloader from "./Components/Preloader";
 
 export default {
   name: "App",
   components: {
-    Navigation
+    Navigation,
+    Preloader
+  },
+  data() {
+    return {
+      preloaderStatus: false
+    }
+  },
+  mounted: function() {
+    setTimeout( () => {
+      this.preloaderStatus = true;
+    }, 2000)
   }
 }
 </script>

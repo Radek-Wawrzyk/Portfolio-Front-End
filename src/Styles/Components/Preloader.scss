@@ -1,0 +1,53 @@
+.preloader {
+  width: 100%;
+  height: 100vh;
+  background: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 102;
+  transition: all 0.5s;
+  visibility: visible;
+  overflow: hidden;
+}
+.preloader[aria-hidden=true] {
+  opacity: 0;
+  z-index: -10;
+  visibility: hidden;
+}
+.preloader::before {
+  content: "Loading...";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 100px 0 0 0;
+  animation: fading 1.5s linear infinite;
+  font-size: 32px;
+  color: $greyDark;
+}
+.preloader::after {
+  content: '';
+  transform-origin: center;
+  border: 16px solid $greyLight;
+  border-top: 16px solid $red;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1.5s ease-in-out infinite;
+}
+
+//Animations
+
+@keyframes fading {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
