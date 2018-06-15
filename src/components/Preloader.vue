@@ -7,7 +7,7 @@
 export default {
   name: "Preloader",
   props: { 
-    preloaderStatus: Boolean 
+    preloaderStatus: Boolean
   }
 }
 

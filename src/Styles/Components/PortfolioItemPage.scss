@@ -6,5 +6,50 @@
   height: calc(100% - 100px);
   background: $white;
   z-index: 50;
-  padding: 50px 150px;
+  padding: 0 25px;
+}
+.portfolio-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.portfolio-page-back {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+.portfolio-page-back:hover,
+.portfolio-page-back:focus {
+  cursor: pointer;
+  color: $red;
+}
+.portfolio-page-back p {
+  margin: 0 0 0 10px;
+  transition: color 0.25s;
+  font-weight: 500;
+}
+.portfolio-page-back:hover svg,
+.portfolio-page-back:focus svg  {
+  fill: $red;
+  transform: translate3d(-5px,0,0);
+}
+.portfolio-page-header svg {
+  width: auto;
+  height: 40px;
+  transition: color 0.25s, transform 0.25s;
+}
+
+//Item list
+
+.portfolio-page-technologies {
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio-page-technologies-item {
+  background: $white;
+  color: #5f5d5d;
+  padding: 6px 12px;
+  font-size: 14px;
+  margin: 5px;
+  border: 2px solid $grey;
 }
