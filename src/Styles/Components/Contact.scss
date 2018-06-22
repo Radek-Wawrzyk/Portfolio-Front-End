@@ -68,7 +68,8 @@
   margin: 0 0 0 20%;
 }
 .contact-form-item {
-  margin: 0 0 30px 0;
+  margin: 0 0 35px 0;
+  position: relative;
 }
 .contact-form-item:last-of-type {
   display: flex;
@@ -98,8 +99,10 @@ input:-ms-input-placeholder, input:-moz-placeholder  {
 //Contact Validation
 
 .contact-form-item-alert {
+  position: absolute;
+  left: 5px;
+  bottom: -25px;
   color: $red;
-  margin: 5px 0 0 7px;
   font-size: 15px;
 }
 

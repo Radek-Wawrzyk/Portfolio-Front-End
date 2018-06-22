@@ -38,19 +38,27 @@
       <form class="contact-form" >
         <div class="contact-form-item">
           <input type="text" name="name" v-model="data.name" placeholder="Name" aria-required="true" title="Your name" aria-label="Name"/>
-          <p class="contact-form-item-alert">{{errors.name}}</p>
+          <transition name="fade-form">
+            <p class="contact-form-item-alert" v-if="errors.name">{{errors.name}}</p>
+          </transition>
         </div>
         <div class="contact-form-item">
-          <input type="text" name="email" v-model="data.email" placeholder="Email adress" aria-required="true" title="Your adress email" aria-label="Email adress"/>
-          <p class="contact-form-item-alert">{{errors.email}}</p>
+          <input type="email" name="email" v-model="data.email" placeholder="Email adress" aria-required="true" title="Your adress email" aria-label="Email adress"/>
+          <transition name="fade-form">
+            <p class="contact-form-item-alert" v-if="errors.email">{{errors.email}}</p>
+          </transition>
         </div>
         <div class="contact-form-item">
           <input type="text" name="subject" v-model="data.subject" placeholder="Subject" aria-required="true" title="Subject" aria-label="Subject"/>
-          <p class="contact-form-item-alert">{{errors.subject}}</p>
+          <transition name="fade-form">
+            <p class="contact-form-item-alert" v-if="errors.subject">{{errors.subject}}</p>
+          </transition>
         </div>
         <div class="contact-form-item">
           <textarea v-model="data.message" name="message" placeholder="Your message" aria-required="true" title="Message" aria-label="Your message"></textarea>
-          <p class="contact-form-item-alert">{{errors.message}}</p>
+          <transition name="fade-form">
+            <p class="contact-form-item-alert" v-if="errors.message">{{errors.message}}</p>
+          </transition>
         </div>
         <div class="contact-form-item">
           <button class="contact-form-item-btn" @click="formValidate" type="submit" onSubmit={this.sumbit}>
@@ -95,9 +103,10 @@ export default {
   methods: {
     formValidate(event) {
       event.preventDefault();
-      const emailCheck = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    
-      if (emailCheck.test(this.data.email) && this.data.name.length >= 1 && this.data.subject.length >= 1  && this.data.message.length >= 1 ) {
+      const checkEmail = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      
+      //Main condition
+      if (checkEmail.test(this.data.email) && this.data.name.length >= 1 && this.data.subject.length >= 1  && this.data.message.length >= 1 ) {
         JSON.stringify(this.data);
         axios.post("//formspree.io/radek511@op.pl", {
             name: this.data.name,
@@ -106,6 +115,8 @@ export default {
             message: this.data.message
         })
         .then(response => {
+
+          //Reset fields and states
           for (let key in this.data) {
             this.data[key] = "";
           }
@@ -127,28 +138,13 @@ export default {
             this.error = false;
           }, 3000);
         }) 
-      } else {
-        if (emailCheck.test(this.data.email)) {
-          return true;
-        } else {
-          this.errors.email = "Bad email address";
-        }
-        if (this.data.name <= 1) {
-          this.errors.name = "Please fill name";
-        } else {
-          this.errors.name = "";
-        }
-        if (this.data.subject <= 1) {
-          this.errors.subject = "Please fill subject";
-        } else {
-          this.errors.subject = "";
-        }
-        if (this.data.message <= 1) {
-          this.errors.message = "Please fill message";
-        } else {
-          this.errors.message = "";
-        }
-      }
+      } 
+
+      //Fields validation
+      this.data.name.length >= 1 ? this.errors.name = "" : this.errors.name = "Please fill Name";
+      this.data.subject.length >= 1 ? this.errors.subject = "" : this.errors.subject = "Please fill Subject";
+      this.data.message.length >= 1 ? this.errors.message = "" : this.errors.message = "Please fill Message";
+      checkEmail.test(this.data.email) ? this.errors.email = "" : this.errors.email = "Bad Email address";
     }
   }
 }

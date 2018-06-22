@@ -20,3 +20,11 @@
   opacity: 0;
   transform: translate3d(50px,0,0);
 }
+
+.fade-form-enter-active, .fade-form-leave-active {
+  transition: all 0.3s ease-out;
+}
+.fade-form-enter, .fade-form-leave-to {
+  opacity: 0;
+  transform: translate3d(-10px,0,0);
+}
