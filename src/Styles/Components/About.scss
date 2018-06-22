@@ -210,34 +210,31 @@
   padding: 0 0 50px 0;
 }
 .about-exp-info-link {
- border: 0;
- background: transparent;
- color: $white;
- font-size: 20px;
- position: relative;
- padding: 15px 150px 15px 0;
- outline-color: $white;
+  border: 0;
+  background: transparent;
+  color: $white;
+  font-size: 20px;
+  position: relative;
+  padding: 15px 150px 15px 0;
+  outline-color: $white;
+  svg {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate3d(-55%,-50%,0);
+    transition: transform 0.25s;
+    fill: $white;
+  }
+  &:focus, &:hover {
+    cursor: pointer;
+  }
+  &:focus svg, &:hover svg {
+    transform: translate3d(-30%,-50%,0);
+  }
 }
-.about-exp-info-link::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 55%;
-  transform: translate3d(-55%,-50%,0);
-  width: 30px;
-  height: 30px;
-  mask-image: url("./Img/arrow.svg");
-  mask-repeat: no-repeat;
-  mask-position: 50% 50%;
-  background-color: $white;
-  transition: transform 0.45s;
-}
-.about-exp-info-link:hover {
-  cursor: pointer;
-}
-.about-exp-info-link:hover::before, .about-exp-info-link:focus::before {
-  transform: translate3d(-30%,-50%,0);
-}
+
 
 //Media
 
@@ -378,7 +375,7 @@
     display: block;
     padding: 15px 50px 15px 0;
   }
-  .about-exp-info-link::before {
-    left: 65%;
+  .about-exp-info-link svg {
+    left: 55%;
   }
 }
