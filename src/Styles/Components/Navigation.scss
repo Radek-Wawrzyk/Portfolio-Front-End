@@ -6,10 +6,11 @@
   left: 0;
   top: 0;
   width: 100%;
-  height: 100px;
+  height: 70px;
   padding: 0 20px;
   z-index: 100;
-  background: rgba(255,255,255,0.96)
+  background: rgba(255,255,255,0.96);
+  box-shadow: 0 4px 6px -6px rgba(34, 34, 34, 0.6);
 }
 .navigation-logo {
   width: 100px;
@@ -27,9 +28,15 @@
 }
 .navigation-menu {
   display: flex;
+  align-items: center;
+  height: 100%;
+}
+.navigation-menu li {
+  height: 100%;
 }
 .navigation-menu li a {
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 100%;
   padding: 6px 12px;
@@ -38,10 +45,33 @@
   font-weight: 700;
   transition: color 0.25s;  
   outline-color: $red;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: $red;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s;
+  }
+  &:focus, &:hover {
+    color: $red;
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+  &.router-link-exact-active {
+    color: $red;
+    &::before {
+      transform: scaleX(1);
+    }
+  }
 }
-.navigation-menu li a:hover, .navigation-menu li a:focus {
-  color: $red;
-}
+
 .navigation-menu li a.router-link-exact-active,  {
   color: $red;
   border-color: $red;
@@ -61,6 +91,54 @@
   outline: none;  
   z-index: 101;
 }
+.navigation-button:hover .navigation-button-description, 
+.navigation-button:focus .navigation-button-description  {
+  color: $red;
+}
+.navigation-button:hover span, .navigation-button:hover span::before,
+.navigation-button:hover span::after, .navigation-button:focus span, 
+.navigation-button:focus span::before, .navigation-button:focus span::after, {
+  background: $red;
+}
+.navigation-button-description {
+  position: absolute;
+  left: -55px;
+  padding: 0 10px 0 0;
+  top: 0;
+  font-size: 18px;
+  color: $greyDark; 
+  font-weight: 500;
+  transition: color 0.25s;    
+}
+.navigation-button span {
+  width: 22px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background: $greyDark;
+  transition: background 0.4s;
+}
+.navigation-button span::before, .navigation-button span::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 2px;
+  background: $greyDark;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: top 0.5s, left 0.5s, transform 0.5s, background 0.25s;
+}
+.navigation-button span::before {
+  top: 8px;
+}
+.navigation-button span::after {
+  top: -8px;
+}
+
+//Active class for button
+
 .navigation-button:hover .navigation-button-description, 
 .navigation-button:focus .navigation-button-description  {
   color: $red;
@@ -151,7 +229,7 @@
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: all 1s;
+    transition: all 0.5s;
     background: $greyDark;
     align-items: center;
     flex-direction: column;
@@ -171,6 +249,9 @@
     color: $greyMediumDark;
     transition: color 0.25s, border 0.25s, background 0.25s;
     outline: none;
+    &::before {
+      display: none;
+    }
   }
   .navigation-menu li a:hover, .navigation-menu li a:focus {
     color: $red;
