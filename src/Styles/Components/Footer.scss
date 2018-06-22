@@ -40,28 +40,27 @@
   display: block;
   width: 100%;
   height: 100%;
-}
-.footer-contact-item a:hover .footer-contact-item-detail {
-  color: $red;
-}
-.footer-contact-item a:hover .footer-contact-item-icon {
-  background-color: $red;
+  outline-color: $red;
+  padding: 5px;
+  &:focus .footer-contact-item-detail,
+  &:hover .footer-contact-item-detail {
+    color: $red;
+  }
+  &:hover .footer-contact-item-icon,
+  &:focus .footer-contact-item-icon {
+    fill: $red;
+  }
 }
 .footer-contact-item-icon {
   width: 60px;
   height: 60px;
-  mask-image: url("./Img/email.svg");
-  mask-repeat: no-repeat;
-  mask-position: 50% 50%;
-  background-color: $greyLight;
-  transition: background-color 0.35s;
+  fill: $greyLight;
+  transition: fill 0.35s;
   margin: 0 auto 10px auto;
-}
-.footer-contact-item:nth-child(2) .footer-contact-item-icon {
-  mask-image: url("./Img/phone.svg");
-}
-.footer-contact-item:nth-child(3) .footer-contact-item-icon {
-  mask-image: url("./Img/comment.svg");
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 }
 .footer-contact-item-addition {
   color: $greyMedium;
@@ -84,8 +83,6 @@
 .footer-socials-item {
   width: 50px;
   height: 50px;
-  border: 3px solid $greyLight;
-  transition: border 0.35s;
   position: relative;
   z-index: 1;
   margin: 0 5px;
@@ -95,39 +92,25 @@
   position: relative;
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid $greyLight;
+  transition: border 0.2s;
+  outline: none;
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: $greyMedium;
+    transition: fill 0.2s;
+  }
+  &:hover svg, &:focus svg {
+    fill: $red;
+  }
+  &:hover, &:focus {
+    border-color: $red; 
+  }
 }
-.footer-socials-item-icon::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 16px;
-  height: 16px;
-  mask-image: url("./Img/facebook.svg");
-  mask-repeat: no-repeat;
-  mask-position: 50% 50%;
-  background-color: $greyMedium;
-  transition: background-color 0.35s;
-}
-.footer-socials-item:nth-child(2) .footer-socials-item-icon::before {
-  mask-image: url("./Img/github.svg");
-}
-.footer-socials-item:nth-child(3) .footer-socials-item-icon::before {
-  mask-image: url("./Img/linkedin.svg");
-}
-.footer-socials-item:hover {
-  border-color: $red;
-  cursor: pointer;
-  z-index: 2;
-}
-.footer-socials-item:hover .footer-socials-item-icon::before {
-  background-color: $red; 
-}
-.footer-socials-item-icon:focus {
-  outline-color: $red; 
-}
-
 
 //footer logo & signature
 
