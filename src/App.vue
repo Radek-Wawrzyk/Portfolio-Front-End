@@ -25,9 +25,7 @@ export default {
     }
   },
   mounted: function() {
-    setTimeout( () => {
-      this.preloaderStatus = true;
-    }, 2000)
+    this.preloaderStatus = true;
   }
 }
 </script>
