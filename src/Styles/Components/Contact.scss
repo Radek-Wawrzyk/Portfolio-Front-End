@@ -119,32 +119,26 @@ input:-ms-input-placeholder, input:-moz-placeholder  {
   transition: background 0.4s;
   outline: none;
   margin: 0 -50px 0 0;
-}
-.contact-form-item-btn::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 60%;
-  transform: translate3d(-60%,-50%,0);
-  width: 30px;
-  height: 30px;
-  mask-image: url("./Img/arrow.svg");
-  mask-repeat: no-repeat;
-  mask-position: 50% 50%;
-  background-color: $greyLight;
-  transition: background-color 0.35s;
-  opacity: 0;
-  transition: transform 0.45s, opacity 0.45s;
-}
-.contact-form-item-btn:hover, 
-.contact-form-item-btn:focus {
-  background: $greyDark;
-  cursor: pointer;
-}
-.contact-form-item-btn:hover::before,
-.contact-form-item-btn:focus::before {
-  transform: translate3d(0%,-50%,0);
-  opacity: 1;
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate3d(-60%,-50%,0);
+    width: 30px;
+    height: 30px;
+    fill: $greyLight;
+    transition: fill 0.35s;
+    opacity: 0;
+    transition: transform 0.35s, opacity 0.35s;
+  }
+  &:hover, &:focus {
+    background: $greyDark;
+    cursor: pointer;
+  }
+  &:hover svg, &:focus svg {
+    transform: translate3d(0%,-50%,0);
+    opacity: 1
+  }
 }
 
 //Media 
