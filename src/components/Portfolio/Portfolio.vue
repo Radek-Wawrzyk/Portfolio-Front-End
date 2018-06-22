@@ -34,7 +34,7 @@
 <script>
 
 import PortfolioItem from "./PortfolioItem";
-import Footer from "./Footer";
+import Footer from "@/Components/Footer";
 
 export default {
   name: "Portfolio",

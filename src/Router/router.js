@@ -2,10 +2,10 @@ import Vue from "vue"
 import Router from "vue-router"
 import Home from '../Components/Home.vue'
 import About from '../Components/About.vue'
-import Contact from '../Components/Contact.vue'
-import Portfolio from '../Components/Portfolio.vue'
+import Contact from '../Components/Contact/Contact.vue'
+import Portfolio from '../Components/Portfolio/Portfolio.vue'
 import Error from '../Components/Error.vue'
-import PortfolioItemPage from '../Components/PortfolioItemPage.vue'
+import PortfolioItemPage from '../Components//Portfolio/PortfolioItemPage.vue'
 
 Vue.use(Router);
 
