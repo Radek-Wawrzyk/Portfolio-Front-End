@@ -1,23 +1,23 @@
 <template>
   <div>
-    <div class="success" v-if="statusModal === true">
-      <transition name="fade-up" appear >
+    <transition name="fade-notification">
+      <div class="success" v-if="sendStatus.success === true">
         <div class="success-email">
           <h4 class="success-email-header">Email has been sent!</h4>
           <div class="success-email-img"></div>
           <p class="success-email-description">Thank you for message, i will try to write back as soon as possible!</p>
         </div>
-      </transition>
-    </div>
-    <div class="error" v-if="error === true">
-      <transition name="fade-up" appear >
+      </div>
+    </transition>
+    <transition name="fade-notification">
+      <div class="error" v-if="sendStatus.error === true">
         <div class="error-email">
           <h4 class="error-email-header">Error</h4>
           <div class="error-email-img"></div>
-          <p class="error-email-description">{{errorDetail}}, sorry message hasn't been sent! There is a problem with connection (server)</p>
+          <p class="error-email-description">Message has not beed sent, sorry message hasn't been sent! There is a problem with connection (server)</p>
         </div>
-      </transition>
-    </div>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -26,9 +26,7 @@
 export default {
   name: "FormError",
   props: {
-    statusModal: Boolean,
-    errorDetail: String && Number,
-    error: Boolean
+    sendStatus: Object
   }
 }
 

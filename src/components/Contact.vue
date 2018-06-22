@@ -67,7 +67,7 @@
         </div>
       </form>
     </main>
-    <FormError v-bind:statusModal="statusModal" v-bind:errorDetail="errorDetail" v-bind:error="error" ></FormError>
+    <FormError v-bind:sendStatus="sendStatus" ></FormError>
     <Footer></Footer>
   </div>
 </template>
@@ -83,9 +83,10 @@ export default {
   components: { Footer, FormError },
   data() {
     return {
-      statusModal: false,
-      error: false,
-      errorDetail: undefined,
+      sendStatus: {
+        error: false,
+        success: false
+      },
       data: {
         name: "",
         email: "",
@@ -107,8 +108,11 @@ export default {
       
       //Main condition
       if (checkEmail.test(this.data.email) && this.data.name.length >= 1 && this.data.subject.length >= 1  && this.data.message.length >= 1 ) {
+
         JSON.stringify(this.data);
-        axios.post("//formspree.io/radek511@op.pl", {
+
+        //Post HTTP Request
+        axios.post("//formspree.iodw/radek511@op.pl", {
             name: this.data.name,
             email: this.data.email,
             subject: this.data.subject,
@@ -123,19 +127,23 @@ export default {
           for (let key in this.errors) {
             this.errors[key] = "";
           }
-          this.statusModal = true;
+
+          //Alert notification
+          this.sendStatus.success = true;
 
           setTimeout(e => {
-            this.statusModal = false;
+            this.sendStatus.success = false;
           }, 3000);
         })
         .catch( error => {
+
           console.log(error);
-          this.error = true;
-          this.errorDetail = error.response.status;
+
+          //Alert notification
+          this.sendStatus.error = true;
 
           setTimeout( () => {
-            this.error = false;
+            this.sendStatus.error= false;
           }, 3000);
         }) 
       } 
