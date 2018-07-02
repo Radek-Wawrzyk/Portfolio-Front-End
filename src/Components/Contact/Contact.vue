@@ -3,10 +3,10 @@
     <main id="contact">
       <header class="contact-header">
         <h1 class="contact-header-title">
-          I'm full of ideas & willingness <br/>to implement new project!
+          I'm full of fresh ideas & willingness <br/>to work with something new!
         </h1>
         <p class="contact-header-description">
-          If you have any question, go ahead and just ask me.
+          If you want to contact me, just check information below.
         </p>
       </header>
       <div class="contact-info">
@@ -20,22 +20,22 @@
         </div>
         <div class="contact-info-tile">
           <h2 class="contact-info-tile-title">
-            Junior Front End Developer
+            Front End Developer
           </h2>
           <p class="contact-info-tile-description">
-            ...without boring passions & descriptions!
+            ... with passion and will to improve his skills.
           </p>
         </div>
       </div>
       <header class="contact-communication-header">
         <h3 class="contact-communication-header-title">
-          Let's do some great things together!
+          Let's make something great together!
         </h3>
         <p class="contact-communication-header-description">
-          Be in touch and feel free to correspondence with me.
+          Feel free to contact me.
         </p>
       </header>
-      <form class="contact-form" >
+      <form class="contact-form" method="POST">
         <div class="contact-form-item">
           <input type="text" name="name" v-model="data.name" placeholder="Name" aria-required="true" title="Your name" aria-label="Name"/>
           <transition name="fade-form">
@@ -150,10 +150,10 @@ export default {
       } 
 
       //Fields validation
-      this.data.name.length >= 1 ? this.errors.name = "" : this.errors.name = "Please fill Name";
-      this.data.subject.length >= 1 ? this.errors.subject = "" : this.errors.subject = "Please fill Subject";
-      this.data.message.length >= 1 ? this.errors.message = "" : this.errors.message = "Please fill Message";
-      checkEmail.test(this.data.email) ? this.errors.email = "" : this.errors.email = "Bad Email address";
+      this.data.name.length >= 1 ? this.errors.name = "" : this.errors.name = "Please fill Your name";
+      this.data.subject.length >= 1 ? this.errors.subject = "" : this.errors.subject = "Please fill the subject";
+      this.data.message.length >= 1 ? this.errors.message = "" : this.errors.message = "Please fill the message";
+      checkEmail.test(this.data.email) ? this.errors.email = "" : this.errors.email = "Your email address is incorrect";
     }
   }
 }
