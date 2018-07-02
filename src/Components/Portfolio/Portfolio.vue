@@ -3,10 +3,10 @@
     <main id="portfolio">
       <header class="portfolio-header">
         <h1 class="portfolio-header-title">
-          I try to do creative & <br/>interesting projects
+          I am trying to make creative & <br/> interesting websites
         </h1>
         <p class="portfolio-header-description">
-          Check my work below.
+          Check my projects below
         </p>
       </header>
       <ul class="portfolio-filter">
