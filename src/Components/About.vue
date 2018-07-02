@@ -3,17 +3,17 @@
     <main id="about">
       <header class="about-header">
         <h1 class="about-header-title">Ambition & hard work!</h1>
-        <p class="about-header-description">These words are my motto for further hard work.</p>
+        <p class="about-header-description">The best way to achieve success!</p>
       </header>
       <section class="about-info">
         <div class="about-info-wrapper">
           <article class="about-info-tile">
             <h2 class="about-info-tile-title">
-              Hello there! My name is Radek and I'm Front End Developer.
+              My name is Radosław and I'm Front End Developer.
             </h2>
             <p class="about-info-tile-description">
-              I like to learn new things, cause as developers we have to do it. However, the key to a success  
-              is to like what you really do. Then everything is possible and the effects will be much better! 
+              I like to learn new things. I've connected my passion to IT with web-development and I'm doing things 
+              what I really like, which is very important in my career. Everything is possible if you are very involved in it!
             </p>
           </article>
         </div>
@@ -34,38 +34,38 @@
       <section class="about-skills">
         <header class="about-skills-header">
           <h2 class="about-skills-header-title">
-            I create & code websites with<br/> details and quality
+            I am writing quality code <br/> which makes your website well-written.
           </h2>
         </header>
         <article class="about-skills-info">
           <h3 class="about-skills-info-title">
-            Creative approach to the project<br/>ensures good final results.
+            Creative approach is a key to impressive final results.
           </h3>
         </article>
         <ul class="about-skills-list">
           <li class="about-skills-list-item">
             <h4 class="about-skills-list-item-title">Website</h4>
             <p class="about-skills-list-item-description">
-              Starting with a simple one page website, finishing on an extensive website
-              with many subpages. Webisites based on the newest HTML5 standards and ARIA accessibility will provide good SEO.
-              I can code your layout from graphic file so called - PS2HTML. Otherwise, I'll contact with my graphic designer,
-              and we'll create a great project together!
+              From simple one-page websites to the advanced project with many subpages. Websites written 
+              by me are based on the newest standards and ARIA accessibility which will provide good SEO. 
+              I can also code your layout from graphics file - it's called PSD2HTML. Otherwise, I'll contact my 
+              graphic designer and we'll create a great project together!
             </p>
           </li>
           <li class="about-skills-list-item">
             <h4 class="about-skills-list-item-title">Wordpress</h4>
             <p class="about-skills-list-item-description">
-              Basic websites based on Wordpress CMS like blogs, portals or simple onepages.
-              By ACF plugin you are gonna to be able to manage your descriptions, links and all content on your website.
-              Also, I can help with basic SEO and implement your own layout.
+              Websites based on WordPress CMS like blogs, portals or simple one-pages. With ACF plugin 
+              you will be able to manage almost all content and links on your website. I can also help you with 
+              basic SEO and implement your own page layout.
             </p>
           </li>
           <li class="about-skills-list-item">
             <h4 class="about-skills-list-item-title">Application</h4>
             <p class="about-skills-list-item-description">
-              With cooperate my fellow Back End developers, we can make your dream service or application.
-              Concrete selection of the newest technologies will result high performance of the application. Moreover, we can fully
-              customize the product for your needs, no unnecessary functions and code!
+              In cooperation with my fellow Back End developers, we can create service or application 
+              of your dreams. Selection of the newest technologies will result in high performance. 
+              Moreover, we can fully customize it for your needs, without unnecessary functions and needless code!
             </p>
           </li>
         </ul>
@@ -73,8 +73,7 @@
       <section class="about-exp">
         <header class="about-exp-header">
           <h4 class="about-exp-header-title">
-            For 2 years of my study & work<br/>
-            I've had chances to learn from professionals.
+            In past 2 years of my study & work <br/> I had a chance to learn from professional developers.
           </h4>
           <div class="about-exp-header-tile">
             <h5 class="about-exp-header-tile-title">Experience</h5>
@@ -86,15 +85,15 @@
         </header>
         <article class="about-exp-info">
           <h5 class="about-exp-info-title">
-            I'm learning new things all the time, cause good developer learns all his own life. In each new project
-            I try to improve my abilities & skills.
+            I'm still learning new things and technologies all the time because it makes you a good, flexible developer. 
+            I'm trying to improve my abilities and skills with every new project.
           </h5>
           <p class="about-exp-info-description">
-            I have a commercial experience with coding websites. I've had internship in professional interactive agency -
-            <a href="https://www.websitestyle.pl/" title="interactive agency - websitestyles" aria-label="interactive agency - websitestyles"> websitestyle.</a> 
-            I've learned there how to work with other developers - I've worked on my soft skills.
-            Moreover, I've realized what is Git and how to work with it. Ofcourse I've work too on my Front End abilities. I've worked little as 
-            freelancer cooperating with my graphic designer.
+            I have a commercial experience with coding websites. I've had an internship in a professional 
+            interactive agency - 
+            <a href="https://www.websitestyle.pl/" title="interactive agency - websitestyles" aria-label="interactive agency - websitestyles"> websitestyle.</a>
+            where I got much more experience in my Front End development. I've learned how to work with a team and I've improved 
+            my soft skills. Moreover, I've realized what is Git and how to properly work with it.
           </p>
           <router-link to="/portfolio" title="my work" aria-label="My work" class="about-exp-info-link">
             See my work
