@@ -1,0 +1,16 @@
+pipeline:
+    build:
+        image: node:latest
+        commands:
+        - npm install
+        - npm run build
+        when:
+            branch: master
+    deploy:
+        image: cschlosser/drone-ftps
+        hostname: s26.mydevil.net:21
+        secrets: [ ftp_username, ftp_password ]
+        dest_dir: /domains/radek-wawrzyk.pl/public_html/
+        src_dir: dist
+        when:
+            branch: master
