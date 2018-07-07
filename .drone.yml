@@ -11,6 +11,6 @@ pipeline:
         hostname: s26.mydevil.net:21
         secrets: [ ftp_username, ftp_password ]
         dest_dir: /domains/radek-wawrzyk.pl/public_html/
-        src_dir: dist
+        src_dir: /dist
         when:
             branch: master
