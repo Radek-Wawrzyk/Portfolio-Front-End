@@ -21,7 +21,7 @@
         </li>
       </ul>
       <ul class="portfolio-list">
-        <PortfolioItem v-bind:portfolioItem="portfolioItem" v-for="portfolioItem in data" :key="portfolioItem.id"></PortfolioItem>
+        <PortfolioItem v-bind:portfolioItem="portfolioItem" v-for="portfolioItem in portfolioItems" :key="portfolioItem.id"></PortfolioItem>
       </ul>
       <transition name="fade-left">
         <router-view></router-view>
@@ -42,18 +42,11 @@ export default {
     PortfolioItem,
     Footer
   },
-  data() {
-    return {
-      data: this.$store.state.Data
-    }
-  },
-  /*
   computed: {
     portfolioItems() {
       return this.$store.state.Data;
     }
   },
-  */
   methods: {
     filter(e) {
       let category = e.target.getAttribute("data-category");

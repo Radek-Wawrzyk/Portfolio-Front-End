@@ -8,6 +8,11 @@ export default new Vuex.Store({
   state: {
     Data
   },
+  getters: {
+    portfolioItems(state) {
+      return state.Data;
+    }
+  },
   mutations: {
     
   },
