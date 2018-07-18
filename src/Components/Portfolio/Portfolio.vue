@@ -20,9 +20,9 @@
           <button class="portfolio-filter-item-button" @click="filter" data-category="app">Application</button>
         </li>
       </ul>
-      <ul class="portfolio-list">
+      <transition-group class="portfolio-list" tag="ul" name="moving-fade">
         <PortfolioItem v-bind:portfolioItem="portfolioItem" v-for="portfolioItem in portfolioItems" :key="portfolioItem.id"></PortfolioItem>
-      </ul>
+      </transition-group>
       <transition name="fade-left">
         <router-view></router-view>
       </transition>
@@ -35,6 +35,7 @@
 
 import PortfolioItem from "./PortfolioItem";
 import Footer from "@/Components/Footer";
+import { mapGetters } from 'vuex';
 
 export default {
   name: "Portfolio",
@@ -43,28 +44,11 @@ export default {
     Footer
   },
   computed: {
-    portfolioItems() {
-      return this.$store.state.Data;
-    }
+    ...mapGetters(["portfolioItems"])
   },
   methods: {
-    filter(e) {
-      let category = e.target.getAttribute("data-category");
-
-      switch (category) {
-        case "website": {
-          this.data = this.$store.state.Data.filter(item => item.category === "website");
-          break;
-        }
-        case "app": {
-          this.data = this.$store.state.Data.filter(item => item.category === "app");
-          break;
-        }
-        default: {
-          this.data = this.$store.state.Data
-          break;
-        }
-      }
+    filter(event) {
+      this.$store.dispatch("filtration", event.target.getAttribute("data-category"));
     }
   }
 }

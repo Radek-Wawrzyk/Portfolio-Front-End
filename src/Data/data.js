@@ -1,4 +1,4 @@
-export const Data = [
+export const data = [
   {
     id: 1,
     link: "vue-todolist",
