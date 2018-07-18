@@ -35,3 +35,24 @@
 .fade-notification-enter, .fade-notification-leave-to {
   opacity: 0;
 }
+
+.moving-fade {
+  &-move {
+    transition: all 0.6s ease-in-out;
+  }
+  &-enter-active {
+    transition: all 0.5s ease-out;
+  }
+  &-leave-active {
+    transition: all 0.3s ease-in;
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+  }
+  &-enter, &-leave-to {
+    opacity: 0;
+  }
+  &-enter {
+    transform: scale(0.8);
+  }
+}

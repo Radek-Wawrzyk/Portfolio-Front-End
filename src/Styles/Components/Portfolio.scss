@@ -40,28 +40,14 @@
   border-color: $red;
   color: $red;
 }
+
 //portfolio item list
 
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-}
-
-//Portfolio tiles animation
-
-.example-enter {
-  opacity: 0.01;
-}
-.example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 0.5s linear;
-}
-.example-appear {
-  opacity: 0.01;
-}
-.example-appear.example-appear-active {
-  opacity: 1;
-  transition: opacity 0.5s linear
+  position: relative;
+  z-index: 10;
 }
 
 //Media 

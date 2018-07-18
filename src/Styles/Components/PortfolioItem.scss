@@ -3,7 +3,8 @@
   margin: 15px; 
   color: $white;
   position: relative;
- overflow: hidden;
+  overflow: hidden;
+  z-index: 5;
 }
 .portfolio-list-item-img {
   width: 100%;
