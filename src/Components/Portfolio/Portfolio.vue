@@ -14,10 +14,10 @@
           <button class="portfolio-filter-item-button" @click="filter" data-category="default">All</button>
         </li>
         <li class="portfolio-filter-item">
-          <button class="portfolio-filter-item-button" @click="filter" data-category="website">Website</button>
+          <button class="portfolio-filter-item-button" @click="filter" data-category="Website">Website</button>
         </li>
         <li class="portfolio-filter-item">
-          <button class="portfolio-filter-item-button" @click="filter" data-category="app">Application</button>
+          <button class="portfolio-filter-item-button" @click="filter" data-category="Application">Application</button>
         </li>
       </ul>
       <transition-group class="portfolio-list" tag="ul" name="moving-fade">

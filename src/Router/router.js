@@ -34,13 +34,11 @@ export default new Router({
       path: '/portfolio',
       name: 'portfolio',
       component: Portfolio,
-      children: [
-        {
-          name: "portfolioItemPage",
-          path: ":title",
-          component: PortfolioItemPage
-        }
-      ]
+    },
+    {
+      name: "portfolioItemPage",
+      path: "/portfolio/:title",
+      component: PortfolioItemPage
     },
     {
       path: '*',
