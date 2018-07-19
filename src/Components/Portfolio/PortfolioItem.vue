@@ -1,6 +1,6 @@
 <template>
   <li class="portfolio-list-item">
-    <router-link v-bind:to="'portfolio/'+portfolioItem.link">
+    <router-link :to="'portfolio/'+portfolioItem.link">
       <article class="portfolio-list-item-description">
         <p class="portfolio-list-item-text">{{portfolioItem.title}}</p>
         <p class="portfolio-list-item-text">{{portfolioItem.description}}</p>
@@ -14,7 +14,7 @@
 
 export default {
   name: "PortfolioItem",
-  props: ["portfolioItem"],
+  props: ["portfolioItem"]
 }
 
 </script>

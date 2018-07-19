@@ -9,7 +9,7 @@
   height: 70px;
   padding: 0 20px;
   z-index: 100;
-  background: rgba(255,255,255,0.96);
+  background: white;
   box-shadow: 0 4px 6px -6px rgba(34, 34, 34, 0.6);
 }
 .navigation-logo {
@@ -72,7 +72,7 @@
   }
 }
 
-.navigation-menu li a.router-link-exact-active,  {
+.navigation-menu li a.router-link-exact-active  {
   color: $red;
   border-color: $red;
 }
@@ -97,7 +97,7 @@
 }
 .navigation-button:hover span, .navigation-button:hover span::before,
 .navigation-button:hover span::after, .navigation-button:focus span, 
-.navigation-button:focus span::before, .navigation-button:focus span::after, {
+.navigation-button:focus span::before, .navigation-button:focus span::after {
   background: $red;
 }
 .navigation-button-description {
@@ -145,7 +145,7 @@
 }
 .navigation-button:hover span, .navigation-button:hover span::before,
 .navigation-button:hover span::after, .navigation-button:focus span, 
-.navigation-button:focus span::before, .navigation-button:focus span::after, {
+.navigation-button:focus span::before, .navigation-button:focus span::after {
   background: $red;
 }
 .navigation-button-description {
@@ -211,7 +211,7 @@
 }
 .navigation-button.active:hover span::before,
 .navigation-button.active:hover span::after, 
-.navigation-button.active:focus span::before, .navigation-button.active:focus span::after, {
+.navigation-button.active:focus span::before, .navigation-button.active:focus span::after {
   background: $red;
 }
 
