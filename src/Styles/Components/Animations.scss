@@ -6,7 +6,7 @@
   transform: translate3d(0,50px,0);
 }
 .fade-up-leave-to {
-  opacity: 0;
+  display: none;
 }
 
 .fade-left-enter-active, .fade-left-leave-active {
