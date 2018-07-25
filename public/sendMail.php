@@ -1,20 +1,17 @@
 <?php
 
-  $name = $_POST["name"];
-  $subject = $_POST["subject"];
-  $message = $_POST["message"];
-  $email = $_POST["email"];
+  $entityBody = file_get_contents('php://input');
+  $post = json_decode($entityBody, true);
 
-  if (isset($name, $subject, $message, $email)) {
+  $name = $post["name"];
+  $subject = $post["subject"];
+  $message = $post["message"];
+  $email = $post["email"];
 
-    $mailTo = "radek511@op.pl";
-    $headers = "From: ".$email;
-    $txt = "You have received an email from ".$name.".\n\n".$message;
+  $mailTo = "sirradek58@gmail.com";
+  $headers = "From: ".$email;
+  $txt = "You have received an email from ".$name.".\n\n".$message;
 
-    mail($mailTo, $subject, $txt, $headers);
-
-  } else {
-    echo "Error!";
-  }
+  mail($mailTo, $subject, $txt, $headers);
 
 ?>
