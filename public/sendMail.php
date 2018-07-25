@@ -8,7 +8,7 @@
   if (isset($name, $subject, $message, $email)) {
 
     $mailTo = "radek511@op.pl";
-    $headers = "From: ".$mail;
+    $headers = "From: ".$email;
     $txt = "You have received an email from ".$name.".\n\n".$message;
 
     mail($mailTo, $subject, $txt, $headers);
