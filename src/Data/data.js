@@ -5,7 +5,7 @@ export const data = [
     title: "Vue Shop",
     header: "Shop aplication based on Vue.js, REST API & Laravel",
     description: "Shop aplication based on Vue.js, REST API & Laravel",
-    img: "http://www.image-share.com/upload/3794/154.jpg",
+    img: "http://www.image-share.com/upload/3794/162.jpg",
     category: "Application",
     technologies: [
       "HTML5/CSS3", "Javascript/ES6", "SCSS preprocessor", "Vue.js framework + Vue-Router", "Vuex state management", "JWT authorization", "REST API architecture", "Webpack module bundler",
@@ -51,7 +51,7 @@ export const data = [
     id: 5,
     link: "forecast",
     title: "Forecast",
-    header: "Simple application which shows you actually weather",
+    header: "Simple application which shows you actual weather",
     description: "Application which shows you weather based on your localisation.",
     img: "http://www.image-share.com/upload/3794/155.jpg",
     category: "Application",

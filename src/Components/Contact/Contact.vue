@@ -113,7 +113,7 @@ export default {
         JSON.stringify(this.data);
 
         //Post HTTP Request
-        axios.post("//formspree.io/radek511@op.pl", {
+        axios.post("sendMail.php", {
             name: this.data.name,
             email: this.data.email,
             subject: this.data.subject,
