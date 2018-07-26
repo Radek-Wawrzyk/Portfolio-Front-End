@@ -31,6 +31,10 @@
   color: $greyMedium;
   transition: all 0.25s;
   outline: none;
+  &.active {
+    border-color: $red;
+    color: $red;
+  }
 }
 .portfolio-filter-item:nth-child(1) .portfolio-filter-item-button {
   padding: 8px 26px;
