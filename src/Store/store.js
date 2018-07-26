@@ -6,24 +6,30 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    portfolioItems: data
+    portfolioItems: data,
+    activeButton: "default"
   },
   getters: {
-    portfolioItems(state) {
+    portfolioItems: state => {
       return state.portfolioItems;
+    },
+    activeButton: state => {
+      return state.activeButton;
     }
   },
   mutations: {
-    filtration(state, category) {
+    filtration: (state, category) => {
       if (category !== "default") {
-        state.portfolioItems= data.filter(item => item.category === category);
+        state.portfolioItems = data.filter(item => item.category === category);
+        state.activeButton = category;
       } else {
         state.portfolioItems = data;
+        state.activeButton = "default";
       }
     }
   },
   actions: {
-    filtration(event, category) {
+    filtration: (event, category) => {
       event.commit("filtration", category);
     }
   }
