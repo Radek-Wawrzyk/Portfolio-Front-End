@@ -5,7 +5,7 @@
         <p class="portfolio-list-item-text">{{portfolioItem.title}}</p>
         <p class="portfolio-list-item-text">{{portfolioItem.header}}</p>
       </article>
-      <img class="portfolio-list-item-img" v-bind:src="portfolioItem.img" :alt="portfolioItem.title" />
+      <img class="portfolio-list-item-img" v-bind:src="portfolioItem.images.main" :alt="portfolioItem.title" />
     </router-link>
   </li>
 </template>

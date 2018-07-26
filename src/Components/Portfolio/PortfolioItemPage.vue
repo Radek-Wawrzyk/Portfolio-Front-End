@@ -1,6 +1,6 @@
 <template>
   <div class="project">
-    <header class="project-header" :style="{backgroundImage: 'url('+ item.img +')'}">
+    <header class="project-header" :style="{backgroundImage: 'url('+ item.images.main +')'}">
       <div class="project-header-description" >
         <h1 class="project-header-title">{{item.title}}</h1>
         <p class="project-header-subtitle">Category - {{item.category}}</p>
@@ -27,8 +27,15 @@
           </ul>
         </div>
       </section>
-      <section class="project-description">
-      </section>
+      <figure class="project-mockup">
+        <img :src="item.images.mockup" :alt="item.title">
+      </figure>
+      <article class="project-description">
+        <p class="project-description-text">{{item.description}}</p>
+        <a class="project-description-link" href="">
+          Visit live
+        </a>
+      </article>
       <Footer></Footer>
     </main>
   </div>
@@ -41,7 +48,6 @@ import Footer from "../Footer";
 export default {
   name: "PortfolioItemPage",
   components: {Footer},
-  component: { Footer },
   data() {
     return {
       routerTitle: this.$route.params.title,

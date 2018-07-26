@@ -40,20 +40,39 @@
       display: flex;
       align-items: center;
       position: relative;
-      &:focus, &:hover {
-
+      transition: color 0.25s;
+      outline: none;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        height: 3px;
+        background: $red;
+        transition: width 0.5s;
       }
-    &:last-of-type {
-      font-size: 16px;
-      margin-top: 5px;
-    }
+      &:focus, &:hover {
+        color: $red;
+        &::before {
+          width: 100px;
+        }
+        svg {
+          fill: $red;
+        }
+      }
+      &:last-of-type {
+        font-size: 16px;
+        margin-top: 5px;
+      }
     }
     svg {
       width: 16px;
       height: 16px;
       height: 16px;
       fill: white;
-      margin-left: 10px;
+      margin-left: 10px;  
+      transition: fill 0.25s;
     }
   }
 }
@@ -64,7 +83,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 100px 0;
+  margin: 0 0 50px 0;
   &-title {
     color: $greyDark;
     padding: 0 50px;
@@ -102,29 +121,34 @@
   }
 }
 
-//Project description
+//Porject mockup
 
-.project-description {
-  text-align: right;
-  padding: 0 0 0 200px;
-  color: $greyDark;
-  &-title {
-    margin-bottom: 20px;
-  }
-}
-
-
-//Project img
-
-.project-description {
-  img {
-    width: 100%;
-  }
-}
-.img-test {
+.project-mockup {
+  width: 100%;
   img {
     width: 100%;
     height: auto;
+  }
+}
+
+//Project description
+
+.project-description {
+  text-align: center;
+  color: $greyDark;
+  padding: 0 200px;
+  &-link {
+    padding: 15px 0;
+    background: $red;
+    color: white;
+    display: block;
+    width: 150px;
+    margin: 15px auto 0 auto;
+    transition: background 0.25s;
+    outline: none;
+    &:focus, &:hover {
+      background: $greyDark;
+    }
   }
 }
 
@@ -141,6 +165,7 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 50px 0;
+    margin: 0;
     &-title {
       padding: 0 0 50px 0;
       text-align: center;
@@ -148,6 +173,9 @@
     .technology {
       margin: 0;
     }
+  }
+  .project-description {
+    padding: 0 50px;
   }
 }
 
@@ -162,11 +190,14 @@
 }
 
 @media screen and (max-width: 576px) {
-  .project{
+  .project {
     margin: 60px 0 0 0;
   }
   .project-header {
     height: 380px;
+  }
+  .project-description {
+    padding: 0;
   }
 }
 
