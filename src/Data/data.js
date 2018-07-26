@@ -5,7 +5,7 @@ export const data = [
     title: "Vue Shop",
     header: "Shop aplication based on Vue.js, REST API & Laravel",
     description: "Shop aplication based on Vue.js, REST API & Laravel",
-    img: "http://www.image-share.com/upload/3794/162.jpg",
+    img: "http://radek-wawrzyk.pl/assets/shop.jpg",
     category: "Application",
     technologies: [
       "HTML5/CSS3", "Javascript/ES6", "SCSS preprocessor", "Vue.js framework + Vue-Router", "Vuex state management", "JWT authorization", "REST API architecture", "Webpack module bundler",
@@ -17,7 +17,7 @@ export const data = [
     title: "Bossbus",
     header: "Website of a company which rents cars for specified amounts of time",
     description: "Website had to be simple, but effective. In cooperation with my graphic designer, we have created modern, simple and good looking website perfect for our client and his business. Cars are the main target which is very visible for every client.",
-    img: "http://www.image-share.com/upload/3794/159.jpg",
+    img: "http://radek-wawrzyk.pl/assets/bossbus.jpg",
     category: "Website",
     technologies: [
       "HTML5/CSS3", "Javascript/jQuery", "LESS preprocessor", "Owl Carousel library", "AOS.js animation library"
@@ -29,7 +29,7 @@ export const data = [
     title: "Sokolnicki Agency",
     header: "Website for Sokolnicki and his services",
     description: "It is fully written by me from a PSD file delivered by his designer. I assisted with a designer in some changes in design. A website is fast and very modern.",
-    img: "http://www.image-share.com/upload/3794/158.jpg",
+    img: "http://radek-wawrzyk.pl/assets/sokolnicki.jpg",
     category: "Website",
     technologies: [
       "HTML5/CSS3", "Javascript/ES6", "SCSS preprocessor", "Gulp task manager"
@@ -41,7 +41,7 @@ export const data = [
     title: "Radek Wawrzyk Portfolio",
     header: "Radek Wawrzyk Portfolio",
     description: "My personal website ",
-    img: "http://www.image-share.com/upload/3794/157.jpg",
+    img: "http://radek-wawrzyk.pl/assets/portfolio.jpg",
     category: "Application",
     technologies: [
       "HTML5/CSS3", "Javascript/ES6", "SCSS preprocessor", "Vue.js + Vue-Router", "Vuex state management", "Webpack bundler", "Firebase realtime database"
@@ -53,7 +53,7 @@ export const data = [
     title: "Forecast",
     header: "Simple application which shows you actual weather",
     description: "Application which shows you weather based on your localisation.",
-    img: "http://www.image-share.com/upload/3794/155.jpg",
+    img: "http://radek-wawrzyk.pl/assets/forecast.jpg",
     category: "Application",
     technologies: [
       "HTML5/CSS3", "Javascript/ES6", "React.js library", "Open Weather Map API"
@@ -65,7 +65,7 @@ export const data = [
     title: "MP Transporte",
     header: "Rework of existing service ",
     description: "Design rework of existing service for internet fake-company in-game ETS2.",
-    img: "http://www.image-share.com/upload/3794/156.jpg",
+    img: "http://radek-wawrzyk.pl/assets/mp-transporte.jpg",
     category: "Website",
     technologies: [
       "HTML5/CSS3", "Javascript", "jQuery library", "LESS preprocessor", "PHP basic template"
@@ -77,7 +77,7 @@ export const data = [
     title: "Cersoir",
     header: "Page based on PSD file",
     description: "Page based on PSD file",
-    img: "http://www.image-share.com/upload/3794/154.jpg",
+    img: "http://radek-wawrzyk.pl/assets/cersoir.jpg",
     category: "Website",
     technologies: [
       "HTML5/CSS3", "Javascript/ES6", "SCSS preprocessor", "Gulp task manager"
