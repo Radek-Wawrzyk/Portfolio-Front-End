@@ -287,6 +287,20 @@
 }
 
 @media screen and (max-width: 576px) {
+  .about-header {
+    padding: 0 0 50px 0;
+  }
+  .about-skills-header {
+    padding: 50px 0;
+  }
+  .about-skills-list {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  .about-exp {
+    padding: 50px 0 0 0;
+  }
   .about-header-title {
     font-size: 26px;
   }
@@ -313,9 +327,6 @@
     padding: 0 5px 25px 5px;
     font-size: 18px;
   }
-  .about-exp-header-title {
-    font-size: 20px;
-  }
   .about-exp-header-tile-description span {
     font-size: 70px;
   }
@@ -341,11 +352,16 @@
   .about-skills-list-item {
     margin: 10px 0;
   }
-  .about-skills-list {
-    padding: 0 15px;
- }
- .about-exp-info {
+  .about-exp-info {
     padding: 70px 25px;
+  }
+  .about-exp-header-title {
+    padding: 0 0 50px 0;
+    font-size: 20px;
+  }
+  .about-exp-header-tile {
+    width: 100%;
+    margin: 0 0 50px 0;
   }
 }
 
