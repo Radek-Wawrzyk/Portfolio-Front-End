@@ -66,6 +66,7 @@ export const data = [
   {
     id: 5,
     link: "forecast",
+    url: "http://radek-wawrzyk.pl/forecast/",
     title: "Forecast",
     header: "Simple application which shows you actual weather",
     description: "ForecastApp is the simple application based on popular javascript library - React.js. Website include few interesting functions. Forecast is in 2 languages - Polish and English. Moreover after typed localization, main screen changes to image, which is depend of state of weather. Application dowloands data asynchronic from Open Weather Map API. Site doesn't need page reload after action, because all application is reactive.",
@@ -81,6 +82,7 @@ export const data = [
   {
     id: 6,
     link: "mp-transporte",
+    url: "http://radek-wawrzyk.pl/mp-transporte/",
     title: "MP Transporte",
     header: "Admin dashboard system for ETS2",
     description: "Mp Transporte is the admin dashboard for dedicated Euro Truck Simulator 2 online system. The biggest challenge was to create simple and effective layout for users, thus UI/UX was the priority. However how You can see I’ve managed the challenge. Dashboard is simply, effective and good looking. Website is fully responsive on all devices, so You can manage the system even on Your smartphone. Unfortunately MP Transport is a closed system, so You are able only to check demo without functionality.",
