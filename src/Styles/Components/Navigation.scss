@@ -13,7 +13,7 @@
   box-shadow: 0 4px 6px -6px rgba(34, 34, 34, 0.6);
 }
 .navigation-logo {
-  width: 100px;
+  //width: 100px;
   position: relative;
   z-index: 101;
 }
@@ -21,6 +21,24 @@
   display: block;
   width: 100%;
   height: 100%;
+  figcaption {
+    font-size: 25px;
+    font-weight: 500;
+    color: $greyDark;
+    position: relative;
+    &::before {
+      content: "<"
+    }
+    &::after {
+      content: "/>"
+    }
+    span {
+      color: $red;
+    }
+    &.mobile {
+      display: none;
+    }
+  }
 }
 .navigation-logo img {
   width: 100%;
@@ -266,6 +284,12 @@
 @media screen and (max-width: 576px) {
   .navigation {
     height: 60px;
+  }
+  .desktop {
+    display: none;
+  }
+  .navigation-logo a figcaption.mobile {
+    display: block
   }
 }
 
