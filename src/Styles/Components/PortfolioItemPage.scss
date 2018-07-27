@@ -134,7 +134,7 @@
 //Project description
 
 .project-description {
-  text-align: center;
+  text-align: justify;
   color: $greyDark;
   padding: 0 200px;
   &-link {
@@ -143,9 +143,10 @@
     color: white;
     display: block;
     width: 150px;
-    margin: 15px auto 0 auto;
+    margin: 50px auto 0 auto;
     transition: background 0.25s;
     outline: none;
+    text-align: center;
     &:focus, &:hover {
       background: $greyDark;
     }
