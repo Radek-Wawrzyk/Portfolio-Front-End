@@ -108,7 +108,7 @@
 
 <script>
 
-import Footer from "./Footer";
+import Footer from "../Footer";
 
 export default {
   name: "About",
@@ -116,4 +116,6 @@ export default {
 }
 
 </script>
+
+<style lang="scss" src="./About.scss" scoped />
 
