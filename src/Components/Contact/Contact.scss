@@ -1,3 +1,5 @@
+@import "@/Styles/Components/Colors.scss";
+
 .contact-header {
   padding: 0 0 100px 0;
   color: $greyDark;
@@ -10,7 +12,7 @@
 }
 .contact-header-description {
   font-size: 18px;
-}
+} 
 
 //Contact info 
 
@@ -42,7 +44,7 @@
   background: $greyDark;
   align-items: center;
   text-align: right;
-}
+} 
 
 //Contact Commincation
 
@@ -51,6 +53,7 @@
   padding: 100px 0 100px 0;
   color: $greyDark;
 }
+
 .contact-communication-header-title {
   font-size: 36px;
   font-weight: 500;
@@ -58,7 +61,7 @@
 }
 .contact-communication-header-description {
   font-size: 18px;
-}
+} 
 
 //Contact form
 
@@ -75,7 +78,7 @@
   display: flex;
   justify-content: flex-end;
 }
-input, textarea {
+input,textarea {
   border: 3px solid $greyLight;
   width: 100%;
   padding: 13px;
@@ -84,17 +87,19 @@ input, textarea {
   outline: none;
   transition: border 0.3s, color 0.3s;
   font-family: 'Roboto', sans-serif;
-} 
+}
 textarea {
   min-height: 200px;
 }
 input:focus, textarea:focus {
   border-color: $greyDark;
 }
-input::-webkit-input-placeholder, input::-moz-placeholder, 
-input:-ms-input-placeholder, input:-moz-placeholder  { 
+input::-webkit-input-placeholder,
+input::-moz-placeholder,
+input:-ms-input-placeholder,
+input:-moz-placeholder {
   color: $greyLight;
-}
+} 
 
 //Contact Validation
 
@@ -104,7 +109,7 @@ input:-ms-input-placeholder, input:-moz-placeholder  {
   bottom: -25px;
   color: $red;
   font-size: 15px;
-}
+} 
 
 //Contact button 
 
@@ -123,7 +128,7 @@ input:-ms-input-placeholder, input:-moz-placeholder  {
     position: absolute;
     top: 50%;
     left: 60%;
-    transform: translate3d(-60%,-50%,0);
+    transform: translate3d(-60%, -50%, 0);
     width: 30px;
     height: 30px;
     fill: $greyLight;
@@ -136,10 +141,10 @@ input:-ms-input-placeholder, input:-moz-placeholder  {
     cursor: pointer;
   }
   &:hover svg, &:focus svg {
-    transform: translate3d(0%,-50%,0);
+    transform: translate3d(0%, -50%, 0);
     opacity: 1
   }
-}
+} 
 
 //Media 
 
@@ -182,7 +187,8 @@ input:-ms-input-placeholder, input:-moz-placeholder  {
 }
 
 @media screen and (max-width: 576px) {
-  .contact-header-title, .contact-communication-header-title {
+  .contact-header-title,
+  .contact-communication-header-title {
     font-size: 26px;
   }
   .contact-info-tile-title {

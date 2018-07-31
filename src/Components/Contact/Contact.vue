@@ -63,12 +63,14 @@
         <div class="contact-form-item">
           <button class="contact-form-item-btn" @click="formValidate" type="submit">
             Sumbit
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"/></svg>
+            <svg enable-background="new 0 0 476.213 476.213" version="1.1" viewBox="0 0 476.213 476.213" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="345.61 107.5 324.39 128.71 418.79 223.11 0 223.11 0 253.11 418.79 253.11 324.39 347.5 345.61 368.71 476.21 238.11"/>
+            </svg>
           </button>
         </div>
       </form>
     </main>
-    <FormError v-bind:sendStatus="sendStatus" ></FormError>
+    <FormNotification v-bind:sendStatus="sendStatus" ></FormNotification>
     <Footer></Footer>
   </div>
 </template>
@@ -76,12 +78,12 @@
 <script>
 
 import Footer from "@/Components/Footer";
-import FormError from "./FormError";
+import FormNotification from "./FormNotification";
 import axios from 'axios';
 
 export default {
   name: "Contact",
-  components: { Footer, FormError },
+  components: { Footer, FormNotification },
   data() {
     return {
       sendStatus: {
@@ -159,3 +161,5 @@ export default {
 }
 
 </script>
+
+<style lang="scss" src="./Contact.scss" scoped />
