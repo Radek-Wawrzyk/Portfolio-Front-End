@@ -43,7 +43,7 @@
 
 <script>
 
-import Footer from "../Footer/Footer";
+import Footer from "../../Footer/Footer";
 
 export default {
   name: "PortfolioItemPage",
@@ -61,3 +61,5 @@ export default {
 }
 
 </script>
+
+<style lang="scss" src="./PortfolioProject.scss"/>

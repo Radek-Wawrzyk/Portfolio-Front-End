@@ -30,7 +30,7 @@
 
 <script>
 
-import PortfolioItem from "./PortfolioItem";
+import PortfolioItem from "./Portfolio Item/PortfolioItem";
 import Footer from "@/Components/Footer/Footer";
 import { mapGetters } from 'vuex';
 
@@ -58,3 +58,4 @@ export default {
 
 </script>
 
+<style lang="scss" src="./Portfolio.scss" scoped/>

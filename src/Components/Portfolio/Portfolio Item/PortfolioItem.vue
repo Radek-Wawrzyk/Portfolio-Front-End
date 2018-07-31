@@ -19,3 +19,5 @@ export default {
 
 </script>
 
+<style lang="scss" src="./PortfolioItem.scss"/>
+
