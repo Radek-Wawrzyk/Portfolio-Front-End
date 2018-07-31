@@ -11,7 +11,7 @@
 <script>
 
 import Navigation from "./Components/Navigation";
-import Preloader from "./Components/Preloader";
+import Preloader from "./Components/Preloader/Preloader";
 
 export default {
   name: "App",
