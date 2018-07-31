@@ -1,0 +1,175 @@
+@import "@/Styles/Components/Colors.scss";
+
+.home-header {
+  padding: 0 15px;
+  text-align: center;
+  position: relative;
+  color: $greyDark;
+}
+
+.home-header-title {
+  padding: 0 0 20px 0;
+}
+
+.home-header-description-link {
+  color: $greyMedium;
+  padding: 6px 16px;
+  border: 3px solid $greyLight;
+  transition: border 0.25s, color 0.25s;
+  outline: none;
+}
+
+.home-header-description-link:hover,
+.home-header-description-link:focus {
+  border-color: $red;
+  color: $red;
+} 
+ 
+//Contact
+
+.contact {
+  &-title {
+    padding: 100px 0;
+    color: $greyDark;
+  }
+  &-description {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+//Contact tile Big
+
+.contact-tile-big {
+  background-color: $red;
+  color: white;
+  width: 70%;
+  color: white;
+  .contact-tile-content {
+    padding: 150px 100px;
+  }
+  .contact-tile-title {
+    font-size: 34px;
+  }
+  .contact-tile-link {
+    background: $greyDark;
+    padding: 20px 65px 20px 30px;
+    margin: 40px 0 0 0;
+    display: block;
+    width: 350px;
+    position: relative;
+    font-size: 20px;
+    outline: none;
+    &:hover, &:focus {
+      svg {
+        transform: translate(15px, -50%);
+      }
+    }
+    svg {
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      fill: white;
+      transition: transform 0.35s;
+    }
+  } 
+}
+
+//Contact tile Small
+
+.contact-tile-small {
+  border: 3px solid $red;
+  border-right: none;
+  width: 30%;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  .contact-tile-title {
+    color: $red;
+  }
+}
+
+//Media
+
+@media screen and (max-width: 920px) {
+  .contact-tile-big .contact-tile-content {
+    padding: 100px 100px;
+  }
+  .contact-tile-small {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-tile-big {
+    width: 100%;
+    .contact-tile-title {
+      font-size: 28px;
+    }
+  }
+  .contact-tile-big .contact-tile-link {
+    font-size: 18px;
+  }
+  .contact-tile-big .contact-tile-content {
+    padding: 75px 50px;
+  }
+  .contact-tile-small {
+    border: 3px solid $red;
+    border-bottom: none;
+    width: 250px;
+    margin: 0 0 0 25px;
+  }
+  .contact-title {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contact-title {
+    padding: 50px 0;
+  }
+  .contact-tile-big .contact-tile-link {
+    width: 300px;
+    font-size: 16px;
+    svg {
+      display: none;
+    }
+  }
+  .contact-tile-big .contact-tile-content {
+    padding: 50px 25px;
+  }
+  .home-header-title {
+    font-size: 26px;
+  }
+  .home-header-description {
+    font-size: 18px;
+  }
+  .contact-tile-big .contact-tile-title {
+    font-size: 24px;
+  }
+  .contact-tile-small .contact-tile-text {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .contact-tile-big .contact-tile-link {
+    width: auto;
+    padding: 16px 15px;
+    text-align: center;
+  }
+  .contact-tile-small {
+    width: 100%;
+    margin: 15px 0;
+    border: 3px solid $red;
+  }
+}
