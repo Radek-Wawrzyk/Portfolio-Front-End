@@ -1,10 +1,13 @@
+@import "@/Styles/Components/Colors.scss";
+
 #page-not-found {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 70px);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 70px auto 0 auto;
+  overflow: hidden;
 }
 .page-not-found-header {
   color: $greyDark;
@@ -35,5 +38,9 @@
 @media screen and (max-width: 576px) {
   .page-not-found-header {
     font-size: 22px;
+  }
+  #page-not-found {
+    height: calc(100vh - 60px);
+    margin: 60px auto 0 auto;
   }
 }

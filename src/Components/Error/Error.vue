@@ -13,3 +13,5 @@
   }
 
 </script>
+
+<style lang="scss" src="./Error.scss" scoped />

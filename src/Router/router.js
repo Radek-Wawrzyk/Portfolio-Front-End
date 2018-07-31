@@ -4,7 +4,7 @@ import Home from '../Components/Home/Home.vue'
 import About from '../Components/About/About.vue'
 import Contact from '../Components/Contact/Contact.vue'
 import Portfolio from '../Components/Portfolio/Portfolio.vue'
-import Error from '../Components/Error.vue'
+import Error from '../Components/Error/Error.vue'
 import PortfolioProject from '../Components/Portfolio/Portfolio Project/PortfolioProject.vue'
 
 Vue.use(Router);
