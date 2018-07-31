@@ -77,7 +77,7 @@
 
 <script>
 
-import Footer from "@/Components/Footer";
+import Footer from "@/Components/Footer/Footer";
 import FormNotification from "./FormNotification";
 import axios from 'axios';
 
