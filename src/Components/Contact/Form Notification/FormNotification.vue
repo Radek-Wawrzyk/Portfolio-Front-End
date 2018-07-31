@@ -31,3 +31,5 @@ export default {
 }
 
 </script>
+
+<style lang="scss" src="./FormNotification.scss" scoped />

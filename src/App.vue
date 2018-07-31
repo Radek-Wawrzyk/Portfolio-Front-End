@@ -10,7 +10,7 @@
 
 <script>
 
-import Navigation from "./Components/Navigation";
+import Navigation from "./Components/Navigation/Navigation";
 import Preloader from "./Components/Preloader/Preloader";
 
 export default {

@@ -1,3 +1,5 @@
+@import "@/Styles/Components/Colors.scss";
+
 .success, .error {
   position: fixed;
   left: 50%;
@@ -17,7 +19,7 @@
   width: 40px;
   height: 40px;
   margin: 15px auto;
-  mask-image: url("./Img/success.svg");
+  mask-image: url("/../Img/success.svg");
   mask-repeat: no-repeat;
   mask-position: 50% 50%;
   background-color: #2ecc71;
@@ -34,7 +36,7 @@
   width: 40px;
   height: 40px;
   margin: 15px auto;
-  mask-image: url("./Img/error.svg");
+  mask-image: url("/../Img/error.svg");
   mask-repeat: no-repeat;
   mask-position: 50% 50%;
   background-color: $red;
