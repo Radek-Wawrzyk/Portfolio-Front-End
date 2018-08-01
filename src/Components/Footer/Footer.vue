@@ -55,8 +55,13 @@
       </li>
     </ul>
     <figure class="footer-logo">
-      <router-link to="/" aria-label="homepage" title="homepage">
-        <img class="footer-logo-img" src="https://blue-shark.co.uk/wp-content/uploads/2016/05/icon-web_dev.png" alt="footer logo" />
+      <router-link aria-label="Homepage" title="Homepage" to="/">
+        <figcaption class="desktop">
+          <span>Radek-</span>Wawrzyk
+        </figcaption>
+        <figcaption class="mobile">
+          <span>R</span>w
+        </figcaption>
       </router-link>
     </figure>
     <p class="footer-singature">© 2018 Radek Wawrzyk</p>
