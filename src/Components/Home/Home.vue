@@ -10,7 +10,27 @@
         </p>
       </header>
       <section class="projects">
-        <h2 class="projects-title"></h2>
+        <h2 class="projects-title">Featured projects</h2>
+        <ul class="projects-list">
+          <li class="project-item">
+            <router-link to="portfolio/sokolnicki-agency" aria-label="Sokolnicki agency">
+              <h3 class="project-item-title">Sokolnicki</h3>
+              <p class="project-item-description">Sokolnicki is a creative agency Public Relations</p>
+            </router-link>
+          </li>
+           <li class="project-item">
+            <router-link to="portfolio/bossbus" aria-label="Bossbus deliver company">
+              <h3 class="project-item-title">Bossbus</h3>
+              <p class="project-item-description">Bus deliver company</p>
+            </router-link>
+          </li>
+          <li class="project-item">
+            <router-link to="portfolio/bossbus" aria-label="Watch shop">
+              <h3 class="project-item-title">Watch Shop</h3>
+              <p class="project-item-description">Online shoping for watch lovers</p>
+            </router-link>
+          </li>
+        </ul>
       </section>
       <section class="contact">
         <h2 class="contact-title">Let's do Your new awesome Project!</h2>

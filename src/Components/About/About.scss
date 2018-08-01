@@ -151,11 +151,12 @@
   padding: 0 0 10px 25px;
   position: relative;
   font-size: 18px;
+  text-align: justify;
 }
 .about-skills-list-item p::before {
   position: absolute;
   left: 0;
-  top: 0;
+  top: -3px;
   content: "—";
   font-weight: bold;
   font-size: 20px;
