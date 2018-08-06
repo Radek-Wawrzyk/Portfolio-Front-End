@@ -1,5 +1,7 @@
 <template>
-  <div class="preloader" v-bind:aria-hidden="preloaderStatus"></div>
+  <transition name="fade">
+    <div class="preloader" v-if="preloaderStatus"></div>
+  </transition>
 </template>
 
 <script>

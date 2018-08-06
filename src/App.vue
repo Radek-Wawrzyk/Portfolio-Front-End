@@ -21,11 +21,11 @@ export default {
   },
   data() {
     return {
-      preloaderStatus: false
+      preloaderStatus: true
     }
   },
   mounted: function() {
-    this.preloaderStatus = true;
+    this.preloaderStatus = false;
   }
 }
 </script>
