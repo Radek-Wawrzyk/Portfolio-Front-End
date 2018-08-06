@@ -56,3 +56,12 @@
     transform: scale(0.8);
   }
 }
+
+.fade {
+  &-enter-active {
+    transition: all 0.5s ease-out;
+  }
+  &-enter, &-leave-to,  {
+    opacity: 0;
+  }
+}
