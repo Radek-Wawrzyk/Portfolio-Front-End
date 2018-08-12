@@ -160,8 +160,11 @@
     flex-wrap: wrap;
   }
   .footer-contact-item {
-    margin: 25px;
+    margin: 0 25px 25px 25px;
     text-align: center;
+    &:last-of-type {
+      margin: 0 25px;
+    }
   }
   .footer-header {
     padding: 0 0 25px 0;

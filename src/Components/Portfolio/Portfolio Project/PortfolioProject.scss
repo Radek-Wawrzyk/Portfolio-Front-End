@@ -199,8 +199,23 @@
   .project-header {
     height: 380px;
   }
+  .project-header-title {
+    font-size: 28px;
+  }
   .project-description {
     padding: 0;
+    &-text {
+      font-size: 16px;
+    }
+  }
+  .project-info-title {
+    font-size: 24px;
+  }
+  .technology-title {
+    font-size: 24px;
+  }
+  .technology-item {
+    font-size: 16px;
   }
 }
 
