@@ -2,7 +2,7 @@ export const data = [
   {
     id: 1,
     link: "vue-shop",
-    url: "http://matisiekpl.nazwa.pl:3003/shop",
+    url: "http://radek-wawrzyk.pl//shop/",
     title: "Vue Shop",
     header: "Shop based on the fastest tools and technologies - in progress",
     description: "The main advantage of this project is that, it is single page application and it works more fastest than typical application based on Wordpress or other shop engine. Everything is reactive and in all cases site doesn't need to be reloaded. We devoted great attention on UI/UX - especially smooth animations, page transitions, and others of awesome effects. Moreover shop has great security, so Yours transactions and personal data are encrypted and safety.",
