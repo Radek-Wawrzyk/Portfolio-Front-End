@@ -1,18 +1,27 @@
 @import "@/Styles/Components/Colors.scss";
 
+#home {
+  margin: 0 auto;
+}
 .hero {
   width: 100%;
   height: calc(100vh - 70px);
   margin: 70px 0 0 0;
   position: relative;
   color: $greyDark;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f0f1;
+  padding: 0 50px;
   &-description {
-    position: absolute;
-    left: 100px;
-    top: 50%;
-    transform: translateY(-50%);
+    width: 50%;
     &-title {
-      padding: 0 0 50px 0;
+      padding: 0 0 25px 0;
+    }
+    &-text {
+      margin: 0 0 25px 0;
     }
     &-link {
       color: $greyMedium;
@@ -24,6 +33,14 @@
         border-color: $red;
         color: $red;
       }
+    }
+  }
+  &-img {
+    width: 30%;
+    margin: 0 20% 0 0;
+    img {
+      height: auto;
+      width: 100%;
     }
   }
 }
@@ -469,6 +486,12 @@
 
 //Media
 
+@media screen and (max-width: 1200px) {
+  .hero-img {
+    margin: 0;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .about-author-content {
     padding: 50px 60px;
@@ -476,6 +499,17 @@
 }
 
 @media screen and (max-width: 768px) {
+  .hero {
+    justify-content: center;
+    padding: 0 15px;
+  }
+  .hero-description {
+    width: 100%;
+    text-align: center;
+  }
+  .hero-img {
+    width: 50%;
+  }
   .about {
     margin: 100px 0 0 0;
   }
@@ -519,6 +553,10 @@
 }
 
 @media screen and (max-width: 576px) {
+  .hero {
+    height: calc(100vh - 60px);
+    margin: 60px 0 0 0;
+  }
   .about {
     margin: 50px 0 0 0;
   }

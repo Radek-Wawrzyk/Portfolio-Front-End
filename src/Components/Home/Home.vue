@@ -6,9 +6,13 @@
           Radek Wawrzyk
         </h1>
         <p class="hero-description-text">
-          Tell me about your dream website and <router-link to="/Contact" class="hero-description-link" aria-label="hire me" title="hire me">hire me.</router-link>
+          Hire me and let's talk about your dream website or application!
         </p>
+        <router-link to="/Contact" class="hero-description-link" aria-label="hire me" title="hire me">Hire me</router-link>
       </div>
+      <figure class="hero-img">
+        <img src="../../Img/logo.jpg" >
+      </figure>
     </header>
     <main id="home">
       <section class="projects">
