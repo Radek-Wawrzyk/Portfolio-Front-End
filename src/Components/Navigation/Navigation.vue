@@ -1,6 +1,6 @@
 <template>
   <nav class="navigation">
-    <figure class="navigation-logo">
+    <figure class="navigation-logo" :class="{'active': actvieClass}">
       <router-link aria-label="Homepage" title="Homepage" to="/">
         <figcaption class="desktop">
           <span>Radek-</span>Wawrzyk
@@ -11,13 +11,13 @@
       </router-link>
     </figure>
     <button 
-      class="navigation-button" v-bind:class="{'active': actvieClass}"  v-bind:aria-expanded="actvieClass" 
+      class="navigation-button" :class="{'active': actvieClass}" :aria-expanded="actvieClass? 'true' : 'false'"
       aria-label="Open mobile menu" aria-controls="menu" v-on:click="toggleNav"
     >
       <p class="navigation-button-description">Menu</p>
       <span></span>
     </button>
-    <ul class="navigation-menu" v-bind:class="{'active': actvieClass}" id="menu">
+    <ul class="navigation-menu" :class="{'active': actvieClass}" id="menu">
       <li @click="toggleNav" ><router-link to='/'>Home</router-link></li>
       <li @click="toggleNav" ><router-link aria-label="Portfolio subpage" title="Portfolio subpage" to="/portfolio">Portfolio</router-link></li>
       <li @click="toggleNav" ><router-link aria-label="About subpage" title="About subpage" to="/about">About</router-link></li>
