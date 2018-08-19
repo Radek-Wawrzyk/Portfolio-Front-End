@@ -62,7 +62,7 @@
         </div>
         <div class="contact-form-item">
           <button class="contact-form-item-btn" @click="formValidate" type="submit">
-            Sumbit
+            Submit
             <svg enable-background="new 0 0 476.213 476.213" version="1.1" viewBox="0 0 476.213 476.213" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
               <polygon points="345.61 107.5 324.39 128.71 418.79 223.11 0 223.11 0 253.11 418.79 253.11 324.39 347.5 345.61 368.71 476.21 238.11"/>
             </svg>
