@@ -61,7 +61,8 @@
       fill: #f2f0f1;
     }
     .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
-      transition: 0.9s all;
+      transition: opacity 0.7s, transform 0.9s;
+      will-change: opacity, transform;
     }
   }
 }
