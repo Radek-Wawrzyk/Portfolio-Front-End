@@ -13,15 +13,16 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background-color: #f2f0f1;
   padding: 0 50px;
   &-description {
-    width: 50%;
+    width: 30%;
     &-title {
       padding: 0 0 25px 0;
+      font-size: 46px;
     }
     &-text {
       margin: 0 0 25px 0;
+      font-size: 24px;
     }
     &-link {
       color: $greyMedium;
@@ -35,16 +36,58 @@
       }
     }
   }
-  &-img {
-    width: 30%;
-    margin: 0 20% 0 0;
-    img {
-      height: auto;
-      width: 100%;
+}
+
+//Hero SVG
+
+.hero-img {
+  width: 70%;
+  svg {
+    transition: 0.25s all;
+    .cls-1 {
+      isolation:isolate;
+      
+      transition: 0.25s all;
+    }
+    .cls-2 {
+      opacity:0.15;
+      mix-blend-mode:multiply;
+     
+      transition: 0.25s all;
+    }
+    .cls-3 {
+      fill: $red;
+     
+      transition: 0.25s all;
+    }
+    .cls-4 {
+      fill: $greyDark;
+      
+      transition: 0.25s all;
+    }
+    .cls-5 {
+      fill: #f2f0f1;
+      transition: 0.25s all;
+    }
+    .st0{fill:#EB3719;}
+	.st1{fill:#333333;}
+	.st2{fill:#F2F0F1;}
+  }
+  &.active {
+    svg {
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        animation: fade 2s linear forwards;
+        opacity: 1;
+      }
+      .cls-3 {
+        opacity: 1 !important;
+        transform: translate(250px) !important;
+      }
     }
   }
 }
- 
+
+
 //Contact
 
 .contact {
@@ -487,8 +530,8 @@
 //Media
 
 @media screen and (max-width: 1200px) {
-  .hero-img {
-    margin: 0;
+  .hero-img, .hero-description {
+    width: 50%;
   }
 }
 
@@ -496,19 +539,26 @@
   .about-author-content {
     padding: 50px 60px;
   }
+  .hero-description {
+    width: 100%;
+    text-align: center;
+    &-title {
+      font-size: 32px;
+    }
+    &-text {
+      font-size: 20px;
+    }
+  }
+  .hero-img {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .hero {
     justify-content: center;
     padding: 0 15px;
-  }
-  .hero-description {
-    width: 100%;
-    text-align: center;
-  }
-  .hero-img {
-    width: 50%;
   }
   .about {
     margin: 100px 0 0 0;
@@ -578,5 +628,15 @@
   }
   .tile-description {
     font-size: 16px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1024px)  {
+  .hero {
+    display: block;
+    height: auto;
+  }
+  .hero-description {
+    padding: 50px 0;
   }
 }
