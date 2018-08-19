@@ -38,55 +38,103 @@
   }
 }
 
-//Hero SVG
+//Hero SVG Global styles
 
 .hero-img {
   width: 70%;
   svg {
-    transition: 0.25s all;
+    overflow: inherit;
     .cls-1 {
       isolation:isolate;
-      
-      transition: 0.25s all;
     }
     .cls-2 {
       opacity:0.15;
       mix-blend-mode:multiply;
-     
-      transition: 0.25s all;
     }
     .cls-3 {
       fill: $red;
-     
-      transition: 0.25s all;
     }
     .cls-4 {
       fill: $greyDark;
-      
-      transition: 0.25s all;
     }
     .cls-5 {
       fill: #f2f0f1;
-      transition: 0.25s all;
     }
-    .st0{fill:#EB3719;}
-	.st1{fill:#333333;}
-	.st2{fill:#F2F0F1;}
-  }
-  &.active {
-    svg {
-      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
-        animation: fade 2s linear forwards;
-        opacity: 1;
-      }
-      .cls-3 {
-        opacity: 1 !important;
-        transform: translate(250px) !important;
-      }
+    .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+      transition: 0.9s all;
     }
   }
 }
 
+//Left side - Before animation
+
+.hero-img [data-name="Warstwa 3"] {
+  .cls-2 {
+    opacity: 0;
+  }
+  #red-down {
+    transform: translate(-200px, 300px);
+    opacity: 0;
+  }
+  #red-up {
+    transform: translate(-200px, -200px);
+    opacity: 0;
+  }
+  #grey-medium {
+    transform: translate(-100px, 100px);
+    opacity: 0;
+  }
+  #white-right-down {
+    transform: translate(-150px, 300px);
+    opacity: 0;
+  }
+}
+
+//Left side - After animation
+
+.hero-img.active [data-name="Warstwa 3"] {
+  #red-down, #grey-medium, #white-right-down {
+    transform: translate(0);
+    opacity: 1;
+  }
+  #red-up {
+    transform: translate(-320px, -100px);
+    opacity: 1;
+  }
+}
+
+//Right side Before animation
+
+.hero-img [data-name="Warstwa 2"] {
+  .cls-2 {
+    opacity: 0;
+  }
+  .cls-3 {
+    transform: translate(200px, 0px);
+    opacity: 0;
+  }
+  #grey-up {
+    transform: translate(-200px, -200px);
+    opacity: 0;
+  }
+  #white-down {
+    opacity: 0;
+    transform: translate(-220px, 50px);
+  }
+}
+
+//Right side - After animation
+
+.hero-img.active [data-name="Warstwa 2"] {
+  .cls-3 {
+    transform: translate(0);
+    opacity: 1;
+  }
+  #white-down, #grey-up {
+    transform: translate(-320px, -100px);
+    opacity: 1;
+  }
+}
 
 //Contact
 
