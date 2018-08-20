@@ -68,7 +68,7 @@ export const data = [
     link: "forecast",
     url: "http://radek-wawrzyk.pl/forecast/",
     title: "Forecast",
-    header: "Simple application which shows you actual weather",
+    header: "Simple application which shows you current weather",
     description: "ForecastApp is the simple application based on popular javascript library - React.js. Website include few interesting functions. Forecast is in 2 languages - Polish and English. Moreover after typed localization, main screen changes to image, which is depend of state of weather. Application dowloands data asynchronic from Open Weather Map API. Site doesn't need page reload after action, because all application is reactive.",
     images: {
       main: "http://radek-wawrzyk.pl/assets/forecast.jpg",

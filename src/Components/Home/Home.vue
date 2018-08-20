@@ -71,7 +71,7 @@
           <div class="tile">
             <h4 class="tile-title">Projects</h4>
             <span class="tile-counter">24</span>
-            <p class="tile-description">I' ve done to this moment</p>
+            <p class="tile-description">I've done so far</p>
           </div>
           <div class="tile">
             <h4 class="tile-title">Experience</h4>
