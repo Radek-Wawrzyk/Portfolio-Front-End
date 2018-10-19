@@ -110,5 +110,21 @@ export const data = [
     technologies: [
       "HTML5/CSS3", "Javascript/ES6", "SCSS preprocessor", "Gulp task manager"
     ]
+  },
+  {
+    id: 8,
+    link: "researchably",
+    url: "https://researchably.com/",
+    title: "Researchably",
+    header: "Landing page for machine learning company",
+    description: "Researchalby is a company that develops machine learning software. In the assumptions the project had to be simple, modern and well-functioning on every device. Webiste is full responsive on each device and of course SEO friendly. The appearance of the website was discussed with the client who was CEO of company, and my graphic designer who created layout. ",
+    images: {
+      main: "http://radek-wawrzyk.pl/assets/researchably.jpg",
+      mockup: "http://radek-wawrzyk.pl/assets/mockups/researchably.jpg"
+    },
+    category: "Website",
+    technologies: [
+      "HTML5/CSS3", "Javascript/ES6", "jQuery"
+    ]
   }
 ];
