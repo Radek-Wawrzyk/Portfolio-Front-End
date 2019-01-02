@@ -8,7 +8,7 @@
         <p class="hero-description-text">
           Let's see what can I do for you!
         </p>
-        <router-link to="/Contact" class="hero-description-link" aria-label="hire me" title="hire me">Write to me</router-link>
+        <router-link to="/Contact" class="hero-description-link" aria-label="hire me" title="hire me">Contact me</router-link>
       </div>
       <figure class="hero-img" :class="{'active': animationStatus}">
         <svg viewBox="0 0 1618 921" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -71,7 +71,7 @@
           <div class="tile">
             <h4 class="tile-title">Projects</h4>
             <span class="tile-counter">24</span>
-            <p class="tile-description">I've done so far</p>
+            <p class="tile-description">so far</p>
           </div>
           <div class="tile">
             <h4 class="tile-title">Experience</h4>
@@ -93,7 +93,7 @@
         </div>
       </section>
       <section class="contact">
-        <h2 class="contact-title">Let's create Your new awesome Project!</h2>
+        <h2 class="contact-title">Let's create your awesome new project!</h2>
         <div class="contact-description">
           <div class="contact-tile contact-tile-small">
             <h3 class="contact-tile-title">Contact</h3>
@@ -103,7 +103,7 @@
             <div class="contact-tile-content">
               <h3 class="contact-tile-title">Do you have a <br/> project in mind?</h3>
               <router-link class="contact-tile-link" to="/contact" aria-label="Let's start project">
-                Let's start your project!
+                Contact
                 <svg enable-background="new 0 0 476.213 476.213" version="1.1" viewBox="0 0 476.213 476.213" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                   <polygon points="345.61 107.5 324.39 128.71 418.79 223.11 0 223.11 0 253.11 418.79 253.11 324.39 347.5 345.61 368.71 476.21 238.11"/>
                 </svg>

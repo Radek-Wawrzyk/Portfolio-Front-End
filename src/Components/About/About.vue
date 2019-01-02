@@ -9,7 +9,7 @@
         <div class="about-info-wrapper">
           <article class="about-info-tile">
             <h2 class="about-info-tile-title">
-              My name is Radosław and I'm Front End Developer.
+              My name is Radek, and I'm Front End Developer.
             </h2>
             <p class="about-info-tile-description">
               I like to learn new things. I've connected my passion to IT with web-development and I'm doing things 
@@ -73,12 +73,12 @@
       <section class="about-exp">
         <header class="about-exp-header">
           <h4 class="about-exp-header-title">
-            In past 2 years of my study & work <br/> I had a chance to learn from professional developers.
+            In the last 3 years of my study & work <br/> I have had the chance to learn from professional developers.
           </h4>
           <div class="about-exp-header-tile">
             <h5 class="about-exp-header-tile-title">Experience</h5>
             <p class="about-exp-header-tile-description">
-              <span>21</span>
+              <span>24</span>
               Projects I've done to this moment!
             </p>
           </div>
