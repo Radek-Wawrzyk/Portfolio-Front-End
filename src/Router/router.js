@@ -1,11 +1,11 @@
-import Vue from "vue"
-import Router from "vue-router"
-import Home from '../Views/Home/Home.vue'
-import About from '../Components/About/About.vue'
-import Contact from '../Views/Contact/Contact.vue'
-import Portfolio from '../Components/Portfolio/Portfolio.vue'
-import Error from '../Components/Error/Error.vue'
-import PortfolioProject from '../Components/Portfolio/Portfolio Project/PortfolioProject.vue'
+import Vue from "vue";
+import Router from "vue-router";
+import Home from '../Views/Home/Home.vue';
+import About from '../Components/About/About.vue';
+import Contact from '../Views/Contact/Contact.vue';
+import Portfolio from '../Views/Portfolio/Portfolio.vue';
+import Error from '../Components/Error/Error.vue';
+import PortfolioProject from '../Views/PortfolioProject/PortfolioProject.vue';
 
 Vue.use(Router);
 

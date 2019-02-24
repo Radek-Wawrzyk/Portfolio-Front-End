@@ -30,7 +30,7 @@
 
 <script>
 
-import PortfolioItem from "./Portfolio Item/PortfolioItem";
+import PortfolioItem from "@/Components/PortfolioItem/PortfolioItem";
 import Footer from "@/Components/Footer/Footer";
 import { mapState } from 'vuex';
 
