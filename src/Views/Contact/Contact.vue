@@ -35,40 +35,7 @@
           Feel free to contact me.
         </p>
       </header>
-      <form class="contact-form" method="POST">
-        <div class="contact-form-item">
-          <input type="text" name="name" v-model="data.name" placeholder="Name" aria-required="true" title="Your name" aria-label="Name"/>
-          <transition name="fade-form">
-            <p class="contact-form-item-alert" v-if="errors.name">{{errors.name}}</p>
-          </transition>
-        </div>
-        <div class="contact-form-item">
-          <input type="email" name="email" v-model="data.email" placeholder="Email adress" aria-required="true" title="Your adress email" aria-label="Email adress"/>
-          <transition name="fade-form">
-            <p class="contact-form-item-alert" v-if="errors.email">{{errors.email}}</p>
-          </transition>
-        </div>
-        <div class="contact-form-item">
-          <input type="text" name="subject" v-model="data.subject" placeholder="Subject" aria-required="true" title="Subject" aria-label="Subject"/>
-          <transition name="fade-form">
-            <p class="contact-form-item-alert" v-if="errors.subject">{{errors.subject}}</p>
-          </transition>
-        </div>
-        <div class="contact-form-item">
-          <textarea v-model="data.message" name="message" placeholder="Your message" aria-required="true" title="Message" aria-label="Your message"></textarea>
-          <transition name="fade-form">
-            <p class="contact-form-item-alert" v-if="errors.message">{{errors.message}}</p>
-          </transition>
-        </div>
-        <div class="contact-form-item">
-          <button class="contact-form-item-btn" @click="formValidate" type="submit">
-            Submit
-            <svg enable-background="new 0 0 476.213 476.213" version="1.1" viewBox="0 0 476.213 476.213" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="345.61 107.5 324.39 128.71 418.79 223.11 0 223.11 0 253.11 418.79 253.11 324.39 347.5 345.61 368.71 476.21 238.11"/>
-            </svg>
-          </button>
-        </div>
-      </form>
+      <ContactForm></ContactForm>
     </main>
     <FormNotification v-bind:sendStatus="sendStatus" ></FormNotification>
     <Footer></Footer>
@@ -78,12 +45,13 @@
 <script>
 
 import Footer from "@/Components/Footer/Footer";
-import FormNotification from "./Form Notification/FormNotification";
+import FormNotification from "@/Components/Form Notification/FormNotification";
+import ContactForm from '@/Components/ContactForm/ContactForm';
 import axios from 'axios';
 
 export default {
   name: "Contact",
-  components: { Footer, FormNotification },
+  components: { Footer, FormNotification, ContactForm },
   data() {
     return {
       sendStatus: {
