@@ -21,7 +21,7 @@
     <div class="contact-form-item">
       <textarea v-model="credentials.message" name="message" v-validate="'required'" placeholder="Your message" aria-required="true" title="Message" aria-label="Your message"></textarea>
       <transition name="fade-form">
-        <p class="contact-form-item-alert"v-if="errors.has('message')">{{errors.first('message')}}</p>
+        <p class="contact-form-item-alert" v-if="errors.has('message')">{{errors.first('message')}}</p>
       </transition>
     </div>
     <div class="contact-form-item">
