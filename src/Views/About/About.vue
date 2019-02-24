@@ -108,12 +108,12 @@
 
 <script>
 
-import Footer from "../Footer/Footer";
+import Footer from "@/Components/Footer/Footer";
 
 export default {
   name: "About",
   components: { Footer }
-}
+};
 
 </script>
 
