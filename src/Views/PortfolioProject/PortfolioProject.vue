@@ -43,18 +43,18 @@
 
 <script>
 
-import Footer from "../../Footer/Footer";
+import Footer from "@/Components/Footer/Footer";
 
 export default {
   name: "PortfolioItemPage",
-  components: {Footer},
+  components: { Footer },
   data() {
     return {
       routerTitle: this.$route.params.title,
       item: ""
     }
   },
-  created: function() {
+  created() {
     const portfolioItem = this.$store.state.portfolioItems.find(item => item.link === this.routerTitle);
     this.item = portfolioItem;
   }

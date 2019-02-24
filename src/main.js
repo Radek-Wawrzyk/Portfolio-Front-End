@@ -1,12 +1,18 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Router from "./Router/router";
-import Store from './Store/store'
+import Store from './Store/store';
 
-Vue.config.productionTip = false
+//Libraries
+import VeeValidate from 'vee-validate';
+
+//Set libraries
+Vue.use(VeeValidate);
+
+Vue.config.productionTip = false;
 
 new Vue({
   router: Router,
   store: Store,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');

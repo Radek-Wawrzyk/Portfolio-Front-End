@@ -87,11 +87,6 @@
   }
 }
 
-.navigation-menu li a.router-link-exact-active  {
-  color: $red;
-  border-color: $red;
-}
-
 // Navigation button 
 
 .navigation-button {
@@ -275,6 +270,34 @@
   .navigation-menu.active {
     visibility: visible;
     opacity: 1;
+  }
+  //List animation
+  .navigation-menu li a.router-link-exact-active  {
+    color: $red;
+    border-color: $red;
+  }
+  .navigation-menu li {
+    opacity: 0;
+    transition: opacity 0.25s, transform 0.25s;
+    transform: translate3d(0, -40px, 0);
+  }
+  .navigation-menu.active {
+    li {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      &:nth-child(1) {
+        transition-delay: 0.2s;
+      }
+      &:nth-child(2) {
+        transition-delay: 0.4s;
+      }
+      &:nth-child(3) {
+        transition-delay: 0.6s;
+      }
+      &:nth-child(4) {
+        transition-delay: 0.8s;
+      }
+    }
   }
 }
 

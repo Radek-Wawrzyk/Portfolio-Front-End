@@ -1,6 +1,6 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import { data } from "../Data/data"
+import Vue from 'vue';
+import Vuex from 'vuex';
+import { data } from "../Data/data";
 
 Vue.use(Vuex);
 
@@ -9,16 +9,13 @@ export default new Vuex.Store({
     portfolioItems: data,
     activeButton: "default"
   },
-  getters: {
-    portfolioItems: state => {
-      return state.portfolioItems;
-    },
-    activeButton: state => {
-      return state.activeButton;
+  actions: {
+    filtration: ({ commit }, category) => {
+      commit("FILTRATION", category);
     }
   },
   mutations: {
-    filtration: (state, category) => {
+    FILTRATION: (state, category) => {
       if (category !== "default") {
         state.portfolioItems = data.filter(item => item.category === category);
         state.activeButton = category;
@@ -28,9 +25,4 @@ export default new Vuex.Store({
       }
     }
   },
-  actions: {
-    filtration: (event, category) => {
-      event.commit("filtration", category);
-    }
-  }
 })

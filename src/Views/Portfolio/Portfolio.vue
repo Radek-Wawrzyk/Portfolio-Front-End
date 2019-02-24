@@ -3,7 +3,7 @@
     <main id="portfolio">
       <header class="portfolio-header">
         <h1 class="portfolio-header-title">
-          I make creative, interesting websites
+          I make creative, interesting projects
         </h1>
         <p class="portfolio-header-description">
           Check out my projects below
@@ -30,9 +30,9 @@
 
 <script>
 
-import PortfolioItem from "./Portfolio Item/PortfolioItem";
+import PortfolioItem from "@/Components/PortfolioItem/PortfolioItem";
 import Footer from "@/Components/Footer/Footer";
-import { mapGetters } from 'vuex';
+import { mapState } from 'vuex';
 
 export default {
   name: "Portfolio",
@@ -40,18 +40,13 @@ export default {
     PortfolioItem,
     Footer
   },
-  data() {
-    return {
-      activeButton: this.$store.state.activeButton
-    }
-  },
-  computed: {
-    ...mapGetters(["portfolioItems"])
-  },
+  computed: mapState({
+    portfolioItems: state => state.portfolioItems,
+    activeButton: state => state.activeButton
+  }),
   methods: {
     filter(event) {
       this.$store.dispatch("filtration", event.target.getAttribute("data-category"));
-      this.activeButton = event.target.getAttribute("data-category");
     }
   }
 }

@@ -70,12 +70,12 @@
         <div class="about-right">
           <div class="tile">
             <h4 class="tile-title">Projects</h4>
-            <span class="tile-counter">24</span>
+            <span class="tile-counter">40</span>
             <p class="tile-description">so far</p>
           </div>
           <div class="tile">
             <h4 class="tile-title">Experience</h4>
-            <span class="tile-counter">2+</span>
+            <span class="tile-counter">3+</span>
             <p class="tile-description">years of study & work</p>
           </div>
         </div>
@@ -119,24 +119,22 @@
 
 <script>
 
-import Footer from "../Footer/Footer"
+import Footer from "../../Components/Footer/Footer";
 
 export default {
   name: "Home",
   components: { 
     Footer
   },
-  data() {
-    return {
-      animationStatus: false
-    }
-  },
-  mounted: function () {
+  data: () => ({
+    animationStatus: false
+  }),
+  mounted() {
     setTimeout(() => {
       this.animationStatus = true;
     }, 500)
   }
-}
+};
 
 </script>
 

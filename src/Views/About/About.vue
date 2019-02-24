@@ -34,7 +34,7 @@
       <section class="about-skills">
         <header class="about-skills-header">
           <h2 class="about-skills-header-title">
-            I am writing quality code <br/> which makes your website well-written.
+            I am writing quality code <br/> which makes your website fast & optimized.
           </h2>
         </header>
         <article class="about-skills-info">
@@ -73,13 +73,13 @@
       <section class="about-exp">
         <header class="about-exp-header">
           <h4 class="about-exp-header-title">
-            In the last 3 years of my study & work <br/> I have had the chance to learn from professional developers.
+            In the last 3 years of my study & work <br/> I have had the chance to learn and work with professional developers.
           </h4>
           <div class="about-exp-header-tile">
             <h5 class="about-exp-header-tile-title">Experience</h5>
             <p class="about-exp-header-tile-description">
-              <span>24</span>
-              Projects I've done to this moment!
+              <span>40</span>
+              Projects I've done so far!
             </p>
           </div>
         </header>
@@ -108,12 +108,12 @@
 
 <script>
 
-import Footer from "../Footer/Footer";
+import Footer from "@/Components/Footer/Footer";
 
 export default {
   name: "About",
   components: { Footer }
-}
+};
 
 </script>
 
