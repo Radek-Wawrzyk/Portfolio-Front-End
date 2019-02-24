@@ -119,24 +119,22 @@
 
 <script>
 
-import Footer from "../Footer/Footer"
+import Footer from "../../Components/Footer/Footer";
 
 export default {
   name: "Home",
   components: { 
     Footer
   },
-  data() {
-    return {
-      animationStatus: false
-    }
-  },
-  mounted: function () {
+  data: () => ({
+    animationStatus: false
+  }),
+  mounted() {
     setTimeout(() => {
       this.animationStatus = true;
     }, 500)
   }
-}
+};
 
 </script>
 

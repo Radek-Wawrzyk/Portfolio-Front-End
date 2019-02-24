@@ -3,7 +3,7 @@
     <main id="portfolio">
       <header class="portfolio-header">
         <h1 class="portfolio-header-title">
-          I make creative, interesting websites
+          I make creative, interesting projects
         </h1>
         <p class="portfolio-header-description">
           Check out my projects below
