@@ -25,17 +25,15 @@
 
 export default {
   name: "Navigation",
-  data() {
-    return {
-      actvieClass: false
-    }
-  },
+  data: () => ({
+    actvieClass: false
+  }),
   methods: {
     toggleNav() {
       this.actvieClass =! this.actvieClass;
     }
   }
-}
+};
 
 </script>
 
