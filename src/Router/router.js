@@ -1,11 +1,5 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from '../Views/Home/Home.vue';
-import About from '../Views/About/About.vue';
-import Contact from '../Views/Contact/Contact.vue';
-import Portfolio from '../Views/Portfolio/Portfolio.vue';
-import Error from '../Views/Error/Error.vue';
-import PortfolioProject from '../Views/PortfolioProject/PortfolioProject.vue';
 
 Vue.use(Router);
 
@@ -18,32 +12,33 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: () => import('../Views/Home/Home.vue')
     },
     {
       path: '/about',
       name: 'about',
-      component: About
+      component: () => import('../Views/About/About.vue')
     },
     {
       path: '/contact',
       name: 'contact',
-      component: Contact
+      component: () => import('../Views/Contact/Contact.vue')
     },
     {
       path: '/portfolio',
       name: 'portfolio',
-      component: Portfolio,
+      component: () => import('../Views/Portfolio/Portfolio.vue')
     },
     {
       name: "portfolioProject",
       path: "/portfolio/:title",
-      component: PortfolioProject
+      props: true,
+      component: () => import('../Views/PortfolioProject/PortfolioProject.vue')
     },
     {
       path: '*',
       name: 'error',
-      component: Error
+      component: () => import('../Views/Error/Error.vue')
     }
   ]
 })
