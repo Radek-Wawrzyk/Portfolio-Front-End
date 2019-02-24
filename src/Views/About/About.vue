@@ -34,7 +34,7 @@
       <section class="about-skills">
         <header class="about-skills-header">
           <h2 class="about-skills-header-title">
-            I am writing quality code <br/> which makes your website well-written.
+            I am writing quality code <br/> which makes your website fast & optimized.
           </h2>
         </header>
         <article class="about-skills-info">

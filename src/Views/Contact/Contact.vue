@@ -13,7 +13,7 @@
         <div class="contact-info-tile">
           <h2 class="contact-info-tile-title">Radek Wawrzyk</h2>
           <p class="contact-info-tile-description">
-            Poland, Pomorskie, Gdynia<br/>
+            United Kingdom, Wales, Aberystwyth<br/>
             +48 516 649 611<br/>
             radek511@op.pl<br/>
           </p>
@@ -58,12 +58,6 @@ export default {
         error: false,
         success: false
       },
-      data: {
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      },
       errors: {
         name: "",
         email: "",
@@ -72,60 +66,6 @@ export default {
       }
     }
   },
-  methods: {
-    formValidate(event) {
-      event.preventDefault();
-      const checkEmail = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-      
-      //Main condition
-      if (checkEmail.test(this.data.email) && this.data.name.length >= 1 && this.data.subject.length >= 1  && this.data.message.length >= 1 ) {
-
-        JSON.stringify(this.data);
-
-        //Post HTTP Request
-        axios.post("sendMail.php", {
-            name: this.data.name,
-            email: this.data.email,
-            subject: this.data.subject,
-            message: this.data.message
-        })
-        .then(response => {
-
-          //Reset fields and states
-          for (let key in this.data) {
-            this.data[key] = "";
-          }
-          for (let key in this.errors) {
-            this.errors[key] = "";
-          }
-
-          //Alert notification
-          this.sendStatus.success = true;
-
-          setTimeout(e => {
-            this.sendStatus.success = false;
-          }, 3000);
-        })
-        .catch( error => {
-
-          console.log(error);
-
-          //Alert notification
-          this.sendStatus.error = true;
-
-          setTimeout( () => {
-            this.sendStatus.error= false;
-          }, 3000);
-        }) 
-      } 
-
-      //Fields validation
-      this.data.name.length >= 1 ? this.errors.name = "" : this.errors.name = "Please fill Your name";
-      this.data.subject.length >= 1 ? this.errors.subject = "" : this.errors.subject = "Please fill the subject";
-      this.data.message.length >= 1 ? this.errors.message = "" : this.errors.message = "Please fill the message";
-      checkEmail.test(this.data.email) ? this.errors.email = "" : this.errors.email = "Your email address is incorrect";
-    }
-  }
 }
 
 </script>
