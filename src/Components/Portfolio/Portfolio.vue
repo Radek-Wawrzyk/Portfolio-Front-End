@@ -32,7 +32,7 @@
 
 import PortfolioItem from "./Portfolio Item/PortfolioItem";
 import Footer from "@/Components/Footer/Footer";
-import { mapGetters } from 'vuex';
+import { mapState } from 'vuex';
 
 export default {
   name: "Portfolio",
@@ -40,18 +40,13 @@ export default {
     PortfolioItem,
     Footer
   },
-  data() {
-    return {
-      activeButton: this.$store.state.activeButton
-    }
-  },
-  computed: {
-    ...mapGetters(["portfolioItems"])
-  },
+  computed: mapState({
+    portfolioItems: state => state.portfolioItems,
+    activeButton: state => state.activeButton
+  }),
   methods: {
     filter(event) {
       this.$store.dispatch("filtration", event.target.getAttribute("data-category"));
-      this.activeButton = event.target.getAttribute("data-category");
     }
   }
 }
