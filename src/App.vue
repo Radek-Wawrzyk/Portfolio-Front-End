@@ -5,6 +5,7 @@
       <router-view></router-view>
     </transition>
     <Preloader v-bind:preloaderStatus="preloaderStatus"></Preloader>
+    <NotificationWrapper></NotificationWrapper>
   </div>
 </template>
 
@@ -12,12 +13,14 @@
 
 import Navigation from "./Components/Navigation/Navigation";
 import Preloader from "./Components/Preloader/Preloader";
+import NotificationWrapper from './Components/NotificationWrapper/NotificationWrapper';
 
 export default {
   name: "App",
   components: {
     Navigation,
-    Preloader
+    Preloader,
+    NotificationWrapper
   },
   data() {
     return {

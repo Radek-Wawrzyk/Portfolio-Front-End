@@ -37,7 +37,6 @@
       </header>
       <ContactForm></ContactForm>
     </main>
-    <FormNotification v-bind:sendStatus="sendStatus" ></FormNotification>
     <Footer></Footer>
   </div>
 </template>
@@ -45,26 +44,14 @@
 <script>
 
 import Footer from "@/Components/Footer/Footer";
-import FormNotification from "@/Components/Form Notification/FormNotification";
 import ContactForm from '@/Components/ContactForm/ContactForm';
 import axios from 'axios';
 
 export default {
   name: "Contact",
-  components: { Footer, FormNotification, ContactForm },
-  data() {
-    return {
-      sendStatus: {
-        error: false,
-        success: false
-      },
-      errors: {
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
-      }
-    }
+  components: { 
+    Footer,
+    ContactForm 
   },
 }
 

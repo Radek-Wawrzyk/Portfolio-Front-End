@@ -7,11 +7,18 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     portfolioItems: data,
-    activeButton: "default"
+    activeButton: "default",
+    notifications: []
   },
   actions: {
     filtration: ({ commit }, category) => {
       commit("FILTRATION", category);
+    },
+    addNotification: ({commit}, notification) => {
+      commit('ADD_NOTIFICATION', notification);
+    },
+    deleteNotification: ({commit}, notificationID) => {
+      commit('DELETE_NOTIFICATION', notificationID);
     }
   },
   mutations: {
@@ -23,6 +30,13 @@ export default new Vuex.Store({
         state.portfolioItems = data;
         state.activeButton = "default";
       }
+    },
+    ADD_NOTIFICATION: (state, notification) => {
+      state.notifications.push(notification);
+    },
+    DELETE_NOTIFICATION: (state, notificationID) => {
+      const newArray = state.notifications.filter(notification => notification.id !== notificationID);
+      state.notifications = newArray;
     }
   },
 })

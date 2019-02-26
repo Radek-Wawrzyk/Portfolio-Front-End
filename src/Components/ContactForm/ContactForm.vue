@@ -47,6 +47,7 @@ export default {
       subject: "",
       message: "",
     },
+    autoID: 0,
   }),
   methods: {
     async submitForm() {
@@ -66,8 +67,11 @@ export default {
         for (let key in this.data) {
           this.credentials[key] = "";
         }
+
+        this.$store.dispatch('addNotification', {type: 'success', message: 'You have sent the message!', id: this.autoID++});
       } catch(error) {
         console.log(error.message);
+        this.$store.dispatch('addNotification', {type: 'error', message: `Something went wrong...`, id: this.autoID++});
       }
     }
   }
