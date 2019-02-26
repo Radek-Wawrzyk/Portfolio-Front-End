@@ -64,7 +64,7 @@ export default {
           message: this.credentials.message
         });
 
-        for (let key in this.data) {
+        for (let key in this.credentials) {
           this.credentials[key] = "";
         }
 
