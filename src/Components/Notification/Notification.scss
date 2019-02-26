@@ -96,6 +96,16 @@
 
 @media screen and (max-width: 768px) {
   .notification {
-    max-width: 300px;
+    max-width: 310px;
+    margin: 0 auto 15px auto;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .notification {
+    padding: 15px 10px;
+    &-content {
+      padding: 0 10px 0 8px;
+    }
   }
 }

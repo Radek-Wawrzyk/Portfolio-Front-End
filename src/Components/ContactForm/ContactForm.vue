@@ -54,6 +54,12 @@ export default {
       const validate = await this.$validator.validateAll();
       validate === true ? this.sendRequest() : false;
     },
+    resetForm() {
+      for (let key in this.credentials) {
+        this.credentials[key] = "";
+      }
+      this.$validator.reset();
+    },
     async sendRequest() {
       JSON.stringify(this.credentials);
       try {
@@ -64,10 +70,7 @@ export default {
           message: this.credentials.message
         });
 
-        for (let key in this.credentials) {
-          this.credentials[key] = "";
-        }
-
+        this.resetForm();
         this.$store.dispatch('addNotification', {type: 'success', message: 'You have sent the message!', id: this.autoID++});
       } catch(error) {
         console.log(error.message);

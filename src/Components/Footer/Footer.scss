@@ -44,6 +44,7 @@
   height: 100%;
   outline-color: $red;
   padding: 5px;
+  text-align: center;
   &:focus .footer-contact-item-detail,
   &:hover .footer-contact-item-detail {
     color: $red;
@@ -185,5 +186,8 @@
   }
   .footer-logo a figcaption.mobile {
     display: block
+  }
+  .footer-contact {
+    padding: 0 0 25px 0;
   }
 }
