@@ -1,4 +1,4 @@
-@import "@/Styles/Components/Colors.scss";
+
 
 .project {
   width: 100%;
@@ -51,16 +51,16 @@
         bottom: -5px;
         width: 0;
         height: 3px;
-        background: $red;
+        background: $primary;
         transition: width 0.5s;
       }
       &:focus, &:hover {
-        color: $red;
+        color: $primary;
         &::before {
           width: 100px;
         }
         svg {
-          fill: $red;
+          fill: $primary;
         }
       }
       &:last-of-type {
@@ -87,7 +87,7 @@
   align-items: center;
   margin: 0 0 50px 0;
   &-title {
-    color: $greyDark;
+    color: $secondaryDark;
     padding: 0 50px;
   }
 }
@@ -98,7 +98,7 @@
   padding: 80px 100px;
   max-width: 500px;
   width: 100%;
-  background: $red;
+  background: $primary;
   color: #f9edd4;
   margin: -100px 0 0 0;
   &-title {
@@ -137,11 +137,11 @@
 
 .project-description {
   text-align: justify;
-  color: $greyDark;
+  color: $secondaryDark;
   padding: 0 200px;
   &-link {
     padding: 15px 0;
-    background: $red;
+    background: $primary;
     color: white;
     display: block;
     width: 150px;
@@ -150,7 +150,7 @@
     outline: none;
     text-align: center;
     &:focus, &:hover {
-      background: $greyDark;
+      background: $secondaryDark;
     }
   }
 }

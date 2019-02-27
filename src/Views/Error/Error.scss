@@ -8,26 +8,26 @@
   overflow: hidden;
 }
 .page-not-found-header {
-  color: $greyDark;
+  color: $secondaryDark;
   text-align: center;
 }
 .page-not-found-error {
   font-size: 40px;
   font-weight: 500;
-  color: $red;
+  color: $primary;
 }
 .page-not-found-link {
-  color: $greyMedium;
+  color: $secondaryMedium;
   padding: 6px 16px;
-  border: 3px solid $greyLight;
+  border: 3px solid $secondaryLight;
   transition: border 0.25s, color 0.25s;
   outline: none;
   margin: 10px 0 0 0;
 }
 .page-not-found-link:hover, 
 .page-not-found-link:focus {
-  border-color: $red;
-  color: $red;
+  border-color: $primary;
+  color: $primary;
   cursor: pointer;
 }
 

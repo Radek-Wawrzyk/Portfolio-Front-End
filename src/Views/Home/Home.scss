@@ -1,4 +1,4 @@
-@import "@/Styles/Components/Colors.scss";
+
 
 #home {
   margin: 0 auto;
@@ -8,7 +8,7 @@
   height: calc(100vh - 70px);
   margin: 70px 0 0 0;
   position: relative;
-  color: $greyDark;
+  color: $secondaryDark;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -25,14 +25,14 @@
       font-size: 24px;
     }
     &-link {
-      color: $greyMedium;
+      color: $secondaryMedium;
       padding: 6px 16px;
-      border: 3px solid $greyLight;
+      border: 3px solid $secondaryLight;
       transition: border 0.25s, color 0.25s;
       outline: none;
       &:focus, &:hover {
-        border-color: $red;
-        color: $red;
+        border-color: $primary;
+        color: $primary;
       }
     }
   }
@@ -52,10 +52,10 @@
       mix-blend-mode:multiply;
     }
     .cls-3 {
-      fill: $red;
+      fill: $primary;
     }
     .cls-4 {
-      fill: $greyDark;
+      fill: $secondaryDark;
     }
     .cls-5 {
       fill: #f2f0f1;
@@ -142,7 +142,7 @@
 .contact {
   &-title {
     padding: 100px 0;
-    color: $greyDark;
+    color: $secondaryDark;
   }
   &-description {
     display: flex;
@@ -156,7 +156,7 @@
 //Contact tile Big
 
 .contact-tile-big {
-  background-color: $red;
+  background-color: $primary;
   color: white;
   width: 70%;
   color: white;
@@ -167,7 +167,7 @@
     font-size: 34px;
   }
   .contact-tile-link {
-    background: $greyDark;
+    background: $secondaryDark;
     padding: 20px 65px 20px 30px;
     margin: 40px 0 0 0;
     display: block;
@@ -196,7 +196,7 @@
 //Contact tile Small
 
 .contact-tile-small {
-  border: 3px solid $red;
+  border: 3px solid $primary;
   border-right: none;
   width: 30%;
   height: 260px;
@@ -205,7 +205,7 @@
   justify-content: space-between;
   padding: 20px;
   .contact-tile-title {
-    color: $red;
+    color: $primary;
   }
 }
 
@@ -234,7 +234,7 @@
     padding: 75px 50px;
   }
   .contact-tile-small {
-    border: 3px solid $red;
+    border: 3px solid $primary;
     border-bottom: none;
     width: 250px;
     margin: 0 0 0 25px;
@@ -283,7 +283,7 @@
   .contact-tile-small {
     width: 100%;
     margin: 15px 0;
-    border: 3px solid $red;
+    border: 3px solid $primary;
   }
 }
 
@@ -291,7 +291,7 @@
 
 .projects-title {
   padding: 100px 0;
-  color: $greyDark;
+  color: $secondaryDark;
   text-align: right;
 }
 .projects-list {
@@ -311,7 +311,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: $greyDark;
+    background: $secondaryDark;
     opacity: 0.6;
   }
   a {
@@ -490,7 +490,7 @@
 .tile {
   padding: 0 30px;
   border: 3px solid #e0dedb;
-  color: $greyMedium;
+  color: $secondaryMedium;
   &-title {
     padding: 20px 0;
   }
@@ -504,7 +504,7 @@
     padding: 0 0 20px 0;
   }
   &-red {
-    border-color: $red;
+    border-color: $primary;
     height: 267px;
     width: 320px;
     z-index: 1;
@@ -514,10 +514,10 @@
     border-bottom: none;
     margin: 0 -3px 0 0;
     .tile-title {
-      color: $red;
+      color: $primary;
     }
     .tile-description {
-      color: $greyDark;
+      color: $secondaryDark;
       text-align: left;
     }
   }
@@ -534,7 +534,7 @@
     position: relative;
     color: white;
     width: calc(60% + 3px);
-    background: $red;
+    background: $primary;
     padding: 90px 80px;
     z-index: 1;
   }
@@ -621,13 +621,13 @@
     }
     .tile-red {
       margin: 0 auto -3px auto;
-      border-bottom: 3px solid $red;
+      border-bottom: 3px solid $primary;
     }
   }
   .about-right {
     width: 100%;
     .tile:nth-last-child(1) {
-      border-left: 3px solid $greyLight;
+      border-left: 3px solid $secondaryLight;
     }
   }
   .tile {

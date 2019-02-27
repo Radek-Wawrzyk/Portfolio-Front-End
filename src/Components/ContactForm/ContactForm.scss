@@ -12,10 +12,10 @@
   justify-content: flex-end;
 }
 input,textarea {
-  border: 3px solid $greyLight;
+  border: 3px solid $secondaryLight;
   width: 100%;
   padding: 13px;
-  color: $greyDark;
+  color: $secondaryDark;
   font-size: 16px;
   outline: none;
   transition: border 0.3s, color 0.3s;
@@ -25,13 +25,13 @@ textarea {
   min-height: 200px;
 }
 input:focus, textarea:focus {
-  border-color: $greyDark;
+  border-color: $secondaryDark;
 }
 input::-webkit-input-placeholder,
 input::-moz-placeholder,
 input:-ms-input-placeholder,
 input:-moz-placeholder {
-  color: $greyLight;
+  color: $secondaryLight;
 } 
 
 //Contact Validation
@@ -40,7 +40,7 @@ input:-moz-placeholder {
   position: absolute;
   left: 5px;
   bottom: -25px;
-  color: $red;
+  color: $primary;
   font-size: 15px;
 } 
 
@@ -48,7 +48,7 @@ input:-moz-placeholder {
 
 .contact-form-item-btn {
   position: relative;
-  background: $red;
+  background: $primary;
   border: 0;
   padding: 15px 150px 15px 25px;
   color: $white;
@@ -64,13 +64,13 @@ input:-moz-placeholder {
     transform: translate3d(-60%, -50%, 0);
     width: 30px;
     height: 30px;
-    fill: $greyLight;
+    fill: $secondaryLight;
     transition: fill 0.35s;
     opacity: 0;
     transition: transform 0.35s, opacity 0.35s;
   }
   &:hover, &:focus {
-    background: $greyDark;
+    background: $secondaryDark;
     cursor: pointer;
   }
   &:hover svg, &:focus svg {

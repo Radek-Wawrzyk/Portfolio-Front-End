@@ -79,16 +79,16 @@
 }
 .notification-error {
   .notification-icon {
-    background: $red;
+    background: $primary;
   }
   .notification-delete {
-    color: lighten($red, 10%);
+    color: lighten($primary, 10%);
   }
   .notification-content-title {
-    color: lighten($red, 10%);
+    color: lighten($primary, 10%);
   }
   .notification-content-message {
-    color: darken($red, 50%);
+    color: darken($primary, 50%);
   }
 }
 

@@ -1,8 +1,6 @@
-@import "@/Styles/Components/Colors.scss";
-
 .about-header {
   padding: 0 0 100px 0;
-  color: $greyDark;
+  color: $secondaryDark;
   width: 100%;
   text-align: left;
 }
@@ -43,7 +41,7 @@
   font-size: 28px;
 }
 .about-info-wrapper:nth-child(1) .about-info-tile {
-  background: $red;
+  background: $primary;
   color: $white;
   padding: 170px 90px;
 }
@@ -59,16 +57,16 @@
   margin: -100px 0 0 0;
 }
 .about-info-wrapper:nth-child(2) .about-info-tile:nth-child(2) {
-  border: 3px solid $greyLight;
+  border: 3px solid $secondaryLight;
   text-align: center;
-  color: $greyMedium;
+  color: $secondaryMedium;
   height: 300px;
   transition: border 0.25s, color 0.25s;
   padding: 0;
 }
 .about-info-wrapper:nth-child(2) .about-info-tile:nth-child(2):hover {
-  border-color: $red;
-  color: $red;
+  border-color: $primary;
+  color: $primary;
 }
 .about-info-wrapper:nth-child(2) .about-info-tile:nth-child(2) .about-info-tile-title {
   padding: 20px;
@@ -85,7 +83,7 @@
   text-align: right;
 }
 .about-skills-header-title {
-  color: $greyDark;
+  color: $secondaryDark;
 }
 .about-skills-info {
   background: rgb(37, 37, 37);
@@ -130,7 +128,7 @@
   position: relative;
 }
 .about-skills-list-item:nth-child(1) {
-  background: $red;
+  background: $primary;
   color: $white;
   margin: -120px 0 0 0;
 }
@@ -141,8 +139,8 @@
 }
 .about-skills-list-item:nth-child(3) {
   background: $white;
-  color: $greyMedium;
-  border: 3px solid $greyLight;
+  color: $secondaryMedium;
+  border: 3px solid $secondaryLight;
 }
 .about-skills-list-item-title {
   padding: 0 0 15px 0;
@@ -176,13 +174,13 @@
   align-items: center;
 }
 .about-exp-header-title {
-  color: $greyDark;
+  color: $secondaryDark;
   padding: 0 50px;
 }
 .about-exp-header-tile  {
   width: 400px;
-  border: 3px solid $greyLight;
-  color: $greyMedium;
+  border: 3px solid $secondaryLight;
+  color: $secondaryMedium;
 }
 .about-exp-header-tile-title {
   padding: 20px 25px;
@@ -202,7 +200,7 @@
 //About info tile 
 
 .about-exp-info {
-  background: $red;
+  background: $primary;
   color: $white;
   padding: 150px;
 }

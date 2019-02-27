@@ -11,7 +11,7 @@
   text-align: center;
   &-title {
     &-error {
-      color: $red;;
+      color: $primary;;
     }
     &-success {
       color: #24bd85;
@@ -24,15 +24,15 @@
   }
   &-link {
     display: inline-block;
-    color: $greyMedium;
+    color: $secondaryMedium;
     padding: 6px 16px;
-    border: 3px solid $greyLight;
+    border: 3px solid $secondaryLight;
     transition: border 0.25s, color 0.25s;
     outline: none;
     margin: 10px 0 0 0;
     &:hover, &:focus {
-      border-color: $red;
-      color: $red;
+      border-color: $primary;
+      color: $primary;
       cursor: pointer;
     }
   }

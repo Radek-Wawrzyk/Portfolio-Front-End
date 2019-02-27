@@ -22,12 +22,10 @@ export default {
     Preloader,
     NotificationWrapper
   },
-  data() {
-    return {
-      preloaderStatus: true
-    }
-  },
-  mounted: function() {
+  data: () => ({
+    preloaderStatus: true
+  }),
+  mounted() {
     this.preloaderStatus = false;
   }
 }

@@ -1,5 +1,3 @@
-@import "@/Styles/Components/Colors.scss";
-
 .preloader {
   width: 100%;
   height: 100vh;
@@ -24,13 +22,13 @@
   margin: 100px 0 0 0;
   animation: fading 1.5s linear infinite;
   font-size: 32px;
-  color: $greyDark;
+  color: $secondaryDark;
 }
 .preloader::after {
   content: '';
   transform-origin: center;
-  border: 16px solid $greyLight;
-  border-top: 16px solid $red;
+  border: 16px solid $secondaryLight;
+  border-top: 16px solid $primary;
   border-radius: 50%;
   width: 100px;
   height: 100px;

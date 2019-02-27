@@ -1,8 +1,8 @@
-@import "@/Styles/Components/Colors.scss";
+
 
 .portfolio-header {
   padding: 0 0 100px 0;
-  color: $greyDark;
+  color: $secondaryDark;
   width: 100%;
   text-align: left;
 }
@@ -28,14 +28,14 @@
   font-size: 15px;
   font-weight: 500;
   background: none;
-  border: 3px solid $grey;
+  border: 3px solid $secondary;
   padding: 8px 16px;
-  color: $greyMedium;
+  color: $secondaryMedium;
   transition: all 0.25s;
   outline: none;
   &.active {
-    border-color: $red;
-    color: $red;
+    border-color: $primary;
+    color: $primary;
   }
 }
 .portfolio-filter-item:nth-child(1) .portfolio-filter-item-button {
@@ -43,8 +43,8 @@
 }
 .portfolio-filter-item-button:hover, .portfolio-filter-item-button:focus {
   cursor: pointer;
-  border-color: $red;
-  color: $red;
+  border-color: $primary;
+  color: $primary;
 }
 
 //portfolio item list
