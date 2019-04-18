@@ -31,7 +31,7 @@ export default new Router({
     },
     {
       name: "portfolioProject",
-      path: "/portfolio/:title",
+      path: "/portfolio/:slug",
       props: true,
       component: () => import('../Views/PortfolioProject/PortfolioProject.vue')
     },

@@ -1,11 +1,11 @@
 <template>
   <div class="project">
-    <header class="project-header" :style="{backgroundImage: 'url('+ item.images.main +')'}">
+    <header class="project-header" :style="{backgroundImage: 'url('+ project.mainImg +')'}">
       <div class="project-header-description" >
-        <h1 class="project-header-title">{{item.title}}</h1>
-        <p class="project-header-subtitle">Category - {{item.category}}</p>
-        <p class="project-header-subtitle">
-          <a :href="item.url" :aria-label="item.title">
+        <h1 class="project-header-title">{{project.title}}</h1>
+        <p class="project-header-subtitle">Category - {{project.category}}</p>
+        <p class="project-header-subtitle" v-if="project.live">
+          <a :href="project.live" :aria-label="project.title">
             Visit live
             <svg enable-background="new 0 0 54.971 54.971" version="1.1" viewBox="0 0 54.971 54.971" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
             <path d="m51.173 3.801c-5.068-5.068-13.315-5.066-18.384 0l-9.192 9.192c-0.781 0.781-0.781 2.047 0 2.828s2.047 0.781 2.828 0l9.192-9.192c1.691-1.69 3.951-2.622 6.363-2.622 2.413 0 4.673 0.932 6.364 2.623s2.623 3.951 2.623 6.364c0 2.412-0.932 4.672-2.623 6.363l-12.019 12.022c-3.51 3.508-9.219 3.508-12.729 0-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.048 0 2.828c2.534 2.534 5.863 3.801 9.192 3.801s6.658-1.267 9.192-3.801l12.021-12.021c2.447-2.446 3.795-5.711 3.795-9.192 0-3.482-1.348-6.746-3.795-9.193z"/>
@@ -17,22 +17,22 @@
     </header>
     <main id="project">
       <section class="project-info">
-        <h2 class="project-info-title">{{item.header}}</h2>
+        <h2 class="project-info-title">{{project.header}}</h2>
         <div class="technology">
           <h2 class="technology-title">Technology</h2>
           <ul class="technology-list">
-            <li class="technology-item" v-for="(technology, index) in item.technologies" :key="index">
+            <li class="technology-project" v-for="(technology, index) in project.technologies" :key="index">
               {{technology}}
             </li>
           </ul>
         </div>
       </section>
       <figure class="project-mockup">
-        <img :src="item.images.mockup" :alt="item.title">
+        <img :src="project.mockup" :alt="project.title">
       </figure>
       <article class="project-description">
-        <p class="project-description-text">{{item.description}}</p>
-        <a class="project-description-link" :href="item.url" :aria-label="item.title">
+        <p class="project-description-text">{{project.description}}</p>
+        <a class="project-description-link" :href="project.live" :aria-label="project.title">
           Visit live
         </a>
       </article>
@@ -48,15 +48,10 @@ import Footer from "@/Components/Footer/Footer";
 export default {
   name: "PortfolioItemPage",
   components: { Footer },
-  data() {
-    return {
-      routerTitle: this.$route.params.title,
-      item: ""
+  computed: {
+    project() {
+      return this.$store.getters.loadProject(this.$route.params.slug);
     }
-  },
-  created() {
-    const portfolioItem = this.$store.state.portfolioItems.find(item => item.link === this.routerTitle);
-    this.item = portfolioItem;
   }
 }
 

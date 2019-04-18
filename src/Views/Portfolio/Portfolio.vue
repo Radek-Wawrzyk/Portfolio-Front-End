@@ -21,7 +21,7 @@
         </li>
       </ul>
       <transition-group class="portfolio-list" tag="ul" name="moving-fade">
-        <PortfolioItem v-bind:portfolioItem="portfolioItem" v-for="portfolioItem in portfolioItems" :key="portfolioItem.id"></PortfolioItem>
+        <PortfolioItem :portfolioItem="portfolioItem" v-for="portfolioItem in portfolioItems" :key="portfolioItem.id"></PortfolioItem>
       </transition-group>
     </main>
     <Footer></Footer>
@@ -33,6 +33,7 @@
 import PortfolioItem from "@/Components/PortfolioItem/PortfolioItem";
 import Footer from "@/Components/Footer/Footer";
 import { mapState } from 'vuex';
+import { client } from '@/API/';
 
 export default {
   name: "Portfolio",
