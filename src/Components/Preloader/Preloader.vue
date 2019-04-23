@@ -1,6 +1,8 @@
 <template>
   <transition name="fade">
-    <div class="preloader" v-if="preloaderStatus"></div>
+    <div class="preloader" v-if="preloaderStatus">
+      <p class="preloader-text">Loading <span>...</span></p>
+    </div>
   </transition>
 </template>
 
