@@ -29,6 +29,7 @@
   transform: scale(0,1);
   transform-origin: left top;
   transition: transform 0.5s;
+  will-change: transform;
 }
 .portfolio-list-item:hover::before {
   transform: scale(1,1);
@@ -42,6 +43,7 @@
   transition: background 0.25s;
   z-index: 10;
   text-align: center;
+  will-change: background;
 }
 .portfolio-list-item-text:nth-child(1) {
   position: absolute;
@@ -56,6 +58,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  will-change: transform opacity;
 }
 .portfolio-list-item-text:nth-child(2) {
   position: absolute;
@@ -70,6 +73,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  will-change: transform opacity;
 }
 
 //Media 

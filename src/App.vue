@@ -1,10 +1,10 @@
 <template>
   <div class="page">
     <Navigation></Navigation>
-    <transition name="fade-up" appear>
+    <transition name="fade-page" mode="out-in">
       <router-view></router-view>
     </transition>
-    <Preloader v-bind:preloaderStatus="preloaderStatus"></Preloader>
+    <Preloader :preloaderStatus="preloaderStatus"></Preloader>
     <NotificationWrapper></NotificationWrapper>
   </div>
 </template>
@@ -31,8 +31,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-
-@import "./Styles/Main";
-
-</style>
+<style lang="scss" src="./Styles/Main.scss" />
