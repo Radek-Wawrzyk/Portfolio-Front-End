@@ -11,17 +11,17 @@
       </header>
       <ul class="portfolio-filter">
         <li class="portfolio-filter-item">
-          <button class="portfolio-filter-item-button" :class="[ activeButton === 'default' ? 'active' : '']" @click="filter" data-category="default">All</button>
+          <button class="portfolio-filter-item-button" :class="[ activeCategory === 'default' ? 'active' : '']" @click="filter" data-category="default">All</button>
         </li>
         <li class="portfolio-filter-item">
-          <button class="portfolio-filter-item-button" :class="[ activeButton === 'Website' ? 'active' : '']" @click="filter" data-category="Website" >Website</button>
+          <button class="portfolio-filter-item-button" :class="[ activeCategory === 'Website' ? 'active' : '']" @click="filter" data-category="Website" >Website</button>
         </li>
         <li class="portfolio-filter-item">
-          <button class="portfolio-filter-item-button" :class="[ activeButton === 'Application' ? 'active' : '']" @click="filter" data-category="Application">Application</button>
+          <button class="portfolio-filter-item-button" :class="[ activeCategory === 'Application' ? 'active' : '']" @click="filter" data-category="Application">Application</button>
         </li>
       </ul>
       <transition-group class="portfolio-list" tag="ul" name="moving-fade">
-        <PortfolioItem :portfolioItem="portfolioItem" v-for="portfolioItem in portfolioItems" :key="portfolioItem.id"></PortfolioItem>
+        <PortfolioItem :project="project" v-for="project in projects" :key="project.id"></PortfolioItem>
       </transition-group>
     </main>
     <Footer></Footer>
@@ -33,7 +33,6 @@
 import PortfolioItem from "@/Components/PortfolioItem/PortfolioItem";
 import Footer from "@/Components/Footer/Footer";
 import { mapState } from 'vuex';
-import { client } from '@/API/';
 
 export default {
   name: "Portfolio",
@@ -41,13 +40,20 @@ export default {
     PortfolioItem,
     Footer
   },
-  computed: mapState({
-    portfolioItems: state => state.portfolioItems,
-    activeButton: state => state.activeButton
+  data: () => ({
+    activeCategory: 'default'
   }),
+  computed: {
+    ...mapState({
+      portfolioItems: state => state.portfolioItems,
+    }),
+    projects() {
+      return this.activeCategory !== 'default' ? this.portfolioItems.filter(item => item.category === this.activeCategory) : this.portfolioItems;
+    }
+  },
   methods: {
     filter(event) {
-      this.$store.dispatch("filtration", event.target.getAttribute("data-category"));
+      this.activeCategory = event.target.getAttribute('data-category');
     }
   }
 }

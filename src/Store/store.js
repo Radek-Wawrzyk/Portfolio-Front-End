@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { data } from "../Data/data";
 import { client } from "@/API/";
 
 Vue.use(Vuex);
@@ -8,7 +7,6 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     portfolioItems: [],
-    activeButton: "default",
     notifications: []
   },
   getters: {
@@ -48,9 +46,6 @@ export default new Vuex.Store({
         });
       }
     },
-    filtration: ({ commit }, category) => {
-      commit("FILTRATION", category);
-    },
     addNotification: ({ commit }, notification) => {
       commit('ADD_NOTIFICATION', notification);
     },
@@ -61,15 +56,7 @@ export default new Vuex.Store({
   mutations: {
     SET_PROJECTS: (state, projects) => {
       state.portfolioItems = projects;
-    },
-    FILTRATION: (state, category) => {
-      if (category !== "default") {
-        state.portfolioItems = data.filter(item => item.category === category);
-        state.activeButton = category;
-      } else {
-        state.portfolioItems = data;
-        state.activeButton = "default";
-      }
+      state.portfolioItemsBackup = projects;
     },
     ADD_NOTIFICATION: (state, notification) => {
       state.notifications.push(notification);

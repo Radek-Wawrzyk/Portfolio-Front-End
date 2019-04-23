@@ -1,11 +1,11 @@
 <template>
   <li class="portfolio-list-item">
-    <router-link :to="`portfolio/${portfolioItem.slug}`">
+    <router-link :to="`portfolio/${project.slug}`" :aria-label="project.title" :title="project.title">
       <article class="portfolio-list-item-description">
-        <p class="portfolio-list-item-text">{{portfolioItem.title}}</p>
-        <p class="portfolio-list-item-text">{{portfolioItem.header}}</p>
+        <p class="portfolio-list-item-text">{{project.title}}</p>
+        <p class="portfolio-list-item-text">{{project.header}}</p>
       </article>
-      <img class="portfolio-list-item-img" :src="portfolioItem.mainImg" :alt="portfolioItem.title" />
+      <img class="portfolio-list-item-img" :src="project.mainImg" :alt="project.title" />
     </router-link>
   </li>
 </template>
@@ -15,7 +15,7 @@
 export default {
   name: "PortfolioItem",
   props: {
-    portfolioItem: {
+    project: {
       type: Object,
       required: true
     }
