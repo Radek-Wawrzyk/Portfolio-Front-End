@@ -6,9 +6,9 @@
           Radek Wawrzyk
         </h1>
         <p class="hero-description-text">
-          Let's see what can I do for you!
+          Front End Developer
         </p>
-        <router-link to="/Contact" class="hero-description-link" aria-label="hire me" title="hire me">Contact me</router-link>
+        <router-link to="/Contact" class="hero-description-link" aria-label="hire me" title="hire me">Hire me</router-link>
       </div>
       <figure class="hero-img" :class="{'active': animationStatus}">
         <svg viewBox="0 0 1618 921" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
