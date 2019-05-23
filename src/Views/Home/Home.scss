@@ -26,6 +26,7 @@
       font-size: 24px;
     }
     &-link {
+			display: inline-block;
       color: $secondaryMedium;
       padding: 6px 16px;
       border: 3px solid $secondaryLight;
@@ -63,7 +64,7 @@
     }
     .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
       transition: opacity 0.7s, transform 0.9s;
-      will-change: opacity, transform;
+      will-change: transform;
     }
   }
 }
@@ -75,19 +76,19 @@
     opacity: 0;
   }
   #red-down {
-    transform: translate(-200px, 300px);
+    transform: translate3d(-200px, 300px, 0);
     opacity: 0;
   }
   #red-up {
-    transform: translate(-200px, -200px);
+    transform: translate3d(-200px, -200px, 0);
     opacity: 0;
   }
   #grey-medium {
-    transform: translate(-100px, 100px);
+    transform: translate3d(-100px, 100px, 0);
     opacity: 0;
   }
   #white-right-down {
-    transform: translate(-150px, 300px);
+    transform: translate3d(-150px, 300px, 0);
     opacity: 0;
   }
 }
@@ -96,11 +97,11 @@
 
 .hero-img.active [data-name="Warstwa 3"] {
   #red-down, #grey-medium, #white-right-down {
-    transform: translate(0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
   #red-up {
-    transform: translate(-320px, -100px);
+    transform: translate3d(-320px, -100px, 0);
     opacity: 1;
   }
 }
@@ -112,16 +113,16 @@
     opacity: 0;
   }
   .cls-3 {
-    transform: translate(200px, 0px);
+    transform: translate3d(200px, 0px, 0);
     opacity: 0;
   }
   #grey-up {
-    transform: translate(-200px, -200px);
+    transform: translate3d(-200px, -200px, 0);
     opacity: 0;
   }
   #white-down {
     opacity: 0;
-    transform: translate(-220px, 50px);
+    transform: translate3d(-220px, 50px, 0);
   }
 }
 
@@ -129,11 +130,11 @@
 
 .hero-img.active [data-name="Warstwa 2"] {
   .cls-3 {
-    transform: translate(0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
   #white-down, #grey-up {
-    transform: translate(-320px, -100px);
+    transform: translate3d(-320px, -100px, 0);
     opacity: 1;
   }
 }
@@ -158,9 +159,8 @@
 
 .contact-tile-big {
   background-color: $primary;
-  color: white;
+  color: $white;
   width: 70%;
-  color: white;
   .contact-tile-content {
     padding: 150px 100px;
   }
@@ -325,7 +325,7 @@
     transition: background 0.45s;
     overflow: hidden;
     .project-item-title {
-      color: white;
+      color: $white;
       font-size: 60px;
       position: absolute;
       left: 100px;
@@ -334,7 +334,7 @@
       transition: transform 0.45s, opacity 0.45s;
     }
     .project-item-description {
-      color: white;
+      color: $white;
       font-size: 30px;
       position: absolute;
       left: 100px;
@@ -533,7 +533,7 @@
   flex-wrap: wrap;
   &-content {
     position: relative;
-    color: white;
+    color: $white;
     width: calc(60% + 3px);
     background: $primary;
     padding: 90px 80px;

@@ -82,7 +82,14 @@
         <div class="about-author">
           <div class="about-author-content">
             <h4 class="content-title">Uncompromising approach to each client causes 100% satisfaction.</h4>
-            <p class="content-description">I always try to meet the challenge of client. You can check my offer.</p>
+            <p class="content-description">
+							I always try to meet the challenge of client, in cooperation with graphic designers or other developers I provide the best 
+							solutions for any problem. I choose the tools & technologies for the problem or requirements, not the other way around.
+							I put emphasis on creating dedicated software.
+						
+							<br/><br/>
+							You can check my offer!
+						</p>
             <router-link class="content-link" to="/about" aria-label="About Me" title="About me">
               <svg enable-background="new 0 0 476.213 476.213" version="1.1" viewBox="0 0 476.213 476.213" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                 <polygon points="345.61 107.5 324.39 128.71 418.79 223.11 0 223.11 0 253.11 418.79 253.11 324.39 347.5 345.61 368.71 476.21 238.11"/>
