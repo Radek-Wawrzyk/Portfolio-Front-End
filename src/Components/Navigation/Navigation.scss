@@ -110,87 +110,47 @@
 }
 .navigation-button-description {
   position: absolute;
-  left: -55px;
-  padding: 0 10px 0 0;
-  top: 0;
+  left: -60px;
+	top: 50%;
+	transform: translateY(-50%);
   font-size: 18px;
   color: $secondaryDark; 
   font-weight: 500;
   transition: color 0.25s;    
 }
 .navigation-button span {
-  width: 22px;
-  height: 2px;
+  width: 25px;
+  height: 3px;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
   background: $secondaryDark;
-  transition: background 0.4s;
+	transition: background 0.4s;
+	border-radius: 3px;
+	-webkit-font-smoothing: antialiased;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px
 }
 .navigation-button span::before, .navigation-button span::after {
   content: "";
   position: absolute;
-  width: 22px;
-  height: 2px;
+  width: 25px;
+  height: 3px;
   background: $secondaryDark;
   left: 50%;
   transform: translateX(-50%);
-  transition: top 0.5s, left 0.5s, transform 0.5s, background 0.25s;
+	transition: top 0.5s, left 0.5s, transform 0.5s, background 0.25s;
+	border-radius: 3px;
+	-webkit-font-smoothing: antialiased;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px
 }
 .navigation-button span::before {
-  top: 8px;
+  top: 6px;
 }
 .navigation-button span::after {
-  top: -8px;
-}
-
-//Active class for button
-
-.navigation-button:hover .navigation-button-description, 
-.navigation-button:focus .navigation-button-description  {
-  color: $primary;
-}
-.navigation-button:hover span, .navigation-button:hover span::before,
-.navigation-button:hover span::after, .navigation-button:focus span, 
-.navigation-button:focus span::before, .navigation-button:focus span::after {
-  background: $primary;
-}
-.navigation-button-description {
-  position: absolute;
-  left: -55px;
-  padding: 0 10px 0 0;
-  top: 0;
-  font-size: 18px;
-  color: $secondaryDark; 
-  font-weight: 500;
-  transition: color 0.25s;    
-}
-.navigation-button span {
-  width: 22px;
-  height: 2px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  background: $secondaryDark;
-  transition: background 0.4s;
-}
-.navigation-button span::before, .navigation-button span::after {
-  content: "";
-  position: absolute;
-  width: 22px;
-  height: 2px;
-  background: $secondaryDark;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: top 0.5s, left 0.5s, transform 0.5s, background 0.25s;
-}
-.navigation-button span::before {
-  top: 8px;
-}
-.navigation-button span::after {
-  top: -8px;
+  top: -6px;
 }
 
 //Active class for button
