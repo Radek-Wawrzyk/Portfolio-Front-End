@@ -15,14 +15,14 @@
           <h2 class="contact-info-tile-title">Radek Wawrzyk</h2>
           <p class="contact-info-tile-description">
             United Kingdom, Wales, Aberystwyth
-            <br>+48 516 649 611
-            <br>radek511@op.pl
+            <br>+447704267097
+            <br>radoslaw.wawrzyk@gmail.com
             <br>
           </p>
         </div>
         <div class="contact-info-tile">
           <h2 class="contact-info-tile-title">Front End Developer</h2>
-          <p class="contact-info-tile-description">... with passion and will to improve his skills.</p>
+          <p class="contact-info-tile-description">Student, Freelancer, Developer</p>
         </div>
       </div>
       <header class="contact-communication-header">

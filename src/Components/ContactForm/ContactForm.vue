@@ -7,7 +7,7 @@
       </transition>
     </div>
     <div class="contact-form-item">
-      <input type="email" name="email" v-model="credentials.email" v-validate="'required|email'" placeholder="Email adress" aria-required="true" title="Your adress email" aria-label="Email adress"/>
+      <input type="email" name="email" v-model="credentials.email" v-validate="'required|email'" placeholder="Email address" aria-required="true" title="Your address email" aria-label="Email address"/>
       <transition name="fade-form">
         <p class="contact-form-item-alert" v-if="errors.has('email')">{{errors.first('email')}}</p>
       </transition>
@@ -71,10 +71,18 @@ export default {
         });
 
         this.resetForm();
-        this.$store.dispatch('addNotification', {type: 'success', message: 'You have sent the message!', id: this.autoID++});
+        this.$store.dispatch('addNotification', {
+          type: 'success', 
+          message: 'You have sent the message!', 
+          id: this.autoID++
+        });
       } catch(error) {
         console.log(error.message);
-        this.$store.dispatch('addNotification', {type: 'error', message: `Something went wrong...`, id: this.autoID++});
+        this.$store.dispatch('addNotification', {
+          type: 'error', 
+          message: `Something went wrong...`, 
+          id: this.autoID++
+        });
       }
     }
   }
