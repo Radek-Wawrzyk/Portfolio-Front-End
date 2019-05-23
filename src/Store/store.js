@@ -7,7 +7,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     portfolioItems: [],
-    notifications: []
+		notifications: [],
+		dowloadedProjects: false
   },
   getters: {
     loadProject: state => slug => {
@@ -56,7 +57,8 @@ export default new Vuex.Store({
   mutations: {
     SET_PROJECTS: (state, projects) => {
       state.portfolioItems = projects;
-      state.portfolioItemsBackup = projects;
+			state.portfolioItemsBackup = projects;
+			state.dowloadedProjects = true;
     },
     ADD_NOTIFICATION: (state, notification) => {
       state.notifications.push(notification);
