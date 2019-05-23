@@ -9,26 +9,18 @@
         <div class="about-info-wrapper">
           <article class="about-info-tile">
             <h2 class="about-info-tile-title">
-              My name is Radek, and I'm Front End Developer.
+              My name is Radek, and I'm the Front End Developer.
             </h2>
             <p class="about-info-tile-description">
-              I like to learn new things. I've connected my passion to IT with web-development and I'm doing things 
-              what I really like, which is very important in my career. Everything is possible if you are very involved in it!
+              I like to learn new things & technologies which is just great! I've connected my passion to IT & programming in web-development, and I'm doing
+              what I really like! Starting just from coding normal websites, ending to creating complex JavaScript applications. <br/><br/>
+							I always keep focus on the UX/UI. In the cooperation with the graphic designer, I try to create complete and user-friendly product.
+							In the end, after my work, I'm just a normal user. That's why exactly I know what I need to pay attention to. 
             </p>
           </article>
         </div>
         <div class="about-info-wrapper">
           <div class="about-info-tile"></div>
-          <div class="about-info-tile">
-            <a href="https://drive.google.com/open?id=1dveXPoNfUYkEvwpFge6B714JoXTwgk6a" target="_blank" aria-label="Check my CV" title="My CV">
-              <h2 class="about-info-tile-title">
-                Curriculum Vitae
-              </h2>
-              <p class="about-info-tile-description">
-                You can check my CV and see my competitions!
-              </p>
-            </a>
-          </div>
         </div>
       </section>
       <section class="about-skills">
@@ -73,27 +65,26 @@
       <section class="about-exp">
         <header class="about-exp-header">
           <h4 class="about-exp-header-title">
-            In the last 3 years of my study & work <br/> I have had the chance to learn and work with professional developers.
+            In the last 4 years of my study & work <br/> I have had the chance to learn and work with professional developers & graphic designers.
           </h4>
-          <div class="about-exp-header-tile">
-            <h5 class="about-exp-header-tile-title">Experience</h5>
-            <p class="about-exp-header-tile-description">
-              <span>40</span>
-              Projects I've done so far!
-            </p>
-          </div>
         </header>
         <article class="about-exp-info">
           <h5 class="about-exp-info-title">
-            I'm still learning new things and technologies all the time because it makes you a good, flexible developer. 
-            I'm trying to improve my abilities and skills with every new project.
+            I've been learning <strong>Front-End</strong> for 4 years. During this time I've had plesure to work with many people, and I've gained a lof of experience in <strong>IT!</strong>
           </h5>
           <p class="about-exp-info-description">
-            I have a commercial experience with coding websites. I've had an internship in a professional 
-            interactive agency - 
-            <a href="https://www.websitestyle.pl/" title="interactive agency - websitestyles" aria-label="interactive agency - websitestyles"> websitestyle.</a>
-            where I got much more experience in my Front End development. I've learned how to work with a team and I've improved 
-            my soft skills. Moreover, I've realized what is Git and how to properly work with it.
+            I have a commercial experience working as Front End developer. At present I work in the polish e-commerce software house - 
+						<a href="https://www.newfantastic.com/" title="newfantastic" aria-label="newfantastic."> newfantastic.</a>
+						I'm in charge of <strong>UX/UI</strong> of e-commerce shops or applications based on <strong>Vue.js</strong>, <strong>Vuestorefront</strong>, & <strong>Nuxt.js</strong>.
+						We design and develop Digital Products for all industries, combining the best of Modern Web Technologies, Typography Principles and Data Driven UX Design.<br/><br/>
+
+						At the beginning of the 2019 year I took part in the project of creating browser game - 
+						<a href="https://footballteam.pl/" title="https://footballteam.pl/" aria-label="https://footballteam.pl/"> footballteam</a>.
+						I was in charge of game components, code refactor and adding new modules/features. Games is based on the <strong>SPA</strong> architecture - <strong>Vue.js framework</strong><br/><br/>
+
+						Also I've worked in the professional interactive agency -
+            <a href="https://www.websitestyle.pl/" title="interactive agency - websitestyles" aria-label="interactive agency - websitestyles"> websitestyle</a>.
+            Where I got much more experience in my soft skills. I've learned how to work and talk with clients, and learned about <strong>SEO</strong>.
           </p>
           <router-link to="/portfolio" title="my work" aria-label="My work" class="about-exp-info-link">
             See my work

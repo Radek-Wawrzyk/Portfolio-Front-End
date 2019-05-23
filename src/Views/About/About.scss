@@ -54,7 +54,7 @@
   background: url("../../Img/author.jpg");
   background-size: cover;
   background-position: center;
-  margin: -100px 0 0 0;
+  // margin: -100px 0 0 0;
 }
 .about-info-wrapper:nth-child(2) .about-info-tile:nth-child(2) {
   border: 3px solid $secondaryLight;
@@ -155,8 +155,8 @@
   }
 }
 .about-skills-list-item:nth-child(3) {
-  background: $white;
-  color: $secondaryMedium;
+  background: white;
+  color: $secondaryDark;
   border: 3px solid $secondaryLight;
   &::before {
     content: '.3';
@@ -184,19 +184,20 @@
 //About experience header
 
 .about-exp {
-  max-width: 1000px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 100px 0 0 0;
 }
 .about-exp-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .about-exp-header-title {
   color: $secondaryDark;
-  padding: 0 50px;
+	padding: 50px 0;
+	text-align: center;
 }
 .about-exp-header-tile  {
   width: 400px;
@@ -223,13 +224,16 @@
 .about-exp-info {
   background: $primary;
   color: $white;
-  padding: 150px;
+	padding: 150px;
+	a, strong {
+		font-weight: bold;
+	}
 }
 .about-exp-info-title {
   padding: 0 0 20px 0;
 }
 .about-exp-info-description {
-  padding: 0 0 50px 0;
+	padding: 0 0 50px 0;
 }
 .about-exp-info-link {
   border: 0;
