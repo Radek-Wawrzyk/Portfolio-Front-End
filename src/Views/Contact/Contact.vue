@@ -16,7 +16,7 @@
           <p class="contact-info-tile-description">
             United Kingdom, Wales, Aberystwyth
             <br>+447704267097
-            <br>radoslaw.wawrzyk@gmail.com
+            <br>info@radek-wawrzyk.pl
             <br>
           </p>
         </div>

@@ -87,6 +87,17 @@
   }
 }
 
+// .fade-page {
+//   will-change: opacity transform;
+//   &-enter-active, &-leave-active {
+//     transition: all 0.4s ease-out;
+//   }
+//   &-enter, &-leave-to {
+//     opacity: 0;
+//     transform: translate3d(-50px, 0, 0);
+//   }
+// }
+
 .fade-page {
   will-change: opacity transform;
   &-enter-active, &-leave-active {
@@ -94,7 +105,7 @@
   }
   &-enter, &-leave-to {
     opacity: 0;
-    transform: translate3d(-50px, 0, 0);
+    transform: translate3d(0, .5rem, 0);
   }
 }
 

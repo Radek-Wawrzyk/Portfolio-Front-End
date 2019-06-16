@@ -8,7 +8,7 @@
   $message = $post["message"];
   $email = $post["email"];
 
-  $mailTo = "sirradek58@gmail.com";
+  $mailTo = "info@radek-wawrzyk.pl";
   $headers = "From: ".$email;
   $txt = "You have received an email from ".$name.".\n\n".$message;
 
