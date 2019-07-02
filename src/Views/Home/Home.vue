@@ -40,21 +40,21 @@
         <h2 class="projects-title">Featured projects</h2>
         <ul class="projects-list">
           <li class="project-item">
-            <router-link to="portfolio/sokolnicki-agency" aria-label="Sokolnicki agency">
-              <h3 class="project-item-title">Sokolnicki</h3>
-              <p class="project-item-description">Sokolnicki is a creative agency Public Relations</p>
+            <router-link to="portfolio/kubota-store" aria-label="Kubotastore">
+              <h3 class="project-item-title">Kubotastore</h3>
+              <p class="project-item-description">Polish e-commerce shop based on Vue.js</p>
             </router-link>
           </li>
            <li class="project-item">
-            <router-link to="portfolio/bossbus" aria-label="Bossbus deliver company">
-              <h3 class="project-item-title">Bossbus</h3>
-              <p class="project-item-description">Bus deliver company</p>
+            <router-link to="portfolio/sokolnicki-agency" aria-label="Sokolnicki agency">
+              <h3 class="project-item-title">Sokolnicki</h3>
+              <p class="project-item-description">Communication</p>
             </router-link>
           </li>
           <li class="project-item">
             <router-link to="portfolio/vue-shop" aria-label="Watch shop">
               <h3 class="project-item-title">Watch Shop</h3>
-              <p class="project-item-description">Online shoping for watch lovers</p>
+              <p class="project-item-description">Shop template based on Vue.js</p>
             </router-link>
           </li>
         </ul>

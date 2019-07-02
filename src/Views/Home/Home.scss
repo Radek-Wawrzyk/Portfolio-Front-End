@@ -313,7 +313,7 @@
     top: 0;
     left: 0;
     background: $secondaryDark;
-    opacity: 0.6;
+    opacity: 0.2;
   }
   a {
     position: relative;
@@ -361,7 +361,7 @@
 
 .project-item:nth-child(1) {
   width: 100%;
-  background: url("../../Img/sokolnicki-homepage.jpg");
+  background: url("../../Img/kubota-main.png");
   background-size: cover;
   background-position: center top;
   height: 700px;
@@ -369,9 +369,9 @@
 .project-item:nth-child(2) {
   width: calc(40% - 50px);
   margin: 0 0 0 50px;
-  background: url("../../Img/bossbus-homepage.jpg");
+  background: url("../../Img/sokolnicki-homepage.jpg");
   background-size: cover;
-  background-position: 75% top;
+  background-position: 20% top;
   height: 500px;
 }
 .project-item:nth-child(3) {
