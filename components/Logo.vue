@@ -4,10 +4,11 @@
     <div class="Triangle Triangle--one" />
     <div class="Triangle Triangle--three" />
     <div class="Triangle Triangle--four" />
+    <h5 class="test">test</h5>
   </div>
 </template>
 
-<style>
+<style lang="scss">
 .VueToNuxtLogo {
   display: inline-block;
   animation: turn 2s linear forwards 1s;
@@ -18,6 +19,9 @@
   width: 245px;
 }
 
+.test {
+  color: $test;
+}
 .Triangle {
   position: absolute;
   top: 0;
