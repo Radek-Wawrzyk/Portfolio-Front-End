@@ -1,0 +1,7 @@
+@mixin hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: $accent;
+  position: absolute;
+  border-radius: 5px;
+}

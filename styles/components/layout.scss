@@ -1,0 +1,11 @@
+body, html, * {
+  background-color: $secondary-brand;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 2rem;
+  position: relative;
+}

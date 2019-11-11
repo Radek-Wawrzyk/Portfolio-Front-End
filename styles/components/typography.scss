@@ -1,7 +1,8 @@
 html, body, *, input, textarea {
 	font-family: 'Raleway', sans-serif;
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
+  color: $accent-text;
 }
 
 a {

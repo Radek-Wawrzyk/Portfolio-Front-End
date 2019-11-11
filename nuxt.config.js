@@ -29,6 +29,7 @@ export default {
   styleResources: {
     scss: [
       './styles/components/variables.scss',
+      './styles/components/mixins.scss',
     ],
   },
   axios: {
