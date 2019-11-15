@@ -139,6 +139,11 @@ export default {
       this.$emit('toggleMenu');
     },
   },
+  mounted() {
+    document.body.addEventListener('keyup', e => {
+      e.keyCode === 27 && this.isMenuOpen ? this.closeMenu() : false;
+    });
+  },
 };
 </script>
 
