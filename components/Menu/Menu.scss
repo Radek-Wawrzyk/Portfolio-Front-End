@@ -1,0 +1,236 @@
+.menu {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  width: 100%;
+  height: calc(100vh - 60px);
+  opacity: 0;
+  visibility: hidden;
+  will-change:  opacity, visibility;
+  transition: opacity 0.2s, visibility 0.2s;
+  background-color: $secondary-brand;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &-socials {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+
+    &__title {
+      position: relative;
+      font-size: 1rem;
+      font-weight: 600;
+      opacity: 0;
+      transform: rotate(90deg), translate3d(50px, 0, 0);
+      transition: opacity 0.2s, transform 0.38s;
+    }
+
+    &__line {
+      display: inline-block;
+      width: 20px;
+      height: 2px;
+      border-radius: 4px;
+      background-color: $accent;
+      transform: rotate(90deg), translate3d(50px, 0, 0);
+      text-align: center;
+      margin: 4rem 0 2rem 0;
+      opacity: 0;
+      transition: opacity 0.2s, transform 0.38s;
+    }
+
+    &__item {
+      opacity: 0;
+      transform: translate3d(50px, 0, 0);
+      transition: opacity 0.2s, transform 0.38s;
+    }
+
+    &__link {
+      display: block;
+      padding: 1rem;
+
+      &:hover, &:focus {
+        cursor: pointer;
+        svg path {
+          fill: $primary-brand--medium;
+        }
+      }
+
+      &:focus {
+        outline-color: $primary-brand--medium;
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
+
+        path {
+          transition: fill 0.1s;
+        }
+      }
+    }
+  }
+
+  &-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &-navigation {
+    padding: 4rem 2rem;
+
+    &__list {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    &__active-text {
+      opacity: 0;
+      font-size: 14px;
+      padding: 0 0 0 2rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      transition: opacity 0.1s;
+      pointer-events: none;
+
+      &::before {
+        content: "";
+        width: 20px;
+        height: 2px;
+        border-radius: 4px;
+        background-color: $accent;
+        display: inline-block;
+        margin: 0 1rem 0 0;
+      }
+    }
+
+    &__link {
+      font-size: 3rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      transition: color 0.1s, transform 0.4s;
+      margin: 0 0 1rem 0;
+
+      &.nuxt-link-exact-active
+      .menu-navigation__active-text  {
+        opacity: 1;
+      }
+
+      &--special {
+        color: $primary-brand--medium;
+
+        &:hover, &:focus {
+          color: $accent-text--medium !important;
+        }
+      }
+
+      &:focus, &:hover {
+        color: $primary-brand--medium;
+        transform: translate3d(20px, 0, 0);
+      }
+
+      &:focus {
+        outline-color: $primary-brand--medium;
+      }
+    }
+
+    &__item {
+      opacity: 0;
+      transform: translate3d(0, 0, 0);
+      transition: opacity 0.2s, transform 0.38s;
+    }
+  }
+
+  &-footer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem;
+
+    &__text {
+      font-size: 14px;
+      font-weight: 600;
+      opacity: 0;
+      transform: translate3d(0, 50px, 0);
+      transition: opacity 0.2s, transform 0.38s;
+    }
+
+    &__link {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}
+
+// Animations on reveal
+
+.menu--active {
+  .menu-navigation__item {
+    opacity: 1;
+    transform: translate3d(0, -50px, 0);
+
+    &:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+    &:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+    &:nth-child(3) {
+      transition-delay: 0.3s;
+    }
+    &:nth-child(4) {
+      transition-delay: 0.4s;
+    }
+    &:nth-child(5) {
+      transition-delay: 0.5s;
+    }
+  }
+
+  .menu-footer__text {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+
+    &:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+    &:nth-child(2) {
+      transition-delay: 0.5s;
+    }
+  }
+
+  .menu-socials__item {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+
+    &:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+    &:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+    &:nth-child(3) {
+      transition-delay: 0.3s;
+    }
+    &:nth-child(4) {
+      transition-delay: 0.4s;
+    }
+  }
+
+  .menu-socials__title, .menu-socials__line {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate(90deg);
+  }
+}

@@ -1,55 +1,36 @@
 <template>
-  <div>
-    <nuxt />
-  </div>
+  <main class="page">
+    <navigation
+      @toggleMenu="toggleMenu()"
+      :isMenuOpen="isMenuOpen"
+    />
+    <Menu
+      @toggleMenu="toggleMenu()"
+      :isMenuOpen="isMenuOpen"
+    />
+    <div class="page__content">
+      <nuxt />
+    </div>
+  </main>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<script>
+const Navigation = () => import(/* webpackChunkName: "navigation-component" */ '@/components/Navigation/Navigation.vue');
+const Menu = () => import(/* webpackChunkName: "menu-component" */ '@/components/Menu/Menu.vue');
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
-</style>
+export default {
+  name: 'default-layout',
+  data: () => ({
+    isMenuOpen: false
+  }),
+  components: {
+    Navigation,
+    Menu,
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+    }
+  }
+};
+</script>

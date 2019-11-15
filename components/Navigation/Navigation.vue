@@ -40,12 +40,15 @@
 <script>
 export default {
   name: 'navigation',
-  data: () => ({
-    isMenuOpen: false,
-  }),
+  props: {
+    isMenuOpen: {
+      type: Boolean,
+      required: true,
+    },
+  },
   methods: {
     toggleMenu() {
-      this.isMenuOpen =! this.isMenuOpen;
+      this.$emit('toggleMenu');
     },
   },
 };
