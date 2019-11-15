@@ -1,5 +1,10 @@
 <template>
-  <div class="menu" id="menu" :class="{'menu--active' : isMenuOpen}">
+  <div
+    class="menu"
+    id="menu"
+    :class="{'menu--active' : isMenuOpen}"
+    :aria-expanded="isMenuOpen ? 'true' : 'false'"
+  >
     <div class="container menu-container">
       <nav class="menu-navigation">
         <ul class="menu-navigation__list">
