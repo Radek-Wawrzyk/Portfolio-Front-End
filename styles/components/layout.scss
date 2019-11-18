@@ -6,6 +6,10 @@ body, html {
   box-sizing: border-box;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .container {
   width: 100%;
   max-width: 1440px;

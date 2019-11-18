@@ -1,0 +1,49 @@
+.main-header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  position: relative;
+
+  &__heading {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    color: $primary-brand--medium;
+    letter-spacing: 4px;
+  }
+
+  &__pre-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    display: inline-block;
+  }
+
+  &__text {
+    font-size: 2rem;
+    font-weight: 500;
+    width: 100%;
+    max-width: 650px;
+  }
+
+  &__scroll-down {
+    position: absolute;
+    right: -1rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    padding: 1rem;
+    letter-spacing: 6px;
+    border: 1px solid $accent;
+    transition: color 0.1s, background-color 0.1s;
+    background-color: transparent;
+    outline-color: $primary-brand--medium;
+
+    &:hover, &:focus {
+      background-color: $accent;
+      color: $secondary-brand;
+      transform: translateY(-50%) rotate(90deg) translate3d(50px, 0, 0);
+    }
+  }
+}

@@ -1,28 +1,17 @@
 <template>
   <div>
-    <p>
-       home!
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus itaque accusantium veritatis animi consequuntur! Omnis accusantium harum iure incidunt vero? Mollitia ad odit, magni dolorem esse architecto libero deleniti nisi!
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aperiam natus, minima explicabo repellendus consequuntur odit esse ducimus libero at incidunt consectetur quisquam excepturi architecto quam. A deleniti quia labore.
-    </p>
-
+    <main-header />
   </div>
 </template>
 
 <script>
+const MainHeader = () => import(/* webpackChunkName: "main-header-component" */ '@/components/MainHeader/MainHeader.vue');
+
 export default {
   name: 'home',
+  components: {
+    MainHeader,
+  },
 };
 </script>
 
-<style scoped>
-
-div {
-  height: 2500px;
-}
-
-p {
-  margin: 600px auto;
-}
-
-</style>
