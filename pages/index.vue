@@ -12,7 +12,7 @@
 
 <script>
 const MainHeader = () => import(/* webpackChunkName: "main-header-component" */ '@/components/MainHeader/MainHeader.vue');
-const FeaturedProjects = () => import(/* webpackChunkName: "featured-projects-component" */ '@/components/featuredProjects/featuredProjects.vue');
+const FeaturedProjects = () => import(/* webpackChunkName: "featured-projects-component" */ '@/components/FeaturedProjects/FeaturedProjects.vue');
 
 export default {
   name: 'home',
