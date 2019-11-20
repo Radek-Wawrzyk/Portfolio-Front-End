@@ -9,6 +9,7 @@
   will-change:  opacity, visibility;
   transition: opacity 0.2s, visibility 0.2s;
   background-color: $secondary-brand;
+  z-index: 100;
 
   &--active {
     opacity: 1;
