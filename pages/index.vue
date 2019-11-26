@@ -6,6 +6,15 @@
         headerText='Uncompromising approach to each client causes 100% satisfaction. Check my latest projects!'
         :featuredProjects="featuredProjects"
       />
+      <contact-me
+        title="Let's build something amazing together."
+        subTitle="
+          Think we might be the right friends for your next adventure?
+          Take a minute, we’d love to hear about your project.
+        "
+        linkURL="/project-form"
+        linkText="Let's do this!"
+      />
     </div>
   </div>
 </template>
@@ -13,12 +22,14 @@
 <script>
 const MainHeader = () => import(/* webpackChunkName: "main-header-component" */ '@/components/MainHeader/MainHeader.vue');
 const FeaturedProjects = () => import(/* webpackChunkName: "featured-projects-component" */ '@/components/FeaturedProjects/FeaturedProjects.vue');
+const ContactMe = () => import(/* webpackChunkName: "contact-me-component" */ '@/components/ContactMe/ContactMe.vue');
 
 export default {
   name: 'home',
   components: {
     MainHeader,
     FeaturedProjects,
+    ContactMe,
   },
   computed: {
     featuredProjects() {

@@ -1,0 +1,40 @@
+.base-button {
+  height: 70px;
+  width: auto;
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0 50px;
+  border: 2px solid transparent;
+  background-color: transparent;
+  transition: color $transition-time--short, background-color $transition-time--short, border $transition-time--short;
+
+  &:focus {
+    outline-color: $primary-brand--medium;
+  }
+
+  &--plain {
+    background-color: $accent;
+    border-color: $accent;
+    color: $secondary-brand;
+  }
+
+  &--outline {
+    border-color: $accent;
+    color: $accent;
+
+    &:focus, &:hover {
+      border-color: $accent;
+      background-color: $accent;
+    }
+  }
+
+  &--text {
+    color: $accent;
+  }
+}

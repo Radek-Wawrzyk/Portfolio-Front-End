@@ -3,6 +3,7 @@ html, body, *, input, textarea {
 	-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $accent-text;
+  line-height: 1.5;
 }
 
 a {

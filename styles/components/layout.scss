@@ -18,7 +18,10 @@ button:hover {
   position: relative;
 }
 
-// Czemu tak twierdzisz, że nie mam nic do zaoferowania
-//
-//
-//
+// Media
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
