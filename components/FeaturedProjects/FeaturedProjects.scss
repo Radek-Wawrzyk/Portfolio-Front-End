@@ -9,6 +9,7 @@
 
   &__heading {
     font-size: 1.8rem;
+    font-weight: bold;
     max-width: 600px;
     width: 100%;
     line-height: 1.7;
@@ -58,7 +59,7 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-    margin: 0 0 2rem 0;
+    margin: 0 0 0.5rem 0;
     transition: transform 0.2s;
 
     &-wrapper {
@@ -68,7 +69,7 @@
 
   &__heading {
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.4;
     margin: 0 0 0.5rem 0;
     transition: color 0.1s, transform 0.2s;
