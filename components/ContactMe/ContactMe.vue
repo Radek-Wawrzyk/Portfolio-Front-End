@@ -6,23 +6,25 @@
     <p class="contact-me__sub-title">
       {{ subTitle }}
     </p>
-    <base-link
-      mode="outline"
-      :aria="title"
-      :path="linkURL"
+    <base-button
+      type="outline"
+      mode="link"
+      :ariaText="title"
+      :url="linkURL"
+      
     >
       {{ linkText }}
-    </base-link>
+    </base-button>
   </section>
 </template>
 
 <script>
-const BaseLink = () => import('@/components/BaseLink/BaseLink.vue');
+const BaseButton = () => import('@/components/BaseButton/BaseButton.vue');
 
 export default {
   name: 'contact-me',
   components: {
-    BaseLink,
+    BaseButton,
   },
   props: {
     title: {

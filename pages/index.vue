@@ -9,8 +9,8 @@
       <contact-me
         title="Let's build something amazing together."
         subTitle="
-          Think we might be the right friends for your next adventure?
-          Take a minute, we’d love to hear about your project.
+          Think I might be the right friend for your next adventure?
+          Take a minute, I’d love to hear about your project.
         "
         linkURL="/project-form"
         linkText="Let's do this!"
@@ -25,7 +25,7 @@ const FeaturedProjects = () => import(/* webpackChunkName: "featured-projects-co
 const ContactMe = () => import(/* webpackChunkName: "contact-me-component" */ '@/components/ContactMe/ContactMe.vue');
 
 export default {
-  name: 'home',
+  name: 'HomePage',
   components: {
     MainHeader,
     FeaturedProjects,
