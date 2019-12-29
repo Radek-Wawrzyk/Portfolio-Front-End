@@ -21,6 +21,7 @@ export default {
     './styles/main.scss',
   ],
   plugins: [
+    { src: '@/plugins/veeValidate' },
   ],
   buildModules: [
     '@nuxtjs/eslint-module'

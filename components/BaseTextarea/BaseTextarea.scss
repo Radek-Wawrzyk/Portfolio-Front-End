@@ -1,0 +1,91 @@
+.base-textarea {
+  width: 100%;
+  position: relative;
+
+  &__inner {
+    width: 100%;
+    min-height: 250px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    resize: none;
+
+    &::placeholder {
+      opacity: 0;
+    }
+
+    &:not(:placeholder-shown) + .base-textarea__label {
+      transform: translate3d(0, -2.5rem, 0);
+    }
+
+    &:placeholder-shown + .base-textarea__label {
+      transform: translate3d(0, 0, 0);
+    }
+
+    &:not(:placeholder-shown)  ~ .base-textarea__border::before {
+      transform: translate3d(0, 0, 0);
+    }
+
+    &:focus {
+      & ~ .base-textarea__border::before {
+        transform: translate3d(0, 0, 0);
+      }
+
+      & + .base-textarea__label  {
+        transform: translate3d(0, -2.5rem, 0);;
+      }
+    }
+  }
+
+  &__border {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: $accent--light;
+    overflow: hidden;
+    
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $accent-text;
+      transform: translate3d(100%, 0, 0);
+      transition: $transition-time--medium transform;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: $accent-text;
+    pointer-events: none;
+    user-select: none;
+    transition: transform $transition-time;
+    font-size: 1rem;
+  }
+
+  &__error {
+    font-size: 0.7rem;
+    position: absolute;
+    left: 0;
+    bottom: -1.2rem;
+    color: $primary-brand--medium;
+  }
+}
+
+// Media
+
+@media screen and (max-width: 680px) {
+  .base-textarea {
+    &__inner, &__label {
+      font-size: 0.8rem;
+    }
+  }
+}

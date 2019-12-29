@@ -1,0 +1,163 @@
+.project-form {
+  padding: 150px 0;
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0 0 4rem 0;
+    text-align: center;
+  }
+
+  &__inner {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__group {
+    margin: 0 0 3.5rem 0;
+
+    &--half {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+    }
+  }
+
+  &__content {
+    height: 400px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 70px;
+    height: 50px;
+    border: none;
+    padding: 0;
+    background: transparent;
+    color: $accent;
+    outline: none;
+    transition: $transition-time transform;
+
+    &--prev {
+      &:hover, &:focus {
+        .project-form__action-icon {
+          transform: translate3d(-0.5rem, 0, 0);
+        }
+      }
+    }
+
+    &--next {
+      &:hover, &:focus {
+        .project-form__action-icon {
+          transform: translate3d(0.5rem, 0, 0);
+        }
+      }
+    }
+
+    &:hover, &:focus {
+      .project-form__action-text {
+        color: $primary-brand--medium;
+      }
+    }
+
+    &-text {
+      font-size: 1rem;
+      padding: 0 0.4rem;
+      transition: color $transition-time;
+    }
+
+    &-icon {
+      transition: $transition-time transform;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-item {
+      margin: 0 1rem 0 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    &-inner {
+      width: 45px;
+      border: none;
+      background: none;
+      outline: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    &-counter {
+      font-size: 0.9rem;
+      font-weight: 600;
+      opacity: 0;
+      margin: 0 0 0.5rem 0;
+      transition: $transition-time opacity;
+      color: $accent-text;
+
+      &--active {
+        opacity: 1;
+      }
+    }
+
+    &-border {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: $accent--light;
+      transition: $transition-time color;
+
+      &--active {
+        background-color: $accent;
+      }
+    }
+  }
+}
+
+// Media
+
+@media screen and (max-width: 980px) {
+  .project-form {
+    &__heading {
+      font-size: 2rem;
+      margin: 0 0 2rem 0;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .project-form {
+    &__heading {
+      margin: 0 0 4rem 0;
+    }
+
+    &__action {
+      width: 32px;
+      &-text {
+        display: none;
+      }
+    }
+  }
+}
