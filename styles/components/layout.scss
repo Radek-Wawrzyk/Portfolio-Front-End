@@ -12,16 +12,16 @@ button:hover {
 
 .container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 92vw;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
   position: relative;
 }
 
 // Media
 
-@media screen and (max-width: 1024px) {
-  .container {
-    padding: 0 1rem;
-  }
-}
+// @media screen and (max-width: 1024px) {
+//   .container {
+//     padding: 0 1rem;
+//   }
+// }

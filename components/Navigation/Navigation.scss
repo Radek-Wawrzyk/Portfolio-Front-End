@@ -3,13 +3,21 @@
   left: 0;
   top: 0;
   width: 100%;
-  height: 60px;
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  height: 80px;
+  
   background-color: $secondary-brand;
   z-index: 200;
+
+  &__content {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    max-width: 92vw;
+    width: 100%;
+    height: 100%;
+  }
 
   &__logo {
     height: 40px;
@@ -92,8 +100,8 @@
 
 // Media
 
-@media screen and (max-width: 768px) {
-  .navigation {
-    padding: 0 1rem;
-  }
-}
+// @media screen and (max-width: 768px) {
+//   .navigation {
+//     padding: 0 1rem;
+//   }
+// }

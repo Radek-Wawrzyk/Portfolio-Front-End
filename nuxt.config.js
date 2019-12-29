@@ -36,6 +36,10 @@ export default {
       './styles/components/mixins.scss',
     ],
   },
+  transition: {
+    name: 'fade-page',
+    mode: 'out-in'
+  },
   axios: {
   },
   build: {
