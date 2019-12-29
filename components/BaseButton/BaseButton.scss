@@ -1,7 +1,8 @@
 .base-button {
+  position: relative;
   height: 70px;
   width: auto;
-  max-width: 300px;
+  max-width: 250px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -26,10 +27,32 @@
   &--outline {
     border-color: $accent;
     color: $accent;
+    overflow: hidden;
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translate3d(0,0,0);
+    transform: translateZ(0);
+
+    &::before {
+      content: '';
+      background-color: $accent;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform $transition-time--long;
+      width: 250px;
+      height: 250px;
+      border-radius: 100%;
+      z-index: -1;
+    }
 
     &:focus, &:hover {
-      border-color: $accent;
-      background-color: $accent;
+      color: $secondary-brand;
+
+      &::before {
+        transform: translate(-50%, -50%) scale(2);
+      }
     }
   }
 
