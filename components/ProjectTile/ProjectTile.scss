@@ -1,0 +1,41 @@
+.project-tile {
+  display: block;
+
+  &__link {
+    display: block;
+    transition: transform 0.5s;
+
+    &:hover {
+      .project-tile__heading {
+        color: $primary-brand--medium;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    margin: 0 0 0.5rem 0;
+    transition: transform 0.2s;
+
+    &-wrapper {
+      overflow: hidden;
+    }
+  }
+
+  &__heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0 0 0.5rem 0;
+    transition: color 0.1s, transform 0.2s;
+  }
+
+  &__sub-heading {
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: color 0.1s, transform 0.1s;
+    line-height: 1.4;
+  }
+}

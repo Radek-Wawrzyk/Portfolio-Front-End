@@ -1,0 +1,151 @@
+.portfolio {
+  padding: 200px 0;
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__tile {
+    width: calc(50% - 4rem);
+    margin: 0 0 8rem 0;
+
+    .project-tile__img {
+      display: block;
+      height: 30vw;
+    }
+
+    &--full {
+      width: 100%;
+      margin: 0 0 8rem 0;
+
+      &:nth-child(odd) {
+        .project-tile__content {
+          order: -1;
+        }
+      }
+      
+      .project-tile__link {
+        display: flex;
+        align-items: center;
+      }
+
+      .project-tile__content {
+        width: 40%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .project-tile__heading {
+        font-size: 2rem;
+        margin: 0 0 1rem 0;
+      }
+
+      .project-tile__sub-heading {
+        font-size: 0.8rem;
+      }
+
+      .project-tile__img-wrapper {
+        width: 60%;
+        margin: 0;
+      }
+
+      .project-tile__img {
+        display: block;
+        height: 35vw;
+      }
+
+    }
+  }
+}
+
+// Media
+
+@media screen and (max-width: 1280px) {
+  .portfolio {
+    &__tile {
+      width: calc(50% - 2rem);
+      margin: 0 0 4rem 0;
+
+      .project-tile__img-wrapper {
+        width: 100%;
+        margin: 0 0 1rem 0;
+      }
+
+      &--full {
+        width: 100%;
+        margin: 0 0 4rem 0;
+
+        &:nth-child(odd) {
+          .project-tile__content {
+            order: unset;
+          }
+        }
+        
+        .project-tile__link {
+          flex-wrap: wrap;
+        }
+
+        .project-tile__content {
+          max-width: 100%;
+          width: 100%;
+        }
+
+        .project-tile__heading {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .portfolio {
+    &__tile {
+      .project-tile__heading {
+        font-size: 1rem;
+        margin: 0 0 0.5rem 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .portfolio {
+    &__tile {
+      width: 100%;
+      margin: 0 0 4rem 0;
+
+      .project-tile__img {
+        height: 60vw;
+      }
+
+      .project-tile__heading {
+        font-size: 1rem;
+      }
+
+      .project-tile__sub-heading {
+        font-size: 0.7rem;
+      }
+
+
+      &--full {
+        width: 100%;
+        margin: 0 0 4rem 0;
+
+        .project-tile__img {
+          height: 50vw;
+        }
+        .project-tile__img-wrapper {
+          width: 100%;
+          margin: 0 0 1rem 0;
+        }
+
+        .project-tile__heading {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
