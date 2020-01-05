@@ -1,0 +1,37 @@
+.stats-info {
+  position: relative;
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 0 5rem 0;
+    letter-spacing: 4px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__item {
+    margin: 0 0.5rem 0 0;
+    width: 25%;
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+    &-value {
+      font-size: 5rem;
+      font-weight: 500;
+      color: $accent-text;
+    }
+
+    &-name {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+
+    }
+  }
+}

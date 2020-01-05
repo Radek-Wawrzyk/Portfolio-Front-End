@@ -1,0 +1,39 @@
+.partners {
+  position: relative;
+  padding: 200px 0 0 0;
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 auto 5rem;
+    letter-spacing: 4px;
+    text-align: center;
+    width: 50%;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 6rem 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+
+    &-image {
+      width: 50%;
+      filter: grayscale(100%);
+
+      &--invert {
+        filter: invert(1);
+      }
+
+      &--small {
+        width: 30%;
+      }
+    }
+  }
+}

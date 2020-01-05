@@ -81,10 +81,12 @@
     height: 100%;
     display: flex;
     align-items: center;
+    max-width: 92vw;
+    margin: 0 auto;
   }
 
   &-navigation {
-    padding: 4rem 2rem;
+    padding: 4rem 0;
 
     &__list {
       width: 100%;

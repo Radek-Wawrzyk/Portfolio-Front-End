@@ -1,5 +1,8 @@
 <template>
-  <nav class="navigation">
+  <nav 
+    class="navigation"
+    :class="{'navigation--active' : isMenuOpen}"
+  >
     <div class="navigation__content">
       <div class="navigation__column">
         <nuxt-link

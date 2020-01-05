@@ -41,16 +41,14 @@
 
     &:hover {
       .featured-project__img {
-        transform: scale(0.95);
+
       }
 
       .featured-project__heading {
         color: $primary-brand--medium;
-        transform: translate3d(20px, -20px, 0);
       }
 
       .featured-project__sub-heading {
-        transform: translate3d(20px, -20px, 0);
       }
     }
   }
@@ -72,13 +70,13 @@
     font-weight: 600;
     line-height: 1.4;
     margin: 0 0 0.5rem 0;
-    transition: color 0.1s, transform 0.2s;
+    transition: color 0.2s;
   }
 
   &__sub-heading {
     font-size: 0.8rem;
     font-weight: 600;
-    transition: color 0.1s, transform 0.1s;
+    transition: color 0.2s;
     line-height: 1.4;
   }
 }

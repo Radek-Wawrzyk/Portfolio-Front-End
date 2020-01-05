@@ -98,7 +98,7 @@
 
 <script>
 export default {
-  name: 'menu',
+  name: 'MainMenu',
   props: {
     isMenuOpen: {
       type: Boolean,
@@ -147,4 +147,4 @@ export default {
 };
 </script>
 
-<style lang='scss' scoed src='./Menu.scss' />
+<style lang='scss' scoed src='./MainMenu.scss' />

@@ -1,0 +1,15 @@
+.about-images {
+  padding: 200px 0 0 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+
+  &__tile {
+    width: 50%;
+
+    &:nth-child(2) {
+      margin: 150px 0 0 0;
+      display: block;
+    }
+  }
+}

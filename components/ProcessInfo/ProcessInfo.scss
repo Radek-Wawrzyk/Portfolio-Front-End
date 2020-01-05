@@ -1,0 +1,57 @@
+.process-info {
+  padding: 200px 0 0 0;
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 0 8rem 0;
+    letter-spacing: 4px;
+    // text-align: right;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    padding: 0 1rem;
+    width: 25%;
+
+    &:nth-child(2) {
+      margin: 6rem 0 0 0;
+    }
+
+    &:nth-child(3) {
+      margin: 12rem 0 0 0;
+    }
+
+    &:nth-child(4) {
+      margin: 18rem 0 0 0;
+    }
+
+    &-step {
+      color: rgba(255, 255, 255, 0.02);
+      font-size: 12rem;
+      font-weight: bold;
+      position: absolute;
+      left: 1rem;
+      top: -130px;
+      z-index: -1;
+    }
+
+    &-name {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin: 0 0 6rem 0;
+    }
+
+    &-text {
+      font-size: 0.8rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+  }
+}
