@@ -48,7 +48,7 @@ export default {
         }
         heading
       }
-    }`
+    }`,
   },
   computed: {
     featuredProjects() {

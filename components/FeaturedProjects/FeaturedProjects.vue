@@ -21,7 +21,7 @@
             <img
               class="featured-project__img"
               :alt="project.name"
-              :src="project.imageURL"
+              :src="project.mainImage.url"
             />
           </figure>
           <h3 class="featured-project__heading">
