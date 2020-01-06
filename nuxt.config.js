@@ -51,5 +51,14 @@ export default {
   build: {
     extend (config, ctx) {
     }
-  }
+  },
+  router: {
+    extendRoutes (routes, resolve) {
+      routes.push({
+        name: 'error',
+        path: '*',
+        component: resolve(__dirname, 'pages/404/index.vue'),
+      });
+    },
+  },
 }

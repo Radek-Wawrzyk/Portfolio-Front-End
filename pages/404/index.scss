@@ -1,0 +1,16 @@
+.not-found {
+  padding: 200px 0;
+
+  &__heading {
+    font-size: 8vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+  }
+
+  &__text {
+    margin: 1rem 0 2rem 0;
+    font-size: 1.5rem;
+    width: 50%;
+  }
+}
