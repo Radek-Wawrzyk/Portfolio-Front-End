@@ -29,7 +29,13 @@ export default {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/axios',
+    '@nuxtjs/apollo',
   ],
+  apollo: {
+    clientConfigs: {
+      default: '~/apollo/config.js',
+    },
+  },
   styleResources: {
     scss: [
       './styles/components/variables.scss',

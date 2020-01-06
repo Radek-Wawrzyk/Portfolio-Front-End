@@ -1,4 +1,6 @@
 .featured-projects {
+  padding: 200px 0 100px 0;
+
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -8,12 +10,13 @@
   }
 
   &__heading {
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-weight: bold;
     max-width: 600px;
+    letter-spacing: 4px;
     width: 100%;
     line-height: 1.7;
-    margin: 0 0 3rem 0;
+    margin: 0 0 5rem 0;
   }
 }
 

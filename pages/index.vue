@@ -2,8 +2,9 @@
   <div class="home">
     <main-header />
     <div class="container">
+      <stats-info :data="infoSection" />
       <featured-projects
-        headerText='Uncompromising approach to each client causes 100% satisfaction. Check my latest projects!'
+        headerText='Featured projects'
         :featuredProjects="featuredProjects"
       />
       <contact-me
@@ -23,6 +24,10 @@
 const MainHeader = () => import(/* webpackChunkName: "main-header-component" */ '@/components/MainHeader/MainHeader.vue');
 const FeaturedProjects = () => import(/* webpackChunkName: "featured-projects-component" */ '@/components/FeaturedProjects/FeaturedProjects.vue');
 const ContactMe = () => import(/* webpackChunkName: "contact-me-component" */ '@/components/ContactMe/ContactMe.vue');
+const StatsInfo = () => import(/* webpackChunkName: "stats-info-component" */ '@/components/StatsInfo/StatsInfo.vue');
+const Partners = () => import(/* webpackChunkName: "partners-component" */ '@/components/Partners/Partners.vue');
+
+import gql from 'graphql-tag';
 
 export default {
   name: 'HomePage',
@@ -30,6 +35,20 @@ export default {
     MainHeader,
     FeaturedProjects,
     ContactMe,
+    StatsInfo,
+    Partners,
+  },
+  apollo: {
+    infoSection: gql`{
+      infoSection {
+        content {
+          name
+          id
+          value
+        }
+        heading
+      }
+    }`
   },
   computed: {
     featuredProjects() {
@@ -58,9 +77,9 @@ export default {
           keys: 'Front-End Developing, UI/UX, SEO optymalization',
           imageURL: 'https://www.rno1.com/images/2/9/2/d/2/292d20a564f6c8230cfc0e692e467a47337971e8-spring-labs-thumbnail-portrait-r.jpeg',
         },
-      ]
-    }
-  }
+      ];
+    },
+  },
 };
 </script>
 

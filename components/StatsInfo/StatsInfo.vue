@@ -6,8 +6,8 @@
     <ul class="stats-info__list">
       <li 
         class="stats-info__item"
-        v-for="item in data.list"
-        :key="item.name"
+        v-for="item in data.content"
+        :key="item.id"
       >
         <h4 class="stats-info__item-value">
           {{ item.value }}
