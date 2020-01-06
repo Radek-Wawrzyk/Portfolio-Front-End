@@ -1,5 +1,5 @@
 <template>
-  <section class="stats-info">
+  <section class="stats-info" v-if="data">
     <h3 class="stats-info__heading">
       {{ data.heading }}
     </h3>

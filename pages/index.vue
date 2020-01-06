@@ -59,7 +59,9 @@ export default {
           URL: 'jimmylion',
           shortDescription: 'Dedicated e-commerce platform',
           keys: 'Front-End Developing, PWA, Optymalization & E-commerce',
-          imageURL: 'https://www.rno1.com/images/6/0/7/1/7/60717db0fe8ad3b5d3d24036c987cc4750451bd4-pspring-thumb-landscape-r.jpeg',
+          mainImage: {
+            url: 'https://www.rno1.com/images/6/0/7/1/7/60717db0fe8ad3b5d3d24036c987cc4750451bd4-pspring-thumb-landscape-r.jpeg',
+          },
         },
         {
           id: 2,
@@ -67,7 +69,9 @@ export default {
           URL: 'kubotastore',
           shortDescription: 'Ecommerce shop',
           keys: 'Front-End Developing, PWA, Optymalization & E-commerce',
-          imageURL: 'https://www.rno1.com/images/3/2/e/0/c/32e0c3f571f3f39589c14d08cd30b1ef7cf8950b-healto-thumbnail-landscape-r.jpeg',
+          mainImage: {
+            url: 'https://www.rno1.com/images/3/2/e/0/c/32e0c3f571f3f39589c14d08cd30b1ef7cf8950b-healto-thumbnail-landscape-r.jpeg',
+          }
         },
         {
           id: 3,
@@ -75,7 +79,9 @@ export default {
           URL: 'sokolnicki-agency',
           shortDescription: 'E-commerce, marketing & branding agency',
           keys: 'Front-End Developing, UI/UX, SEO optymalization',
-          imageURL: 'https://www.rno1.com/images/2/9/2/d/2/292d20a564f6c8230cfc0e692e467a47337971e8-spring-labs-thumbnail-portrait-r.jpeg',
+          mainImage: {
+            url: 'https://www.rno1.com/images/2/9/2/d/2/292d20a564f6c8230cfc0e692e467a47337971e8-spring-labs-thumbnail-portrait-r.jpeg',
+          },
         },
       ];
     },

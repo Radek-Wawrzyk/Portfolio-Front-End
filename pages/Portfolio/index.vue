@@ -3,8 +3,8 @@
     <div class="container">
       <ul class="portfolio__grid">
         <project-tile
-          v-for="(project, index) in projects"
-          :key="index"
+          v-for="(project, index) in allPortfolioProjects"
+          :key="project.id"
           :project="project"
           class="portfolio__tile"
           :class="[
@@ -20,11 +20,27 @@
 const BaseButton = () => import('@/components/BaseButton/BaseButton.vue');
 const ProjectTile = () => import('@/components/ProjectTile/ProjectTile.vue');
 
+import gql from 'graphql-tag';
+
 export default {
   name: 'PortfolioPage',
   components: {
     ProjectTile,
     BaseButton,
+  },
+  apollo: {
+    allPortfolioProjects: gql`{
+      allPortfolioProjects(orderBy: order_ASC) {
+        id
+        name
+        slug
+        isFeatured
+        order
+        mainImage {
+          url
+        }
+      }
+    }`,
   },
   computed: {
     projects() {

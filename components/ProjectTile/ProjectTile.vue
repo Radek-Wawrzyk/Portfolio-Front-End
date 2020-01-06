@@ -1,7 +1,7 @@
 <template>
   <li class="project-tile">
     <nuxt-link
-      :to="`projects/${project.slug}`"
+      :to="`portfolio/${project.slug}`"
       class="project-tile__link"
       :title="project.name"
       :aria-label="project.name"
@@ -10,12 +10,12 @@
         <img
           class="project-tile__img"
           :alt="project.name"
-          :src="project.imageURL"
+          :src="project.mainImage.url"
         />
       </figure>
       <div class="project-tile__content">
         <h3 class="project-tile__heading">
-          {{ project.name }} — {{ project.shortDescription }}
+          {{ project.name }}
         </h3>
         <p class="project-tile__sub-heading">
           {{ project.keys }}
