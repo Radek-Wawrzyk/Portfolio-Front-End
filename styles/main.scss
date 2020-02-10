@@ -7,3 +7,16 @@
 @import './components/animations.scss';
 @import './components/mixins.scss';
 @import './components/layout.scss';
+
+.loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: $secondary-brand;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: $accent;
+  z-index: 1000000;
+}

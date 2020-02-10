@@ -38,53 +38,67 @@ export default {
     StatsInfo,
     Partners,
   },
-  apollo: {
-    infoSection: gql`{
-      infoSection {
-        content {
-          name
-          id
-          value
-        }
-        heading
-      }
-    }`,
-  },
-  computed: {
-    featuredProjects() {
-      return [
-        {
-          id: 1,
-          name: 'Jimmylion',
-          URL: 'jimmylion',
-          shortDescription: 'Dedicated e-commerce platform',
-          keys: 'Front-End Developing, PWA, Optymalization & E-commerce',
-          mainImage: {
-            url: 'https://www.rno1.com/images/6/0/7/1/7/60717db0fe8ad3b5d3d24036c987cc4750451bd4-pspring-thumb-landscape-r.jpeg',
-          },
-        },
-        {
-          id: 2,
-          name: 'Kubotastore',
-          URL: 'kubotastore',
-          shortDescription: 'Ecommerce shop',
-          keys: 'Front-End Developing, PWA, Optymalization & E-commerce',
-          mainImage: {
-            url: 'https://www.rno1.com/images/3/2/e/0/c/32e0c3f571f3f39589c14d08cd30b1ef7cf8950b-healto-thumbnail-landscape-r.jpeg',
+  // apollo: {
+  //   infoSection: gql`{
+  //     infoSection {
+  //       content {
+  //         name
+  //         id
+  //         value
+  //       }
+  //       heading
+  //     }
+  //   }`,
+  // },
+  async asyncData({ app }) {
+    try {
+      const portfolioProjects = gql`
+        query {
+          allPortfolioProjects(filter: {isFeatured: {eq: true}}) {
+            id
+            name
+            slug
+            isFeatured
+            order
+            mainImage {
+              url
+            }
+            headerContent {
+              heading
+              value
+              id
+            }
           }
-        },
-        {
-          id: 3,
-          name: 'Sokolnicki Agency',
-          URL: 'sokolnicki-agency',
-          shortDescription: 'E-commerce, marketing & branding agency',
-          keys: 'Front-End Developing, UI/UX, SEO optymalization',
-          mainImage: {
-            url: 'https://www.rno1.com/images/2/9/2/d/2/292d20a564f6c8230cfc0e692e467a47337971e8-spring-labs-thumbnail-portrait-r.jpeg',
-          },
-        },
-      ];
-    },
+        }
+      `
+      const infoSection = gql`
+        query {
+          infoSection {
+            content {
+              name
+              id
+              value
+            }
+            heading
+          }
+        }
+      `
+      const projects = await app.apolloProvider.defaultClient.query({
+        query: portfolioProjects,
+      });
+      const info = await app.apolloProvider.defaultClient.query({
+        query: infoSection,
+      });
+
+      return {
+        featuredProjects: projects.data.allPortfolioProjects,
+        infoSection: info.data.infoSection,
+      };
+    } catch (err) {
+      return {
+        test: err
+      }
+    }
   },
 };
 </script>

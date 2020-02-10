@@ -13,6 +13,11 @@
         />
       </ul>
     </div>
+        <transition name="fade" mode="out-in">
+      <div v-if="$apollo.loading" class="loader" style="transition-delay: 0.5s">
+      loading...
+      </div>
+    </transition>
   </div>
 </template>
 

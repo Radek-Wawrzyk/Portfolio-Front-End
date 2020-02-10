@@ -11,8 +11,8 @@
         v-for="project in featuredProjects"
         :key="project.id"
       >
-        <a
-          href="#"
+        <nuxt-link
+          :to="`portfolio/${project.slug}`"
           class="featured-project__link"
           :title="project.name"
           :aria-label="project.name"
@@ -25,12 +25,12 @@
             />
           </figure>
           <h3 class="featured-project__heading">
-            {{ project.name }} — {{ project.shortDescription }}
+            {{ project.name }}
           </h3>
           <p class="featured-project__sub-heading">
-            {{ project.keys }}
+            {{ tags(project.headerContent).value }}
           </p>
-        </a>
+        </nuxt-link>
       </li>
     </ul>
   </section>
@@ -47,6 +47,11 @@ export default {
     featuredProjects: {
       type: Array,
       required: true,
+    },
+  },
+  methods: {
+    tags(content) {
+      return content.find(header => header.heading === 'Categories');
     },
   },
 };

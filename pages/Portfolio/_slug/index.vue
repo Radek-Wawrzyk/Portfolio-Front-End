@@ -1,6 +1,12 @@
 <template>
-  <div class="project" v-if="portfolioProject">
-    <div class="container">
+  <div class="project">
+    <transition name="fade" mode="out-in">
+       <div class="loader" v-if="!portfolioProject">
+        loading...
+      </div>
+    </transition>
+   
+    <div class="container" v-if="portfolioProject">
       <header class="project-header">
         <div class="project-header__column project-header__column--left">
           <span class="project-header__sub-label">
