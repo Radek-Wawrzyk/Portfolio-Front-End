@@ -12,7 +12,7 @@
           class="navigation__logo-link"
         >
           <img
-            src="~/assets/images/logo.svg"
+            src="~/assets/images/Rlogo9.svg"
             alt="Radek Wawrzyk"
             class="navigation__logo"
           />
