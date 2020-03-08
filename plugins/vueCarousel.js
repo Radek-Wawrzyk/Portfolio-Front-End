@@ -1,9 +1,4 @@
-// import Vue from 'vue'
-// import VueCarousel from 'vue-carousel';
+import Vue from 'vue';
+import Siema from 'vue2-siema';
 
-// Vue.use(VueCarousel);
-
-import Vue from 'vue'
-import Siema from 'vue2-siema'
-
-Vue.use(Siema)
+Vue.use(Siema);
