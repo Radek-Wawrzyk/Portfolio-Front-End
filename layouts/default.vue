@@ -67,7 +67,7 @@ export default {
       this.$refs.cursor.style.left = `${e.pageX}px`;
     });
 
-    document.querySelectorAll('a, button, nuxt-link, .project-tile__heading').forEach(link => {
+    document.querySelectorAll('a, button, nuxt-link, img').forEach(link => {
       link.addEventListener('mouseleave', () => {
         this.$refs.cursor.classList.remove('cursor--on-link');
       });
@@ -91,6 +91,7 @@ export default {
   .page__content {
     transition: all 0.7s;
     height: 100vh;
+
     &--active {
       transform: translate3d(0, 100vh, 0);
     }
