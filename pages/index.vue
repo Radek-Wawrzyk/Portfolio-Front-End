@@ -1,6 +1,12 @@
 <template>
   <div class="home">
-    <main-header />
+    <!-- <div class="container"> -->
+      <projects-carousel
+        :projects="featuredProjects"
+      />
+    <!-- </div> -->
+
+    <!-- <main-header />
     <div class="container">
       <stats-info :data="infoSection" />
       <featured-projects
@@ -16,7 +22,7 @@
         linkURL="/project-form"
         linkText="Let's do this!"
       />
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -26,6 +32,7 @@ const FeaturedProjects = () => import(/* webpackChunkName: "featured-projects-co
 const ContactMe = () => import(/* webpackChunkName: "contact-me-component" */ '@/components/ContactMe/ContactMe.vue');
 const StatsInfo = () => import(/* webpackChunkName: "stats-info-component" */ '@/components/StatsInfo/StatsInfo.vue');
 const Partners = () => import(/* webpackChunkName: "partners-component" */ '@/components/Partners/Partners.vue');
+const ProjectsCarousel = () => import(/* webpackChunkName: "projects-carousel-component" */ '@/components/ProjectsCarousel/ProjectsCarousel.vue');
 
 import gql from 'graphql-tag';
 
@@ -37,6 +44,7 @@ export default {
     ContactMe,
     StatsInfo,
     Partners,
+    ProjectsCarousel,
   },
   // apollo: {
   //   infoSection: gql`{
@@ -57,6 +65,8 @@ export default {
           allPortfolioProjects(filter: {isFeatured: {eq: true}}) {
             id
             name
+            titleUp
+            titleDown
             slug
             isFeatured
             order

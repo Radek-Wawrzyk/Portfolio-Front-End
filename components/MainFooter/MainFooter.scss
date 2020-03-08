@@ -1,78 +1,23 @@
 .main-footer {
-  padding: 2rem 0;
-  position: relative;
-  z-index: 2;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 
-  &__container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  &__logo {
-    width: 50px;
-  }
-
-  &__heading {
-    margin: 0 0 2rem 0;
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
-
-  &__menu-list {
-    &-item {
-      margin: 0 0 1rem 0;
-    }
-
-    &-link {
-      display: inline-block;
-      outline-color: $primary-brand--medium;
-    }
-  }
-
-  &__socials {
+  &__content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 92vw;
     display: flex;
     align-items: center;
-
-    &-item {
-      width: 22px;
-      margin: 0 1rem 0 0;
-
-      &:last-child {
-        margin: 0;
-      }
-    }
-
-    &-link {
-      display: inline-block;
-      outline-color: $primary-brand--medium;
-      padding: 2px;
-
-      &:hover, &:focus {
-        svg path {
-          fill: $primary-brand--medium;
-        }
-      }
-
-      svg {
-        display: block;
-        width: 100%;
-      
-        path {
-          transition: fill $transition-time;
-        }
-      }
-    }
+    justify-content: space-between;
+    height: 60px;
   }
 
-  &__link {
-    display: block;
-    font-size: 1rem;
-    margin: 0 0 1rem 0;
-    outline-color: $primary-brand--medium;
-  }
-
-  &__copyright {
-    color: $accent-text;
-    margin: 1rem 0 0 0;
+  &__copyright, &__link {
+    color: $accent--medium;
+    font-size: 0.8rem;
+    font-weight: 300;
   }
 }

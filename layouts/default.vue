@@ -8,16 +8,21 @@
       @toggleMenu="toggleMenu()"
       :isMenuOpen="isMenuOpen"
     />
-    <div class="page__content">
+    <div
+      class="page__content"
+      :class="{'page__content--active' : isMenuOpen }"
+    >
       <nuxt />
     </div>
-    <div class="lines">
+
+    <!-- <div class="lines">
       <span class="lines__item"/>
       <span class="lines__item"/>
       <span class="lines__item"/>
       <span class="lines__item"/>
       <span class="lines__item"/>
     </div>
+    -->
     <main-footer />
   </main>
 </template>
@@ -44,3 +49,16 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+  body {
+    overflow: hidden;
+  }
+  .page__content {
+    transition: all 0.7s;
+    height: 100vh;
+    &--active {
+      transform: translate3d(0, 100vh, 0);
+    }
+  }
+</style>

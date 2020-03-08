@@ -14,6 +14,7 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900&amp;subset=latin-ext' },
+      { rel: 'stylesheet', href: 'href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap&subset=latin-ext' },
     ]
   },
   loading: { color: '#fff' },
@@ -22,6 +23,7 @@ export default {
   ],
   plugins: [
     { src: '@/plugins/veeValidate' },
+    { src: '@/plugins/vueCarousel', mode: 'client' },
   ],
   buildModules: [
     '@nuxtjs/eslint-module'
