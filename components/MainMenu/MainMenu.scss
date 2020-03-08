@@ -3,19 +3,13 @@
   left: 0;
   top: 60px;
   width: 100%;
-  height: calc(100vh - 60px);
-  // opacity: 0;
-  // visibility: hidden;
-  will-change:  opacity, visibility;
-  // transition: opacity 0.2s, visibility 0.2s;
-  transition: all 0.7s;
-  // background-color: $secondary-brand;
+  height: calc(100vh - 120px);
+  will-change:  transform;
+  transition: transform 0.7s;
   z-index: 100;
   transform: translate3d(0, -100vh, 0);
 
   &--active {
-    // opacity: 1;
-    // visibility: visible;
     transform: translate3d(0, 0, 0);
   }
 

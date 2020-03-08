@@ -13,6 +13,7 @@
         :current.sync="currentSlide"
         class="project-carousel__inner"
         auto-play
+        @scroll="test()"
       >
         <div
           class="project-tile"
@@ -80,6 +81,9 @@ export default {
     },
   },
   methods: {
+    test() {
+      console.log('XD')
+    },
     goNext() {
       this.$refs.siema.next();
     },
@@ -92,7 +96,15 @@ export default {
       e.keyCode === 39 ? this.goNext() : false;
       e.keyCode === 37 ? this.goPrev() : false;
     }, { passive: true });
-  }
+
+    window.addEventListener('scroll', (e) => {
+      console.log('XD');
+    });
+
+    document.querySelector('.projects-carousel').addEventListener('scroll', () => {
+      console.log('xd')
+    })
+  },
 };
 </script>
 

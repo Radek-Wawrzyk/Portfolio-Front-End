@@ -1,9 +1,11 @@
 body, html {
   background-color: $secondary-brand;
+  cursor: none;
 }
 
 * {
   box-sizing: border-box;
+  cursor: none;
 }
 
 button:hover {
@@ -66,6 +68,28 @@ button:hover {
   &__content {
     position: relative;
     z-index: 2;
+  }
+}
+
+// Custom cursor
+
+.cursor {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid $accent;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.2s ease;
+  transition-property: background-color, transform;
+  transform-origin: 100% 100%;
+  mix-blend-mode: exclusion;
+
+  &--on-link {
+    background-color: $accent;
+    transform: scale(2);
   }
 }
 
