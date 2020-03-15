@@ -36,6 +36,12 @@
         >
           +48 516 649 611
         </a>
+        <base-button
+          type="outline"
+          @click="twoSum(x, y)"
+        >
+          Click me
+        </base-button>
       </div>
     </div>
   </div>
@@ -49,6 +55,29 @@ export default {
   components: {
     BaseButton,
   },
+  data: () => ({
+    x: [1, 4, 5, 5, 3, 8, 9, 6],
+    y: 10,
+  }),
+  methods: {
+    twoSum(numbers, target) {
+      if (numbers && target) {
+        let i = 0;
+        let numbersLength = numbers.length;
+        let nextIndexNumber;
+
+        for (i; i < numbersLength; i++) {
+          nextIndexNumber = numbers[i + 1] != undefined ? numbers[i + 1] : numbers[0];
+
+          if (numbers[i] + nextIndexNumber === target) {
+            console.log(`${numbers[i]} + ${nextIndexNumber} = ${numbers[i] + nextIndexNumber}`);
+          } else {
+            console.log(`${numbers[i]} + ${nextIndexNumber} != ${numbers[i] + nextIndexNumber}`);
+          }
+        }
+      }
+    },
+  }
 };
 </script>
 

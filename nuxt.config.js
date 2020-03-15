@@ -44,10 +44,9 @@ export default {
       './styles/components/mixins.scss',
     ],
   },
-  // transition: {
-  //   name: 'fade-page',
-  //   mode: 'out-in'
-  // },
+  transition: {
+    name: 'fade-page-2',
+  },
   axios: {
   },
   build: {
@@ -55,6 +54,7 @@ export default {
     }
   },
   router: {
+    linkPrefetchedClass: 'nuxt-link',
     extendRoutes (routes, resolve) {
       routes.push({
         name: 'error',

@@ -39,7 +39,6 @@
               :src="project.mainImage.url"
             />
           </figure>
-
         </div>
       </siema>
       <div class="pagination">
@@ -77,13 +76,10 @@ export default {
   },
   computed: {
     allSlides() {
-      return this.projects.length;
+      return this.projects ? this.projects.length : 0;
     },
   },
   methods: {
-    test() {
-      console.log('XD')
-    },
     goNext() {
       this.$refs.siema.next();
     },
@@ -96,14 +92,6 @@ export default {
       e.keyCode === 39 ? this.goNext() : false;
       e.keyCode === 37 ? this.goPrev() : false;
     }, { passive: true });
-
-    window.addEventListener('scroll', (e) => {
-      console.log('XD');
-    });
-
-    document.querySelector('.projects-carousel').addEventListener('scroll', () => {
-      console.log('xd')
-    })
   },
 };
 </script>

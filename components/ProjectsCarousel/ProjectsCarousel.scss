@@ -59,6 +59,16 @@
     z-index: 9;
     position: relative;
     transition: 0.7s all 0.3s;
+
+    &-wrapper {
+      position: relative;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      perspective: 1000;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
   }
 
   &__heading {
@@ -66,13 +76,13 @@
     left: -4rem;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 400px;
+    // max-width: 400px;
     z-index: 10;
     transition: all 3s;
 
     &-up {
-      display: inline-block;
-      font-size: 60px;
+      display: block;
+      font-size: 4vw;
       font-weight: bold;
       // transition: all 0.8s ease-out;
       transition: 0.9s opacity 0.2s, transform 0.8s ;
@@ -82,7 +92,7 @@
 
     &-down {
       display: inline-block;
-      font-size: 60px;
+      font-size: 4vw;
       font-weight: bold;
       transition: 1s opacity 0.2s, transform 0.8s;
       opacity: 0;
@@ -127,5 +137,31 @@
   &__line {
     height: 10px;
     margin: 0 1rem;
+  }
+}
+
+// Media
+
+@media screen and (max-width: 1024px) {
+  .project-tile {
+    width: 75%;
+
+    &__image {
+      height: 40vw;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-tile {
+    width: 75%;
+
+    &__image {
+      height: 50vw;
+    }
+
+    &__heading {
+      left: -2rem;
+    }
   }
 }

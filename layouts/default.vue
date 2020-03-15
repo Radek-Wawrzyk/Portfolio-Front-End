@@ -67,7 +67,7 @@ export default {
       this.$refs.cursor.style.left = `${e.pageX}px`;
     });
 
-    document.querySelectorAll('a, button, nuxt-link, img').forEach(link => {
+    document.querySelectorAll('a, button, .nuxt-link, img').forEach(link => {
       link.addEventListener('mouseleave', () => {
         this.$refs.cursor.classList.remove('cursor--on-link');
       });

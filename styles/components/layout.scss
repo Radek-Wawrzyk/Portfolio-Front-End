@@ -1,15 +1,12 @@
 body, html {
   background-color: $secondary-brand;
   cursor: none;
+  overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
   cursor: none;
-}
-
-button:hover {
-  cursor: pointer;
 }
 
 .container {
@@ -96,8 +93,21 @@ button:hover {
 
 // Media
 
-// @media screen and (max-width: 1024px) {
-//   .container {
-//     padding: 0 1rem;
-//   }
-// }
+@media screen and (max-width: 1024px) {
+  .lines {
+    &__item {
+      &:nth-child(1),  &:nth-child(2),  &:nth-child(3),
+      &:nth-child(4),  &:nth-child(5) {
+        display: none;
+      }
+
+      // &:nth-child(3) {
+      //   display: none;
+      // }
+
+      // &:nth-child(5) {
+      //   display: none;
+      // }
+    }
+  }
+}
