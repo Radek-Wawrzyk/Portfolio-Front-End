@@ -94,6 +94,14 @@ body, html {
 // Media
 
 @media screen and (max-width: 1024px) {
+  .cursor {
+    display: none;
+  }
+
+  body, html {
+    cursor: unset;
+  }
+
   .lines {
     &__item {
       &:nth-child(1),  &:nth-child(2),  &:nth-child(3),

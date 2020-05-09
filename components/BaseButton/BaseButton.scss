@@ -61,3 +61,12 @@
     color: $accent;
   }
 }
+
+// Media
+
+@media screen and (max-width: 1024px) {
+  .base-button {
+    height: 60px;
+    font-size: 1rem;
+  }
+}
