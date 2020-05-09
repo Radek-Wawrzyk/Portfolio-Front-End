@@ -46,6 +46,7 @@ export default {
   },
   transition: {
     name: 'fade-page-2',
+    // mode: 'out-in'
   },
   axios: {
   },

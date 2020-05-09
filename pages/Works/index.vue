@@ -16,7 +16,20 @@ export default {
   components: {
     ProjectsCarousel,
   },
-  async asyncData({ app }) {
+  // apollo: {
+  //   infoSection: gql`{
+  //     infoSection {
+  //       content {
+  //         name
+  //         id
+  //         value
+  //       }
+  //       heading
+  //     }
+  //   }`,
+  // },
+  async asyncData({ app, redirect }) {
+    redirect('/works');
     try {
       const portfolioProjects = gql`
         query {

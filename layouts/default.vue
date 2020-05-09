@@ -22,7 +22,10 @@
       <span class="lines__item"/>
       <span class="lines__item"/>
     </div>
-    <div class="cursor" ref="cursor" />
+    <client-only>
+      <div class="cursor" ref="cursor" v-if="isLoaded" />
+    </client-only>
+
     <main-footer />
   </main>
 </template>
@@ -35,7 +38,8 @@ const MainFooter = () => import(/* webpackChunkName: "main-footer-component" */ 
 export default {
   name: 'default-layout',
   data: () => ({
-    isMenuOpen: false
+    isMenuOpen: false,
+    isLoaded: false,
   }),
   components: {
     Navigation,
@@ -67,15 +71,19 @@ export default {
       this.$refs.cursor.style.left = `${e.pageX}px`;
     });
 
-    document.querySelectorAll('a, button, .nuxt-link, img').forEach(link => {
+    document.querySelectorAll('a, button, .nuxt-link, img', '.project-tile__heading').forEach(link => {
       link.addEventListener('mouseleave', () => {
         this.$refs.cursor.classList.remove('cursor--on-link');
+
       });
       link.addEventListener('mouseover', () => {
         this.$refs.cursor.classList.add('cursor--on-link');
+        console.log('xd')
       });
     });
-
+  },
+  created() {
+    this.isLoaded = true;
   },
 };
 </script>

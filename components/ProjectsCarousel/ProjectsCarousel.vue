@@ -2,7 +2,7 @@
   <section class="projects-carousel">
     <h2
       class="projects-carousel__background-text"
-      :style="{ transform: `translate(${currentSlide}00px, -50%)` }"
+      :style="{ transform: `translate(${ currentSlide }00px, -50%)` }"
     >
       Works.
     </h2>
@@ -57,6 +57,8 @@
 </template>
 
 <script>
+import debounce from 'lodash/debounce';
+
 export default {
   name: 'ProjectsCarousel',
   data: () => ({
@@ -85,13 +87,22 @@ export default {
     },
     goPrev() {
       this.$refs.siema.prev();
-    }
+    },
   },
   mounted() {
-    document.body.addEventListener('keyup', e => {
+    const body = document.querySelector('body');
+    const carousel =  document.querySelector('.projects-carousel');
+
+    body.addEventListener('keyup', e => {
       e.keyCode === 39 ? this.goNext() : false;
       e.keyCode === 37 ? this.goPrev() : false;
     }, { passive: true });
+
+    carousel.addEventListener('wheel', debounce((event) => {
+      var event = window.event || event;
+      const delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+      delta > 0 ? this.goNext() : this.goPrev();
+    }, { passive: true }, 1200));
   },
 };
 </script>
