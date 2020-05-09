@@ -18,10 +18,12 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "core-js": "^2.0.0",
     "datocms-client": "^3.0.14",
+    "lodash.debounce": "^4.0.8",
     "node-sass": "^4.13.0",
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.0",
-    "vee-validate": "^3.2.1"
+    "vee-validate": "^3.2.1",
+    "vue2-siema": "^0.2.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",

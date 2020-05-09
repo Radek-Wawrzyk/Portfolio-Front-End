@@ -7,11 +7,43 @@
   }
 }
 
+.pagination-fade {
+  &-enter-active, &-leave-active {
+    transition: opacity 0.2s;
+  }
+  &-enter, &-leave-to {
+    opacity: 0;
+  }
+}
+
 .fade-page {
   &-enter-active, &-leave-active {
     transition: opacity 0.4s;
   }
   &-enter, &-leave-to {
     opacity: 0;
+  }
+}
+
+.fade-page-2 {
+  &-enter-active, &-leave-active, &-enter, &-leave {
+    transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    overflow: hidden;
+  }
+
+  &-enter {
+    transform: translate3d(0, 100vh, 0);
+  }
+
+  &-enter-active {
+    // transform: translate3d(0, 0, 0);
+  }
+
+  &-leave {
+    // transform: translate3d(0, 0, 0);
+  }
+
+  &-leave-active {
+    transform: translate3d(0, 100vh, 0);
   }
 }

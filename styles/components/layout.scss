@@ -1,13 +1,12 @@
 body, html {
   background-color: $secondary-brand;
+  cursor: none;
+  // overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
-}
-
-button:hover {
-  cursor: pointer;
+  cursor: none;
 }
 
 .container {
@@ -69,10 +68,46 @@ button:hover {
   }
 }
 
+// Custom cursor
+
+.cursor {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid $accent;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.2s ease;
+  transition-property: background-color, transform;
+  transform-origin: 100% 100%;
+  mix-blend-mode: exclusion;
+
+  &--on-link {
+    background-color: $accent;
+    // background-color: $primary-brand--medium;
+    transform: scale(2);
+  }
+}
+
 // Media
 
-// @media screen and (max-width: 1024px) {
-//   .container {
-//     padding: 0 1rem;
-//   }
-// }
+@media screen and (max-width: 1024px) {
+  .lines {
+    &__item {
+      &:nth-child(1),  &:nth-child(2),  &:nth-child(3),
+      &:nth-child(4),  &:nth-child(5) {
+        display: none;
+      }
+
+      // &:nth-child(3) {
+      //   display: none;
+      // }
+
+      // &:nth-child(5) {
+      //   display: none;
+      // }
+    }
+  }
+}

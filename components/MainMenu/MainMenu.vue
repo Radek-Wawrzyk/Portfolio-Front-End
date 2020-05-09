@@ -78,21 +78,6 @@
         </li>
       </ul>
     </div>
-    <footer class="menu-footer">
-      <p class="menu-footer__text">
-        <a
-          class="menu-footer__link"
-          aria-label="Email me"
-          title="Email me"
-          href="mailto:radekwawrzyk@gmail.com"
-        >
-          radekwawrzyk@gmail.com
-        </a>
-      </p>
-      <p class="menu-footer__text">
-        © 2019 Radoslaw Wawrzyk Front-End Engineer
-      </p>
-    </footer>
   </div>
 </template>
 

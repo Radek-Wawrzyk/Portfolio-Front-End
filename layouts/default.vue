@@ -8,9 +8,13 @@
       @toggleMenu="toggleMenu()"
       :isMenuOpen="isMenuOpen"
     />
-    <div class="page__content">
+    <div
+      class="page__content"
+      :class="{'page__content--active' : isMenuOpen }"
+    >
       <nuxt />
     </div>
+
     <div class="lines">
       <span class="lines__item"/>
       <span class="lines__item"/>
@@ -18,6 +22,10 @@
       <span class="lines__item"/>
       <span class="lines__item"/>
     </div>
+    <client-only>
+      <div class="cursor" ref="cursor" v-if="isLoaded" />
+    </client-only>
+
     <main-footer />
   </main>
 </template>
@@ -30,7 +38,8 @@ const MainFooter = () => import(/* webpackChunkName: "main-footer-component" */ 
 export default {
   name: 'default-layout',
   data: () => ({
-    isMenuOpen: false
+    isMenuOpen: false,
+    isLoaded: false,
   }),
   components: {
     Navigation,
@@ -40,7 +49,59 @@ export default {
   methods: {
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
+    },
+  },
+  watch: {
+    isMenuOpen(o, n) {
+      const body = document.querySelector('body');
+
+      if (this.isMenuOpen) {
+        body.classList.add('no-scroll');
+      } else {
+        setTimeout(() => {
+          body.classList.remove('no-scroll');
+        }, 700);
+
+      }
     }
-  }
+  },
+  mounted() {
+    window.addEventListener('mousemove', (e) => {
+      this.$refs.cursor.style.top = `${e.pageY}px`;
+      this.$refs.cursor.style.left = `${e.pageX}px`;
+    });
+
+    document.querySelectorAll('a, button, .nuxt-link, img', '.project-tile__heading').forEach(link => {
+      link.addEventListener('mouseleave', () => {
+        this.$refs.cursor.classList.remove('cursor--on-link');
+
+      });
+      link.addEventListener('mouseover', () => {
+        this.$refs.cursor.classList.add('cursor--on-link');
+        console.log('xd')
+      });
+    });
+  },
+  created() {
+    this.isLoaded = true;
+  },
 };
 </script>
+
+<style lang="scss">
+  body {
+    overflow-x: hidden;
+
+    &.no-scroll {
+      overflow: hidden;
+    }
+  }
+  .page__content {
+    transition: all 0.7s;
+    height: 100vh;
+
+    &--active {
+      transform: translate3d(0, 100vh, 0);
+    }
+  }
+</style>
