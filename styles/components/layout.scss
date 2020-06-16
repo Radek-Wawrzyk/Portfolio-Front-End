@@ -51,9 +51,9 @@ body, html {
 // Media
 
 @media screen and (max-width: 1024px) {
-  // .cursor {
-  //   display: none;
-  // }
+  .cursor {
+    display: none;
+  }
 
   .container {
     padding: 0 1rem;
