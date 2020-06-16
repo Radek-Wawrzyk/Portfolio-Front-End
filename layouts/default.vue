@@ -15,13 +15,13 @@
       <nuxt />
     </div>
 
-    <div class="lines">
+    <!-- <div class="lines">
       <span class="lines__item"/>
       <span class="lines__item"/>
       <span class="lines__item"/>
       <span class="lines__item"/>
       <span class="lines__item"/>
-    </div>
+    </div> -->
     <client-only>
       <div class="cursor" ref="cursor" />
     </client-only>
