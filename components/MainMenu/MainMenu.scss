@@ -1,16 +1,17 @@
 .menu {
   position: fixed;
   left: 0;
-  top: 60px;
+  top: 0;
   width: 100%;
-  height: calc(100vh - 120px);
+  height: 100vh;
   will-change:  transform;
-  transition: transform 0.7s;
+  transition: all 0.7s;
   z-index: 100;
   transform: translate3d(0, -100vh, 0);
 
   &--active {
     transform: translate3d(0, 0, 0);
+    transition: all 0.7s;
   }
 
   &-socials {
@@ -23,29 +24,18 @@
     &__title {
       position: relative;
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 400;
       opacity: 0;
-      transform: rotate(90deg), translate3d(50px, 0, 0);
-      transition: opacity 0.2s, transform 0.38s;
-    }
-
-    &__line {
-      display: inline-block;
-      width: 20px;
-      height: 2px;
-      border-radius: 4px;
-      background-color: $accent;
-      transform: rotate(90deg), translate3d(50px, 0, 0);
-      text-align: center;
       margin: 4rem 0 2rem 0;
-      opacity: 0;
-      transition: opacity 0.2s, transform 0.38s;
+      transform: translate3d(0, 50px, 0) rotate(90deg);
+      transition: opacity 0.7s, transform 1.4s;
+      transition-delay: 0.4s;
     }
 
     &__item {
       opacity: 0;
-      transform: translate3d(50px, 0, 0);
-      transition: opacity 0.2s, transform 0.38s;
+      transform: translate3d(0, 50px, 0);
+      transition: opacity 0.7s, transform 1.4s;
     }
 
     &__link {
@@ -146,7 +136,7 @@
     &__item {
       opacity: 0;
       transform: translate3d(0, 0, 0);
-      transition: opacity 0.2s, transform 0.38s;
+      transition: opacity 0.7s, transform 1.4s;
     }
   }
 
@@ -181,21 +171,26 @@
   .menu-navigation__item {
     opacity: 1;
     transform: translate3d(0, -50px, 0);
+    transition: opacity 0.7s, transform 1.4s;
 
     &:nth-child(1) {
-      transition-delay: 0.1s;
-    }
-    &:nth-child(2) {
-      transition-delay: 0.2s;
-    }
-    &:nth-child(3) {
-      transition-delay: 0.3s;
-    }
-    &:nth-child(4) {
       transition-delay: 0.4s;
     }
-    &:nth-child(5) {
+
+    &:nth-child(2) {
       transition-delay: 0.5s;
+    }
+
+    &:nth-child(3) {
+      transition-delay: 0.6s;
+    }
+
+    &:nth-child(4) {
+      transition-delay: 0.7s;
+    }
+
+    &:nth-child(5) {
+      transition-delay: 0.8s;
     }
   }
 
@@ -214,18 +209,19 @@
   .menu-socials__item {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+    transition: opacity 0.7s, transform 1.4s;
 
     &:nth-child(1) {
-      transition-delay: 0.1s;
+      transition-delay: 0.4s;
     }
     &:nth-child(2) {
-      transition-delay: 0.2s;
+      transition-delay: 0.5s;
     }
     &:nth-child(3) {
-      transition-delay: 0.3s;
+      transition-delay: 0.6s;
     }
     &:nth-child(4) {
-      transition-delay: 0.4s;
+      transition-delay: 0.7s;
     }
   }
 
@@ -270,7 +266,7 @@
 
     &-navigation {
       max-width: 100%;
-      margin: 100px 0 0 0;
+      margin: 200px 0 0 0;
 
       &__link {
         font-size: 1.5rem;

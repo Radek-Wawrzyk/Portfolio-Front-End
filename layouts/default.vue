@@ -15,16 +15,10 @@
       <nuxt />
     </div>
 
-    <!-- <div class="lines">
-      <span class="lines__item"/>
-      <span class="lines__item"/>
-      <span class="lines__item"/>
-      <span class="lines__item"/>
-      <span class="lines__item"/>
-    </div> -->
     <client-only>
       <div class="cursor" ref="cursor" />
     </client-only>
+    
     <transition name="fade" mode="out-in">
       <preloader v-if="$apollo.loading" />
     </transition>
@@ -124,12 +118,15 @@ export default {
       overflow: hidden;
     }
   }
+
   .page__content {
     transition: all 0.7s;
     height: 100vh;
 
     &--active {
+      transition: all 0.7s;
       transform: translate3d(0, 100vh, 0);
+      opacity: 0;
     }
   }
 </style>

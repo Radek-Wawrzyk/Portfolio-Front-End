@@ -94,7 +94,7 @@ export default {
     menu: [
       {
         id: 1,
-        name: 'Home',
+        name: 'Works',
         path: '/',
       },
       {
@@ -104,12 +104,7 @@ export default {
       },
       {
         id: 3,
-        name: 'Contact',
-        path: '/contact',
-      },
-      {
-        id: 4,
-        name: 'Your project',
+        name: 'Hire me!',
         path: '/project-form',
       },
     ],
