@@ -15,17 +15,13 @@
       <nuxt />
     </div>
 
-    <div class="lines">
-      <span class="lines__item"/>
-      <span class="lines__item"/>
-      <span class="lines__item"/>
-      <span class="lines__item"/>
-      <span class="lines__item"/>
-    </div>
     <client-only>
-      <div class="cursor" ref="cursor" v-if="isLoaded" />
+      <div class="cursor" ref="cursor" />
     </client-only>
-
+    
+    <transition name="fade" mode="out-in">
+      <preloader v-if="$apollo.loading" />
+    </transition>
     <main-footer />
   </main>
 </template>
@@ -34,17 +30,20 @@
 const Navigation = () => import(/* webpackChunkName: "navigation-component" */ '@/components/Navigation/Navigation.vue');
 const MainMenu = () => import(/* webpackChunkName: "main-menu-component" */ '@/components/MainMenu/MainMenu.vue');
 const MainFooter = () => import(/* webpackChunkName: "main-footer-component" */ '@/components/MainFooter/MainFooter.vue');
+const Preloader = () => import(/* webpackChunkName: "preloader-component" */ '@/components/Preloader/Preloader.vue');
+
+import gql from 'graphql-tag';
 
 export default {
   name: 'default-layout',
   data: () => ({
     isMenuOpen: false,
-    isLoaded: false,
   }),
   components: {
     Navigation,
     MainMenu,
     MainFooter,
+    Preloader,
   },
   methods: {
     toggleMenu() {
@@ -52,7 +51,7 @@ export default {
     },
   },
   watch: {
-    isMenuOpen(o, n) {
+    isMenuOpen() {
       const body = document.querySelector('body');
 
       if (this.isMenuOpen) {
@@ -61,9 +60,32 @@ export default {
         setTimeout(() => {
           body.classList.remove('no-scroll');
         }, 700);
-
       }
+    },
+    allPortfolioProjects() {
+      this.allPortfolioProjects && this.allPortfolioProjects.length ? console.log('pobrane!') : false;
     }
+  },
+  apollo: {
+    allPortfolioProjects: gql`{
+      allPortfolioProjects(filter: {isFeatured: {eq: true}}) {
+        id
+        name
+        titleUp
+        titleDown
+        slug
+        isFeatured
+        order
+        mainImage {
+          url
+        }
+        headerContent {
+          heading
+          value
+          id
+        }
+      },
+    }`,
   },
   mounted() {
     window.addEventListener('mousemove', (e) => {
@@ -83,7 +105,7 @@ export default {
     });
   },
   created() {
-    this.isLoaded = true;
+    this.$store.dispatch('fetchData');
   },
 };
 </script>
@@ -96,12 +118,15 @@ export default {
       overflow: hidden;
     }
   }
+
   .page__content {
     transition: all 0.7s;
     height: 100vh;
 
     &--active {
+      transition: all 0.7s;
       transform: translate3d(0, 100vh, 0);
+      opacity: 0;
     }
   }
 </style>
