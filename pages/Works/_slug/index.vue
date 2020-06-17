@@ -1,41 +1,45 @@
 <template>
   <div class="project">
-    <div class="container" v-if="portfolioProject">
+    <div class="container" v-if="project">
       <header class="project-header">
+        <!-- <h2
+          class="projects-carousel__background-text"
+          :style="{ transform: `translate(-50%, -50%)` }"
+        >
+          Works.
+        </h2> -->
         <div class="project-header__column">
           <h1 class="project-header__title">
             <span class="project-header__title-row">
-              JimmyLion
+              {{ project.data.heading_up[0].text }}
             </span>
             <span class="project-header__title-row">
-              PWA ecommerce
+              {{ project.data.heading_down[0].text }}
             </span>
           </h1>
           <h2 class="project-header__sub-title">
             Intro
           </h2>
           <p class="project-header__description">
-           In 2012, two friends, Alvaro and Felipe, left their jobs in investment banking to start an MBA in New York. There they got obsessed with the start-up world and spent the first semester of school discussing business ideas.
-           They noticed that socks have been generally neglected by the fashion industry.
-           Hocked by the lack of well designed socks and by the unaccesible prices of good quality socks they started Jimmy Lion.
+            {{ project.data.intro[0].text }}
           </p>
           <h2 class="project-header__sub-title">
             Services
           </h2>
           <p class="project-header__description">
-            Front End Development, Back End Development
+            {{ project.data.services[0].text }}
           </p>
         </div>
         <div class="project-header__column project-header__column--right">
           <img
             class="project-header__image"
-            alt=""
-            src="https://www.prokhorov.design/assets/images/es-mockup-first.png"
+            :alt="project.data.header_image_left.alt ? project.data.header_image_left.alt : ''"
+            :src="project.data.header_image_left.url"
           />
           <img
             class="project-header__image"
-            alt=""
-            src="https://www.prokhorov.design/assets/images/es-mockup-second.png"
+            :alt="project.data.header_image_right.alt ? project.data.header_image_right.alt : ''"
+            :src="project.data.header_image_right.url"
           />
         </div>
       </header>
@@ -44,7 +48,7 @@
         <img
           class="project-main-img__inner"
           alt=""
-          :src="portfolioProject.mainImage.url"
+          :src="project.data.main_image.url"
         />
       </figure>
 
@@ -54,81 +58,95 @@
             <h3 class="project-description__heading">
               Challenge
             </h3>
-            <p
-              class="project-description__text"
-            >
-              After talking to the client about his vision and exploring similar apps in the store, we were focused on creating the relaxing and meditation feels in the app. Since the target audience is beginners, the design should not become too serious, on the contrary, it should give a sense of friendless, calmness and serenity, so we placed greater emphasis on the graphics that should convey the idea of the app.
-            </p>
+            <prismic-rich-text
+              :field="project.data.challenge"
+              class="project-description__text prismic"
+            />
           </div>
           <div class="project-description__column">
             <h3 class="project-description__heading">
               Approach & solutions
             </h3>
-            <p
-              class="project-description__text"
-            >
-              Our main goal was to create a holistic picture, consisting of the separate of meditative sessions, which would complement each other at the expense of colors and interaction.
-            </p>
+            <prismic-rich-text
+              :field="project.data.solutions"
+              class="project-description__text prismic"
+            />
           </div>
         </div>
 
         <ul class="project-description__info">
-          <li
-            class="project-description__info-item"
-            v-for="info in portfolioProject.headerContent"
-            :key="info.id"
-          >
+          <li class="project-description__info-item">
             <h3 class="project-description__info-heading">
-              {{ info.heading }}
+              Client
             </h3>
             <p class="project-description__info-value">
-              {{ info.value }}
+              {{ project.data.info[0].client[0].text }}
             </p>
           </li>
+          <li class="project-description__info-item">
+            <h3 class="project-description__info-heading">
+              Year
+            </h3>
+            <p class="project-description__info-value">
+              {{ project.data.info[0].date[0].text }}
+            </p>
+          </li>
+          <li class="project-description__info-item">
+            <h3 class="project-description__info-heading">
+              Categories
+            </h3>
+            <p class="project-description__info-value">
+              {{ project.data.info[0].categories[0].text }}
+            </p>
+          </li>
+          <li class="project-description__info-item" v-if="project.data.info[0].cooperation[0].text">
+            <h3 class="project-description__info-heading">
+              With Cooperation
+            </h3>
+            <prismic-rich-text
+              :field="project.data.info[0].cooperation"
+              class="project-description__info-value prismic"
+            />
+            <!-- <p class="project-description__info-value">
+              {{ project.data.info[0].cooperation[0].text }}
+            </p> -->
+          </li>
         </ul>
+
+
 
         <div class="project-additional">
           <div class="project-additional__row">
             <img 
               class="project-additional__image" 
-              alt="" 
-              src="https://www.prokhorov.design/assets/images/es-mockup-second.png"
+              :alt="project.data.additional[0].image.alt ? project.data.additional[0].image.alt : ''" 
+              :src="project.data.additional[0].image.url"
             />
             <div class="project-additional__content">
               <h3 class="project-header__sub-title">
-                Architecture & Technologies
+                {{ project.data.additional[0].heading[0].text }}
               </h3>
-              <p class="project-header__description">
-                In 2012, two friends, Alvaro and Felipe, left their jobs in investment banking to start an MBA in New York. There they got obsessed with the start-up world and spent the first semester of school discussing business ideas.
-                They noticed that socks have been generally neglected by the fashion industry.
-                Hocked by the lack of well designed socks and by the unaccesible prices of good quality socks they started Jimmy Lion.
-              </p>
-              <ul class="project-description__technologies">
-                <li
-                  class="project-description__technologies-item"
-                  v-for="technology in portfolioProject.technologies"
-                  :key="technology"
-                >
-                  {{ technology }}
-                </li>
-            </ul>
+              <prismic-rich-text
+                :field="project.data.additional[0].description"
+                class="project-header__description prismic"
+              />
             </div>
           </div>
+
           <div class="project-additional__row project-additional__row--second"> 
             <div class="project-additional__content">
-              <h2 class="project-header__sub-title">
-                Results
-              </h2>
-              <p class="project-header__description">
-                In 2012, two friends, Alvaro and Felipe, left their jobs in investment banking to start an MBA in New York. There they got obsessed with the start-up world and spent the first semester of school discussing business ideas.
-                They noticed that socks have been generally neglected by the fashion industry.
-                Hocked by the lack of well designed socks and by the unaccesible prices of good quality socks they started Jimmy Lion.
-              </p>
+              <h3 class="project-header__sub-title">
+                {{ project.data.additional[1].heading[0].text }}
+              </h3>
+              <prismic-rich-text
+                :field="project.data.additional[1].description"
+                class="project-header__description prismic"
+              />
             </div>
             <img 
               class="project-additional__image" 
-              alt="" 
-              src="https://www.prokhorov.design/assets/images/es-mockup-first.png"
+              :alt="project.data.additional[1].image.alt ? project.data.additional[1].image.alt : ''" 
+              :src="project.data.additional[1].image.url"
             />
           </div>
         </div>
@@ -138,50 +156,16 @@
 </template>
 
 <script>
-const ContactMe = () => import(/* webpackChunkName: "contact-me-component" */ '@/components/ContactMe/ContactMe.vue');
 const BaseButton = () => import('@/components/BaseButton/BaseButton.vue');
-
-import gql from 'graphql-tag';
 
 export default {
   name: 'PortfolioProjectPage',
   components: {
     BaseButton,
-    ContactMe,
   },
-  apollo: {
-    portfolioProject: {
-      query: gql`query Post($slug: String!) {
-        portfolioProject(filter: { slug: {
-          eq: $slug
-        } }) {
-          id
-          liveLink
-          headerText
-          name
-          mainImage {
-            url
-          }
-          technologies
-          problemsSolutions
-          useCase
-          headerContent {
-            heading
-            value
-            id
-          }
-        }
-      }`,
-      prefetch({ route }) {
-        return {
-          slug: route.params.slug,
-        };
-      },
-      variables() {
-        return {
-          slug: this.$route.params.slug,
-        };
-      },
+  computed: {
+    project() {
+      return this.$store.getters.getProject(this.$route.params.slug);
     },
   },
 };

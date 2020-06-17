@@ -13,30 +13,32 @@
         :current.sync="currentSlide"
         class="project-carousel__inner"
         auto-play
-        @scroll="test()"
       >
         <div
           class="project-tile"
-          :class="{'project-tile--active' : currentSlide === index }"
           v-for="(project, index) in projects"
-          :key="index"
-          :aria-label="project.name"
-          :title="project.name"
+          :class="{'project-tile--active' : currentSlide === index }"
+          :key="project.id"
         >
-          <nuxt-link class="project-tile__heading"  :to="`/works/${project.slug}`">
+          <nuxt-link 
+            class="project-tile__heading" 
+            :to="`/works/${project.uid}`"
+            :aria-label="project.data.heading_up[0].text"
+            :title="project.data.heading_up[0].text"
+          >
             <span class="project-tile__heading-up">
-              {{ project.titleUp }}
+              {{ project.data.heading_up[0].text }}
             </span>
             <span class="project-tile__heading-down">
-              {{ project.titleDown }}
+              {{ project.data.heading_down[0].text }}
             </span>
           </nuxt-link>
 
           <figure class="project-tile__image-wrapper">
             <img
               class="project-tile__image"
-              :alt="project.name"
-              :src="project.mainImage.url"
+              :alt="project.data.heading_up[0].text"
+              :src="project.data.main_image.url"
             />
           </figure>
         </div>
@@ -66,7 +68,7 @@ export default {
       duration: 700,
       perPage: 1,
       loop: true,
-      easing: 'ease-out',
+ 
     },
     currentSlide: 0,
   }),
@@ -98,11 +100,13 @@ export default {
       e.keyCode === 37 ? this.goPrev() : false;
     }, { passive: true });
 
-    carousel.addEventListener('wheel', debounce((event) => {
-      var event = window.event || event;
-      const delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
-      delta > 0 ? this.goNext() : this.goPrev();
-    }, { passive: true }, 1200));
+    if (carousel) {
+      carousel.addEventListener('wheel', debounce((event) => {
+        var event = window.event || event;
+        const delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+        delta > 0 ? this.goNext() : this.goPrev();
+      }, { passive: true }, 1200));
+    }
   },
 };
 </script>
