@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <div class="home" v-if="isLoaded">
     <projects-carousel
-      :projects="featuredProjects"
+      :projects="projects"
     />
   </div>
 </template>
@@ -9,63 +9,17 @@
 <script>
 const ProjectsCarousel = () => import(/* webpackChunkName: "projects-carousel-component" */ '@/components/ProjectsCarousel/ProjectsCarousel.vue');
 
-import gql from 'graphql-tag';
-
 export default {
   name: 'HomePage',
   components: {
     ProjectsCarousel,
   },
-  async asyncData({ app }) {
-    try {
-      const portfolioProjects = gql`
-        query {
-          allPortfolioProjects(filter: {isFeatured: {eq: true}}) {
-            id
-            name
-            titleUp
-            titleDown
-            slug
-            isFeatured
-            order
-            mainImage {
-              url
-            }
-            headerContent {
-              heading
-              value
-              id
-            }
-          }
-        }
-      `
-      const infoSection = gql`
-        query {
-          infoSection {
-            content {
-              name
-              id
-              value
-            }
-            heading
-          }
-        }
-      `
-      const projects = await app.apolloProvider.defaultClient.query({
-        query: portfolioProjects,
-      });
-      const info = await app.apolloProvider.defaultClient.query({
-        query: infoSection,
-      });
-
-      return {
-        featuredProjects: projects.data.allPortfolioProjects,
-        infoSection: info.data.infoSection,
-      };
-    } catch (err) {
-      return {
-        test: err
-      }
+  computed: {
+    projects() {
+      return this.$store.state.projects;
+    },
+    isLoaded() {
+      return this.$store.state.loaded;
     }
   },
 };

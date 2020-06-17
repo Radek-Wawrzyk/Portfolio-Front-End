@@ -21,6 +21,9 @@
     "lodash.debounce": "^4.0.8",
     "node-sass": "^4.13.0",
     "nuxt": "^2.0.0",
+    "prismic-dom": "^2.2.3",
+    "prismic-javascript": "^3.0.0",
+    "prismic-vue": "^2.0.1",
     "sass-loader": "^8.0.0",
     "vee-validate": "^3.2.1",
     "vue2-siema": "^0.2.2"

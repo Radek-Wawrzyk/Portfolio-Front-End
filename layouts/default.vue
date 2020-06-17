@@ -19,9 +19,9 @@
       <div class="cursor" ref="cursor" />
     </client-only>
     
-    <transition name="fade" mode="out-in">
-      <preloader v-if="$apollo.loading" />
-    </transition>
+    <!-- <transition name="page-fade"> -->
+      <preloader />
+    <!-- </transition> -->
     <main-footer />
   </main>
 </template>
@@ -31,8 +31,6 @@ const Navigation = () => import(/* webpackChunkName: "navigation-component" */ '
 const MainMenu = () => import(/* webpackChunkName: "main-menu-component" */ '@/components/MainMenu/MainMenu.vue');
 const MainFooter = () => import(/* webpackChunkName: "main-footer-component" */ '@/components/MainFooter/MainFooter.vue');
 const Preloader = () => import(/* webpackChunkName: "preloader-component" */ '@/components/Preloader/Preloader.vue');
-
-import gql from 'graphql-tag';
 
 export default {
   name: 'default-layout',
@@ -45,10 +43,25 @@ export default {
     MainFooter,
     Preloader,
   },
+  computed: {
+    isLoaded() {
+      return this.$store.state.loaded;
+    },
+  },
   methods: {
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
     },
+    async fetchData() {
+      try {
+        const { results } = await this.$prismic.client.query(
+          this.$prismic.Predicates.at('document.type', 'work')
+        );
+        this.$store.dispatch('fetchData', results);
+      } catch (err) {
+        console.log(err);
+      }
+    }
   },
   watch: {
     isMenuOpen() {
@@ -62,30 +75,6 @@ export default {
         }, 700);
       }
     },
-    allPortfolioProjects() {
-      this.allPortfolioProjects && this.allPortfolioProjects.length ? console.log('pobrane!') : false;
-    }
-  },
-  apollo: {
-    allPortfolioProjects: gql`{
-      allPortfolioProjects(filter: {isFeatured: {eq: true}}) {
-        id
-        name
-        titleUp
-        titleDown
-        slug
-        isFeatured
-        order
-        mainImage {
-          url
-        }
-        headerContent {
-          heading
-          value
-          id
-        }
-      },
-    }`,
   },
   mounted() {
     window.addEventListener('mousemove', (e) => {
@@ -93,19 +82,19 @@ export default {
       this.$refs.cursor.style.left = `${e.pageX}px`;
     });
 
-    document.querySelectorAll('a, button, .nuxt-link, img', '.project-tile__heading').forEach(link => {
+    document.querySelectorAll('a, button').forEach(link => {
       link.addEventListener('mouseleave', () => {
         this.$refs.cursor.classList.remove('cursor--on-link');
 
       });
       link.addEventListener('mouseover', () => {
         this.$refs.cursor.classList.add('cursor--on-link');
-        console.log('xd')
+        console.log('Found element!')
       });
     });
   },
   created() {
-    this.$store.dispatch('fetchData');
+    this.fetchData();
   },
 };
 </script>

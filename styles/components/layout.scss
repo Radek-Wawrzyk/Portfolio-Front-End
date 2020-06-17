@@ -48,12 +48,24 @@ body, html {
   }
 }
 
+// Prismic editor styles
+
+.prismic {
+  ul {
+    margin: 2rem 0 0 0;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+}
+
 // Media
 
 @media screen and (max-width: 1024px) {
-  // .cursor {
-  //   display: none;
-  // }
+  .cursor {
+    display: none;
+  }
 
   .container {
     padding: 0 1rem;

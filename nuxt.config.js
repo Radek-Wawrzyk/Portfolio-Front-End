@@ -1,4 +1,3 @@
-
 export default {
   mode: 'universal',
   head: {
@@ -23,7 +22,8 @@ export default {
   ],
   plugins: [
     { src: '@/plugins/veeValidate' },
-    { src: '@/plugins/vueCarousel', mode: 'client' },
+    { src: "./plugins/prismic.js", },
+    { src: '@/plugins/vueCarousel', srr: false },
   ],
   buildModules: [
     '@nuxtjs/eslint-module'
@@ -46,7 +46,7 @@ export default {
   },
   transition: {
     name: 'fade-page',
-    // mode: 'out-in'
+    // mode: 'out-in',
   },
   axios: {
   },
