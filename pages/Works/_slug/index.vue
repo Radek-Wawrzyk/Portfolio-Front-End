@@ -1,5 +1,5 @@
 <template>
-  <div class="project">
+  <div class="project" >
     <div class="container" v-if="project">
       <header class="project-header">
         <!-- <h2
@@ -44,7 +44,7 @@
         </div>
       </header>
 
-      <figure class="project-main-img">
+      <figure class="project-main-img" >
         <img
           class="project-main-img__inner"
           alt=""

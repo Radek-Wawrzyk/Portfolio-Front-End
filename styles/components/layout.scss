@@ -1,6 +1,11 @@
 body, html {
   background-color: $secondary-brand;
+  overflow-x: hidden;
   cursor: none;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 * {
@@ -22,6 +27,14 @@ body, html {
   &__content {
     position: relative;
     z-index: 2;
+    transition: all 0.7s;
+    height: 100%;
+
+    &--active {
+      transition: all 0.7s;
+      transform: translate3d(0, 100vh, 0);
+      opacity: 0;
+    }
   }
 }
 
@@ -59,6 +72,12 @@ body, html {
     font-weight: 500;
   }
 }
+
+//AOS
+
+$aos-distance: 10px; // It has to be above import
+@import 'node_modules/aos/src/sass/aos.scss';
+$aos-distance: 10px; // It has to be above import
 
 // Media
 

@@ -1,76 +1,48 @@
 <template>
   <div class="about">
     <div class="container">
-      <stats-info :data="infoSection" />
-      <process-info :data="allProcesses" />
-      <about-images 
-        imageLeft="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80"
-        imageRight="https://images.unsplash.com/photo-1474403078171-7f199e9d1335?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80"
-      />
-      <partners
-        :data="allPartners[0]"
-        v-if="allPartners"
-      />
-      <contact-me
-        title="Let's build something amazing together."
-        subTitle="
-          Think I might be the right friend for your next adventure?
-          Take a minute, I’d love to hear about your project.
-        "
-        linkURL="/project-form"
-        linkText="Let's do this!"
-      />
+      <header class="about-header">
+        <background-text align="">
+          About
+        </background-text>
+        <div class="about-header__column">
+          <h1 class="about-header__title">
+            <span class="about-header__title-row">
+              Radosław Wawrzyk
+            </span>
+            <span class="about-header__title-row">
+              Front-End/UI Developer
+            </span>
+          </h1>
+          <h2 class="about-header__sub-title">
+            About me
+          </h2>
+          <p class="about-header__description">
+            Hi my name is Radek and I'm the Front-End Developer with a terrible haircut! Despite my hairs I keep attention to
+            every project - I strive to make a positive impact on the product 
+            and the company's goals by introducing new solutions and providing a specialized 
+            dedicated approach to each project and challenge. I say NO to standard/boring approaches! Feel free to contact me and let's
+            make Front-End great again!
+          </p>
+          <h2 class="about-header__sub-title">
+            My stack
+          </h2>
+          <p class="about-header__description">
+            HTML/CSS/JS, Vue.js/Vuex/Vuestorefront, Nuxt.js, Node.js/Express.js/MongoDB
+          </p>
+        </div>
+      </header>
     </div>
   </div>
 </template>
 
 <script>
-const ContactMe = () => import(/* webpackChunkName: "contact-me-component" */ '@/components/ContactMe/ContactMe.vue');
-const ProcessInfo = () => import(/* webpackChunkName: "process-info-component" */ '@/components/ProcessInfo/ProcessInfo.vue');
-const StatsInfo = () => import(/* webpackChunkName: "stats-info-component" */ '@/components/StatsInfo/StatsInfo.vue');
-const AboutImages = () => import(/* webpackChunkName: "about-images-component" */ '@/components/AboutImages/AboutImages.vue');
-const Partners = () => import(/* webpackChunkName: "partners-component" */ '@/components/Partners/Partners.vue');
-
-import gql from 'graphql-tag';
+const BackgroundText = () => import(/* webpackChunkName: "background-text-component" */ '@/components/BackgroundText/BackgroundText.vue');
 
 export default {
   name: 'AboutMePage',
   components: {
-    ContactMe,
-    ProcessInfo,
-    StatsInfo,
-    AboutImages,
-    Partners,
-  },
-  apollo: {
-    allPartners: gql`{
-      allPartners {
-        heading
-        images {
-          id
-          url
-          title
-        }
-      }
-    }`,
-    allProcesses: gql`{
-      allProcesses {
-        id
-        name
-        step
-        text
-      }
-    }`,
-    infoSection: gql`{
-      infoSection {
-        content {
-          name
-          id
-          value
-        }
-        heading
-      }
-    }`
+    BackgroundText,
   },
 };
 </script>

@@ -1,0 +1,23 @@
+.background-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  font-size: 20vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: -1;
+  color: rgba($accent--light, 0.05);
+  transition: all 1s;
+
+  &--left {
+    left: 10%;
+    transform: translateY(-50%) translateX(0);
+  }
+
+  &--right {
+    right: 10%;
+    left: unset;
+    transform: translateY(-50%) translateX(0);
+  }
+}

@@ -32,6 +32,8 @@ const MainMenu = () => import(/* webpackChunkName: "main-menu-component" */ '@/c
 const MainFooter = () => import(/* webpackChunkName: "main-footer-component" */ '@/components/MainFooter/MainFooter.vue');
 const Preloader = () => import(/* webpackChunkName: "preloader-component" */ '@/components/Preloader/Preloader.vue');
 
+import AOS from 'aos';
+
 export default {
   name: 'default-layout',
   data: () => ({
@@ -64,6 +66,25 @@ export default {
     }
   },
   watch: {
+    isLoaded() {
+      if (this.isLoaded) {
+        window.addEventListener('mousemove', (e) => {
+          this.$refs.cursor.style.top = `${e.pageY}px`;
+          this.$refs.cursor.style.left = `${e.pageX}px`;
+        });
+
+        document.querySelectorAll('a, button').forEach(link => {
+          link.addEventListener('mouseleave', () => {
+            this.$refs.cursor.classList.remove('cursor--on-link');
+
+          });
+          link.addEventListener('mouseover', () => {
+            this.$refs.cursor.classList.add('cursor--on-link');
+            console.log('Found element!')
+          });
+        });
+      }
+    },
     isMenuOpen() {
       const body = document.querySelector('body');
 
@@ -98,24 +119,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-  body {
-    overflow-x: hidden;
-
-    &.no-scroll {
-      overflow: hidden;
-    }
-  }
-
-  .page__content {
-    transition: all 0.7s;
-    height: 100vh;
-
-    &--active {
-      transition: all 0.7s;
-      transform: translate3d(0, 100vh, 0);
-      opacity: 0;
-    }
-  }
-</style>

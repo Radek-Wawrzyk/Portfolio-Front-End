@@ -23,7 +23,8 @@ export default {
   plugins: [
     { src: '@/plugins/veeValidate' },
     { src: "./plugins/prismic.js", },
-    { src: '@/plugins/vueCarousel', srr: false },
+    { src: '@/plugins/vueCarousel', ssr: false },
+    { src: '@/plugins/aos', ssr: false },
   ],
   buildModules: [
     '@nuxtjs/eslint-module'
