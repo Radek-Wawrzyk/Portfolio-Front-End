@@ -2,12 +2,9 @@
   <div class="project" >
     <div class="container" v-if="project">
       <header class="project-header">
-        <!-- <h2
-          class="projects-carousel__background-text"
-          :style="{ transform: `translate(-50%, -50%)` }"
-        >
-          Works.
-        </h2> -->
+        <background-text opacity="0.5" class="project-header__text">
+          Work
+        </background-text>
         <div class="project-header__column">
           <h1 class="project-header__title">
             <span class="project-header__title-row">
@@ -74,6 +71,10 @@
           </div>
         </div>
 
+        <background-text opacity="0.5" class="project-description__text-info">
+          Info
+        </background-text>
+
         <ul class="project-description__info">
           <li class="project-description__info-item">
             <h3 class="project-description__info-heading">
@@ -107,13 +108,8 @@
               :field="project.data.info[0].cooperation"
               class="project-description__info-value prismic"
             />
-            <!-- <p class="project-description__info-value">
-              {{ project.data.info[0].cooperation[0].text }}
-            </p> -->
           </li>
         </ul>
-
-
 
         <div class="project-additional">
           <div class="project-additional__row">
@@ -157,11 +153,13 @@
 
 <script>
 const BaseButton = () => import('@/components/BaseButton/BaseButton.vue');
+const BackgroundText = () => import(/* webpackChunkName: "background-text-component" */ '@/components/BackgroundText/BackgroundText.vue');
 
 export default {
   name: 'PortfolioProjectPage',
   components: {
     BaseButton,
+    BackgroundText,
   },
   computed: {
     project() {

@@ -4,8 +4,8 @@
     :class="[
       align === 'left' ? 'background-text--left' : '',
       align === 'right' ? 'background-text--right' : '',
-
     ]"
+    :style="{ opacity: opacity }"
   >
     <slot></slot>
   </div>
@@ -20,6 +20,10 @@ export default {
       required: false,
       default: 'center',
     },
+    opacity: {
+      type: [String, Number],
+      required: false,
+    }
   },
 };
 </script>

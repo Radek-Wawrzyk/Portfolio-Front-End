@@ -2,7 +2,7 @@
   <div class="about">
     <div class="container">
       <header class="about-header">
-        <background-text align="">
+        <background-text opacity="0.5">
           About
         </background-text>
         <div class="about-header__column">
@@ -18,7 +18,7 @@
             About me
           </h2>
           <p class="about-header__description">
-            Hi my name is Radek and I'm the Front-End Developer with a terrible haircut! Despite my hairs I keep attention to
+            Hi my name is Radek and I'm the Front-End Developer with a terrible haircut! Despite my hair I keep attention to
             every project - I strive to make a positive impact on the product 
             and the company's goals by introducing new solutions and providing a specialized 
             dedicated approach to each project and challenge. I say NO to standard/boring approaches! Feel free to contact me and let's

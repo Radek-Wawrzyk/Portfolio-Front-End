@@ -7,7 +7,7 @@
   font-weight: 700;
   text-transform: uppercase;
   z-index: -1;
-  color: rgba($accent--light, 0.05);
+  color: $accent--light;
   transition: all 1s;
 
   &--left {

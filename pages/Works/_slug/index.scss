@@ -2,11 +2,16 @@
   position: relative;
 
   &-header {
+    position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    &__text {
+      top: 90%;
+    }
 
     &__column {
       position: relative;
@@ -59,7 +64,6 @@
     padding: 8rem 0;
     width: 100%;
     margin: 0 auto;
-    max-width: 1200px;
 
     &__inner {
       width: 100%;
@@ -72,7 +76,10 @@
     position: relative;
     padding: 0 0 3rem 0;
     margin: 0 auto;
-    max-width: 1200px;
+
+    &__text-info {
+      top: 15%;
+    }
 
     &__content {
       display: grid;
@@ -185,6 +192,10 @@
       height: auto;
       // text-align: center;
       display: block;
+
+      &__text {
+        top: 100%;
+      }
 
       &__title {
         font-size: 3rem;

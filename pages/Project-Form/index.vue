@@ -1,5 +1,8 @@
 <template>
   <div class="project-form">
+    <background-text opacity="0.3">
+      Form
+    </background-text>
     <div class="container">
       <h1 class="project-form__heading">
         Project form
@@ -193,12 +196,14 @@
 <script>
 const BaseInput = () => import('@/components/BaseInput/BaseInput.vue');
 const BaseTextarea = () => import('@/components/BaseTextarea/BaseTextarea.vue');
+const BackgroundText = () => import(/* webpackChunkName: "background-text-component" */ '@/components/BackgroundText/BackgroundText.vue');
 
 export default {
   name: 'ProjectFormPage',
   components: {
     BaseInput,
     BaseTextarea,
+    BackgroundText,
   },
   data: () => ({
     stage: 0,
