@@ -31,14 +31,7 @@ export default {
   ],
   modules: [
     '@nuxtjs/style-resources',
-    '@nuxtjs/axios',
-    '@nuxtjs/apollo',
   ],
-  apollo: {
-    clientConfigs: {
-      default: '~/apollo/config.js',
-    },
-  },
   styleResources: {
     scss: [
       './styles/components/variables.scss',
@@ -48,8 +41,6 @@ export default {
   transition: {
     name: 'fade-page',
     // mode: 'out-in',
-  },
-  axios: {
   },
   build: {
     extend (config, ctx) {
