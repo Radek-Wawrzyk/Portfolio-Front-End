@@ -100,13 +100,13 @@ export default {
       e.keyCode === 37 ? this.goPrev() : false;
     }, { passive: true });
 
-    if (carousel) {
-      carousel.addEventListener('wheel', debounce((event) => {
-        var event = window.event || event;
-        const delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
-        delta > 0 ? this.goNext() : this.goPrev();
-      }, { passive: true }, 1200));
-    }
+    // if (carousel) {
+    //   carousel.addEventListener('wheel', debounce((event) => {
+    //     var event = window.event || event;
+    //     const delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+    //     delta > 0 ? this.goNext() : this.goPrev();
+    //   }, { passive: true }, 1200));
+    // }
   },
 };
 </script>
