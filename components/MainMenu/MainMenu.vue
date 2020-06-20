@@ -103,6 +103,11 @@ export default {
         path: '/about-me',
       },
       {
+        id: 2,
+        name: 'Contact',
+        path: '/contact',
+      },
+      {
         id: 3,
         name: 'Hire me!',
         path: '/project-form',
