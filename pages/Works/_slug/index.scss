@@ -46,17 +46,7 @@
 
     &__image {
       width: 100%;
-
-      &:first-child {
-        margin: 0 0 0 5rem;
-      }
-      
-      &:last-child {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0;
-      }
+      padding: 0 0 0 2rem;
     }
   }
 
@@ -155,9 +145,20 @@
 
     &__image {
       width: 50%;
+
+      &--left {
+        width: 35%;
+        margin: 0 15% 0 0;
+      }
+
+      &--right {
+        width: 35%;
+        margin: 0 0 0 15%;
+      }
     }
 
     &__content {
+      min-width: 50%;
       width: 50%;
     }
   }
@@ -210,13 +211,12 @@
       }
 
       &__image {
-        &:last-child {
-          right: 10%;
-        }
+        padding: 0;
       }
     }
 
     &-main-img {
+      display: none;
       width: 100%;
       padding: 100px 0;
 
@@ -226,6 +226,8 @@
     }
 
     &-description {
+      margin: 100px 0 0 0;
+      
       &__content {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 4rem;
@@ -258,6 +260,7 @@
   
       &__image {
         width: 100%;
+        max-width: 420px;
         margin: 0 auto;
         
         display: block;

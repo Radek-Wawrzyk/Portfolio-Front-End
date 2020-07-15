@@ -12,12 +12,12 @@
     &__list {
       display: flex;
       align-items: center;
-      margin: 0 0 0 -0.9rem;
+      margin: 0 0 0 -0.5rem;
     }
     
     &__link {
       display: block;
-      padding: 1rem;
+      padding: 1rem 0.5rem;
 
       &:hover, &:focus {
         cursor: pointer;

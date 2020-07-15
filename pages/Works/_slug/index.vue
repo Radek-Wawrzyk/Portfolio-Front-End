@@ -30,11 +30,6 @@
         <div class="project-header__column project-header__column--right">
           <img
             class="project-header__image"
-            :alt="project.data.header_image_left.alt ? project.data.header_image_left.alt : ''"
-            :src="project.data.header_image_left.url"
-          />
-          <img
-            class="project-header__image"
             :alt="project.data.header_image_right.alt ? project.data.header_image_right.alt : ''"
             :src="project.data.header_image_right.url"
           />
@@ -114,7 +109,7 @@
         <div class="project-additional">
           <div class="project-additional__row">
             <img 
-              class="project-additional__image" 
+              class="project-additional__image project-additional__image--left" 
               :alt="project.data.additional[0].image.alt ? project.data.additional[0].image.alt : ''" 
               :src="project.data.additional[0].image.url"
             />
@@ -140,7 +135,7 @@
               />
             </div>
             <img 
-              class="project-additional__image" 
+              class="project-additional__image project-additional__image--right" 
               :alt="project.data.additional[1].image.alt ? project.data.additional[1].image.alt : ''" 
               :src="project.data.additional[1].image.url"
             />
