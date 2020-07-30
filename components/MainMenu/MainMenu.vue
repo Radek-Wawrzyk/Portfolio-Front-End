@@ -31,9 +31,6 @@
       </nav>
     </div>
     <div class="menu-socials">
-      <h3 class="menu-socials__title">
-        Contact
-      </h3>
       <span class="menu-socials__line"></span>
       <ul class="menu-socials__list">
         <li class="menu-socials__item">
@@ -107,11 +104,11 @@ export default {
         name: 'Contact',
         path: '/contact',
       },
-      {
-        id: 3,
-        name: 'Hire me!',
-        path: '/project-form',
-      },
+      // {
+      //   id: 3,
+      //   name: 'Hire me!',
+      //   path: '/project-form',
+      // },
     ],
   }),
   methods: {

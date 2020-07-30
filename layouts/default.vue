@@ -16,9 +16,9 @@
     </div>
 
     <client-only>
-      <div class="cursor" ref="cursor" />
+      <!-- <div class="cursor" ref="cursor" /> -->
     </client-only>
-    
+
     <!-- <transition name="page-fade"> -->
       <preloader />
     <!-- </transition> -->
@@ -63,28 +63,26 @@ export default {
       } catch (err) {
         console.log(err);
       }
-    }
+    },
+    // cursorListener() {
+    //   window.addEventListener('mousemove', (e) => {
+    //     this.$refs.cursor.style.top = `${e.pageY}px`;
+    //     this.$refs.cursor.style.left = `${e.pageX}px`;
+    //   });
+
+    //   document.querySelectorAll('a, button').forEach(link => {
+    //     link.addEventListener('mouseleave', () => {
+    //       this.$refs.cursor.classList.remove('cursor--on-link');
+
+    //     });
+    //     link.addEventListener('mouseover', () => {
+    //       this.$refs.cursor.classList.add('cursor--on-link');
+    //       console.log('Found element!')
+    //     });
+    //   });
+    // },
   },
   watch: {
-    isLoaded() {
-      if (this.isLoaded) {
-        window.addEventListener('mousemove', (e) => {
-          this.$refs.cursor.style.top = `${e.pageY}px`;
-          this.$refs.cursor.style.left = `${e.pageX}px`;
-        });
-
-        document.querySelectorAll('a, button').forEach(link => {
-          link.addEventListener('mouseleave', () => {
-            this.$refs.cursor.classList.remove('cursor--on-link');
-
-          });
-          link.addEventListener('mouseover', () => {
-            this.$refs.cursor.classList.add('cursor--on-link');
-            console.log('Found element!')
-          });
-        });
-      }
-    },
     isMenuOpen() {
       const body = document.querySelector('body');
 
@@ -96,23 +94,6 @@ export default {
         }, 700);
       }
     },
-  },
-  mounted() {
-    window.addEventListener('mousemove', (e) => {
-      this.$refs.cursor.style.top = `${e.pageY}px`;
-      this.$refs.cursor.style.left = `${e.pageX}px`;
-    });
-
-    document.querySelectorAll('a, button').forEach(link => {
-      link.addEventListener('mouseleave', () => {
-        this.$refs.cursor.classList.remove('cursor--on-link');
-
-      });
-      link.addEventListener('mouseover', () => {
-        this.$refs.cursor.classList.add('cursor--on-link');
-        console.log('Found element!')
-      });
-    });
   },
   created() {
     this.fetchData();

@@ -19,8 +19,8 @@
           </h2>
           <p class="contact-header__description">
             Do you have any question or project in mind?
-            Feel free to contact me! I'm always free 
-            for a chat and a coffee. Drop me a line and let's 
+            Feel free to contact me! I'm always free
+            for a chat and a coffee. Drop me a line and let's
             build something amazing together!
           </p>
           <h2 class="contact-header__sub-title">
@@ -45,7 +45,7 @@
             </a>
           </p>
           <h2 class="contact-header__sub-title">
-            Socials
+            Find me on
           </h2>
           <ul class="contact-socials__list">
             <li class="contact-socials__item">
