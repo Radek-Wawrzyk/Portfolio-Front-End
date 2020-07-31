@@ -19,8 +19,8 @@
           </h2>
           <p class="about-header__description">
             Hi my name is Radek and I'm the Front-End Developer with a terrible haircut! Despite my hair I keep attention to
-            every project - I strive to make a positive impact on the product 
-            and the company's goals by introducing new solutions and providing a specialized 
+            every project - I strive to make a positive impact on the product
+            and the company's goals by introducing new solutions and providing a specialized
             dedicated approach to each project and challenge. I say NO to standard/boring approaches! Feel free to contact me and let's
             make Front-End great again!
           </p>
@@ -28,7 +28,7 @@
             My stack
           </h2>
           <p class="about-header__description">
-            HTML/CSS/JS, Vue.js/Vuex/Vuestorefront, Nuxt.js, Node.js/Express.js/MongoDB
+            HTML/CSS/SASS/SCSS,JS, Vue.js/Vuex, Vuestorefront, Nuxt.js, Gridsome, Node.js/Express.js, MongoDB
           </p>
         </div>
       </header>
